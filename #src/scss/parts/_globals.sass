@@ -1,0 +1,131 @@
+h1,h2,h3,h4,h5,h6
+	font-weight: 600
+	text-align: center
+
+h1
+	font-size: 42px
+	line-height: 51px
+
+	@media screen and (max-width: $media-sm)
+		font-size: 28px
+		line-height: 34px
+
+h2
+	font-size: 36px
+	line-height: 44px
+
+	@media screen and (max-width: $media-sm)
+		font-size: 24px
+		line-height: 29px
+	
+h3
+	font-size: 24px
+	line-height: 29px
+
+.headline
+	margin-top: 15px
+	margin-bottom: 30px
+
+body
+	font-size: 16px
+	font-family: Gilroy
+	color: #fafafa
+	background-color: #1b1c20
+
+a
+	color: #fafafa
+	text-decoration: none
+
+.container
+	@include wrapper()
+
+	@media screen and (max-width: $media-lg)
+		max-width: 720px
+
+	@media screen and (max-width: $media-sm)
+		max-width: 404px
+
+	@media screen and (max-width: $media-xs)
+		max-width: 320px
+
+.row
+	@include row-flex()
+
+	&_justify_content_center
+		@media screen and (max-width: $media-sm)
+			justify-content: center
+
+.btn
+	display: inline-flex
+	flex-direction: row
+	align-items: center
+	justify-content: center
+	height: 51px
+	padding: 0 32px
+	background: #31383f
+	border-radius: 3px
+	box-shadow: 0 5px 13px rgba(#000, .15)
+
+	&:hover
+		background: linear-gradient(279.91deg, #30373E -21.28%, #1B1F23 106.73%)
+		box-shadow: 0px 8px 20px rgba(53, 53, 53, 0.35)
+
+	@media screen and (max-width: $media-sm)
+		padding: 0 25px
+
+	&_color_blue
+		background: linear-gradient(to right, #3D5F95, #1E2F4B)
+
+		&:hover
+			background: linear-gradient(96.22deg, #10213C -30.94%, #2C4164 105.3%)
+			box-shadow: 0px 8px 20px rgba(31, 48, 77, 0.45)
+
+	&_size_small
+		height: 45px
+
+		@media screen and (max-width: $media-sm)
+			height: 51px
+
+	&_type_search
+		position: relative
+		margin-right: 5px
+		color: transparent
+		width: 51px
+		padding: 0
+
+		&::before
+			display: block
+			content: ''
+			width: 22px
+			height: 22px
+			background: url(../img/icon-search.svg) center no-repeat
+			background-size: contain
+			position: absolute
+			left: calc(50% - 11px)
+
+	&_type_to-top
+		padding: 0
+		width: 60px
+		height: 60px
+		border-radius: 50%
+		cursor: pointer
+		display: flex
+		justify-content: center
+		align-items: center
+		z-index: 200
+
+		@media screen and (max-width: $media-sm)
+			padding: 0
+
+		@media screen and (max-width: $media-xs)
+			padding: 0
+
+		&::after
+			content: ''
+			display: block
+			width: 24px
+			height: 24px
+			background: url(../img/icon-arrow-to-top.svg) center no-repeat
+			background-size: contain
+			
+

@@ -1,0 +1,10 @@
+.DS_Store
+/#src/fonts/*
+/dist/fonts/*
+/alternate_project
+/assets
+/graphics
+/node_modules
+package-lock.json
+shpion.sublime-project
+shpion.sublime-workspace

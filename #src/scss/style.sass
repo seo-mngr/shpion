@@ -1,0 +1,2056 @@
+@charset "utf-8"
+
+@import "parts/vars"
+@import "parts/reset"
+@import "parts/fonts"
+@import "parts/grid"
+@import "parts/globals"
+
+.wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100vh
+	overflow: hidden
+
+.side-wrapper
+
+	&__sidebar
+		@include col()
+		@include size(3)
+		@include size-lg(4)
+
+		@media screen and (max-width: $media-sm)
+			display: none
+
+	&__content
+		@include col()
+		@include size(9)
+		@include size-lg(8)
+		@include size-sm(12)
+		@include size-xs(12)
+
+.side-nav
+	background-color: #232428
+	border-radius: 3px
+	padding-top: 11px
+	padding-bottom: 11px
+
+	@media screen and (max-width: $media-lg)
+		margin-left: -20px
+
+	&__headline
+		padding-left: 35px
+		color: #3d5f95
+		text-align: left
+		margin-bottom: 14px
+		line-height: 1em
+
+		@media screen and (max-width: $media-lg)
+			padding-left: 25px
+
+	&__list
+		font-size: 14px
+		line-height: 1em
+
+	&__list-item
+
+	&__link
+		display: flex
+		align-items: center
+		height: 32px
+		width: 100%
+		padding-left: 32px
+		border-left: 3px solid transparent
+
+		@media screen and (max-width: $media-lg)
+			padding-left: 25px
+
+		&:hover
+			background-color: #30373d
+			border-left: 3px solid #3D5F95
+
+.header
+	position: fixed
+	width: 100%
+	height: 100px
+	z-index: 100
+
+	@media screen and (max-width: $media-lg)
+		height: 80px
+
+	@media screen and (max-width: $media-sm)
+		height: 66px
+
+	&_fill
+		background-color: #23252a
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+
+		& .nav__subnav
+			border-radius: 0 0 3px 3px
+			box-shadow: 0 5px 13px rgba(#000, .15), inset 0 5px 13px rgba(#000, .15)
+
+	&__wrap
+		margin: 0 auto
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+
+		@media screen and (max-width: $media-xxl)
+			max-width: 1110px
+			justify-content: space-between
+
+		@media screen and (max-width: $media-lg)
+			justify-content: center
+
+	&__logo
+		margin-right: 180px
+
+		@media screen and (max-width: $media-xxl)
+			margin-right: 0
+
+	&__logo-img
+		height: 65px
+		width: 157px
+
+		@media screen and (max-width: $media-xxl)
+			height: 61px
+			width: 142px
+
+		@media screen and (max-width: $media-lg)
+			height: 50px
+			width: 119px
+
+		@media screen and (max-width: $media-sm)
+			height: 36px
+			width: 88px
+
+	&__nav
+		margin-right: 140px
+
+		@media screen and (max-width: $media-xxl)
+			margin-right: 0
+
+		@media screen and (max-width: $media-lg)
+			display: none
+
+	&__additions
+		display: flex
+		flex-direction: row
+
+		@media screen and (max-width: $media-lg)
+			display: none
+
+.breadcrumbs
+	padding-top: 15px
+	margin-bottom: 15px
+
+	@media screen and (max-width: $media-sm)
+		font-size: 14px
+
+	&__wrap
+		display: flex
+		flex-direction: row
+		justify-content: flex-start
+		align-items: center
+		height: 50px
+		background-color: #232428
+		border-radius: 3px
+		padding-left: 35px
+
+		@media screen and (max-width: $media-lg)
+			margin-left: -20px
+			margin-right: -20px
+			padding-left: 25px
+
+		@media screen and (max-width: $media-sm)
+			height: 40px
+			margin-left: unset
+			margin-right: unset
+
+	&__list
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: flex-start
+
+	&__list-item
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: flex-start
+		align-items: center
+		color: #3d5f95
+
+		&:not(:last-child)::after
+			content: ''
+			display: block
+			width: 8px
+			height: 15px
+			margin-left: 25px
+			margin-right: 25px
+			background: url(../img/icon-breadcrumbs-arrow.svg) center no-repeat
+
+			@media screen and (max-width: $media-sm)
+				margin-left: 15px
+				margin-right: 15px
+
+	&__link
+		color: #8b8b8b
+
+.main
+	flex: 1 0 auto
+	padding-top: $header-height
+
+	@media screen and (max-width: $media-sm)
+		padding-top: $header-height-sm
+
+	@media screen and (max-width: $media-xs)
+		padding-top: $header-height-xs
+
+.footer
+	background-color: #1d1e22
+
+	&__wrap
+		display: flex
+		flex-direction: row
+		justify-content: flex-start
+		flex-wrap: wrap
+
+		@media screen and (max-width: $media-sm)
+			flex-direction: column
+			align-content: center
+			max-width: 315px
+			margin: 0 auto
+
+	&__first
+		width: 32%
+		padding-top: 12px
+		padding-bottom: 32px
+
+		@media screen and (max-width: $media-lg)
+			width: 39%
+
+		@media screen and (max-width: $media-sm)
+			width: 100%
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			align-items: center
+
+	&__logo
+		margin-bottom: 31px
+		width: 240px
+		height: 109px
+		background: url(../img/logo.svg) center no-repeat
+		background-size: contain
+
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 25px
+
+	&__additions
+		display: flex
+		flex-direction: row
+
+	&__nav
+		display: flex
+		flex-direction: row
+		padding-top: 40px
+		padding-bottom: 40px
+		background-color: #232428
+		width: 48.5%
+		position: relative
+		z-index: 1
+
+		@media screen and (max-width: $media-lg)
+			width: 49%
+
+		@media screen and (max-width: $media-sm)
+			width: 100%
+
+		&::before
+			@media screen and (max-width: $media-sm)
+				content: ''
+				display: block
+				height: 100%
+				width: 2000px
+				background-color: #232428
+				position: absolute
+				top: 0
+				left: calc(50% - 1000px)
+				z-index: -1
+
+	&__nav-list
+		width: 50%
+		padding-left: 94px
+		line-height: 1.2
+
+		@media screen and (max-width: $media-lg)
+			padding-left: 28px
+
+		&:first-child
+			@media screen and (max-width: $media-sm)
+				padding-left: 0
+
+	&__nav-item
+		&:not(:last-child)
+			margin-bottom: 15px
+
+	&__nav-link
+
+	&__soc
+		display: flex
+		flex-direction: column
+		justify-content: center
+		padding-top: 27px
+		padding-bottom: 26px
+		padding-left: 40px
+		width: 19.5%
+		background-color: #232428
+		position: relative
+		z-index: 1
+
+		@media screen and (max-width: $media-lg)
+			width: 12%
+			padding-left: 0
+			align-items: flex-end
+
+		@media screen and (max-width: $media-sm)
+			width: 100%
+			align-items: stretch
+
+		&::before
+			content: ''
+			display: block
+			height: 90%
+			width: 2px
+			background-color: #424242
+			position: absolute
+			top: 0
+			bottom: 0
+			margin-top: auto
+			margin-bottom: auto
+			left: 0
+
+			@media screen and (max-width: $media-sm)
+				height: 2px
+				width: 100%
+				bottom: auto
+				right: 0
+				margin-left: auto
+				margin-right: auto
+
+		&::after
+			content: ''
+			display: block
+			height: 100%
+			width: 3000px
+			background-color: #232428
+			position: absolute
+			top: 0
+			left: 100%
+
+			@media screen and (max-width: $media-sm)
+				left: calc(50% - 1500px)
+				z-index: -1
+
+	&__policy
+		padding-top: 26px
+		padding-bottom: 29px
+		width: 100%
+		font-size: 13px
+		font-weight: 300
+		text-align: justify
+		background-color: #17181c
+
+		@media screen and (max-width: $media-sm)
+			font-size: 12px
+
+	&__policy-text
+		margin-bottom: 21px
+
+	&__policy-link
+		color: #8b8b8b
+
+		@media screen and (max-width: $media-sm)
+			text-align: left
+
+		a
+			color: #8b8b8b
+			text-decoration: underline
+
+
+.nav
+
+	&__wrap
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		border-bottom: 1px solid #1E2F4B
+
+	&__item
+		display: flex
+		flex-direction: row
+
+		&_has-subnav
+			&::after
+				content: ''
+				display: block
+				position: relative
+				top: 7px
+				width: 19px
+				height: 11px
+				margin-left: 14px
+				background: url(../img/icon-subnav-arrow.svg) center no-repeat
+				background-size: contain
+
+	&__item:hover
+		& .nav__subnav
+			display: block
+
+	&__item:not(:last-child)
+		margin-right: 65px
+
+		@media screen and (max-width: $media-xxl)
+			margin-right: 40px
+
+	&__link
+		display: block
+		font-size: 16px
+		padding-bottom: 13px
+		border-bottom: 3px solid transparent
+
+		&:hover
+			border-bottom: 3px solid #3D5F95
+
+	&__subnav
+		display: none
+		position: absolute
+		top: 100%
+		columns: 3
+		column-gap: 30px
+		background-color: rgba(#23252A, .98)
+		box-shadow: 0 5px 13px rgba(#000, .15)
+		border-radius: 3px
+		padding: 26px 10px 26px 46px
+		margin-left: -46px
+
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			bottom: 100%
+			width: 100%
+			height: 40px
+
+	&__subnav-item
+		margin-bottom: 17px
+
+		&:hover
+			& .nav__subnav-link
+				position: relative
+				left: 11px
+				color: #3d5f95
+
+			& .nav__subnav-link
+				&::before
+					content: ''
+					display: block
+					width: 20px
+					height: 10px
+					position: absolute
+					top: 2px
+					left: -34px
+					margin-right: 15px
+					background: url(../img/icon-subnav-item-arrow.svg) center no-repeat
+
+	&__subnav-link
+		white-space: nowrap
+
+.offer
+	position: relative
+	height: 622px
+	background: url(../img/bg-offer.jpg) center bottom no-repeat
+	background-size: cover
+	margin-top: -$header-height
+
+	@media screen and (max-width: $media-lg)
+		height: 496px
+
+	@media screen and (max-width: $media-sm)
+		height: 590px
+		margin-top: -$header-height-sm
+
+	@media screen and (max-width: $media-xs)
+		margin-top: -$header-height-xs
+
+	&__wrap
+		height: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+
+	&__headline
+		margin-bottom: 34px
+
+		@media screen and (max-width: $media-lg)
+			margin-bottom: 24px
+
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 18px
+
+		& span
+			color: #3d5f95
+
+	&__subline
+		text-align: center
+		font-size: 18px
+		max-width: 600px
+		margin-bottom: 60px
+
+		@media screen and (max-width: $media-lg)
+			margin-bottom: 40px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 16px
+			margin-bottom: 30px
+
+	&__buttons
+		display: flex
+		flex-direction: row
+
+		@media screen and (max-width: $media-sm)
+			flex-direction: column
+			align-items: center
+
+		& .btn
+			margin-right: 30px
+
+			@media screen and (max-width: $media-sm)
+				margin-right: 0
+				margin-bottom: 15px
+
+			&:last-child
+				margin-right: 0
+				margin-bottom: 0
+
+.main-services
+	height: 180px
+	display: flex
+	flex-direction: row
+	flex-wrap: wrap
+	box-shadow: 0 0 16px #2F343C
+
+	@media screen and (max-width: $media-lg)
+		max-width: 555px
+		height: auto
+		margin: 0 auto
+		box-shadow: none
+
+	&__item
+		$width: 16.6667%
+		$width-lg: 33.333333%
+		$width-sm: 50%
+		position: relative
+		width: $width
+		background: #101317
+
+		@media screen and (max-width: $media-lg)
+			width: $width-lg
+			height: 180px
+			margin-bottom: 15px
+
+		@media screen and (max-width: $media-sm)
+			width: $width-sm
+			margin-bottom: 15px
+
+		&:first-child
+			border-radius: 5px 0 0 5px
+
+		&:last-child
+			border-radius: 0 5px 5px 0
+
+		&:not(:last-child)
+
+			&::after
+				position: absolute
+				content: ''
+				right: 0
+				top: 0
+				height: 100%
+				width: 1px
+				background: url(../img/main-services-delimeter.svg) center repeat-y
+
+		&:nth-child(3n)
+			@media screen and (max-width: $media-lg)
+				border-radius: 0 5px 5px 0
+
+			&::after
+				@media screen and (max-width: $media-lg)
+					position: absolute
+					content: ''
+					right: 0
+					top: 0
+					height: 100%
+					width: 300%
+					background: transparent
+					border-radius: 5px
+					box-shadow: 0 0 16px #2F343C
+
+				@media screen and (max-width: $media-sm)
+					width: 1px
+					background: url(../img/main-services-delimeter.svg) center repeat-y
+
+		&:nth-child(2n)
+			@media screen and (max-width: $media-sm)
+				border-radius: 0 5px 5px 0
+
+			&::after
+				@media screen and (max-width: $media-sm)
+					position: absolute
+					content: ''
+					right: 0
+					top: 0
+					height: 100%
+					width: 200%
+					background: transparent
+					border-radius: 5px
+					box-shadow: 0 0 16px #2F343C
+
+		&:nth-child(3n + 1)
+			@media screen and (max-width: $media-lg)
+				border-radius: 5px 0 0 5px
+
+			&::after
+				@media screen and (max-width: $media-lg)
+
+		&:nth-child(2n + 1)
+			@media screen and (max-width: $media-sm)
+				border-radius: 5px 0 0 5px
+
+		&:nth-last-child(-n + 3)
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 0
+
+	&__item-wrap
+		width: 100%
+		height: 100%
+		padding: 85px 25px 20px
+		overflow: hidden
+		border-radius: 5px
+		position: relative
+
+		&::before
+			content: ''
+			display: block
+			width: 117px
+			height: 117px
+			position: absolute
+			top: -36px
+			left: calc(50% - 58px)
+			border-radius: 50%
+			background-color: #161a1f
+			background-repeat: no-repeat
+			background-position: center bottom 20px
+
+	@for $i from 1 through 6
+		&__item:nth-child(#{$i}) &__item-wrap::before
+			background-image: url(../img/icon-main-service-#{$i}.svg)
+
+	&__item-content
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 100%
+		font-size: 14px
+		text-align: center
+
+.common-services
+	margin-bottom: 45px
+	position: relative
+
+	&__headline
+		margin-bottom: 50px
+
+		@media screen and (max-width: $media-sm)
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 25px
+			max-width: 226px
+
+	&__services
+		margin-bottom: 60px
+
+		@media screen and (max-width: $media-lg)
+			max-width: 570px
+			margin-right: auto
+			margin-left: auto
+			margin-bottom: 40px
+
+	&__item
+		$padding-left: 113px
+		$padding-left-lg: 90px
+		@include col()
+		@include size(4)
+		@include size-lg(6)
+		@include size-sm(12)
+		@include size-xs(12)
+		padding-left: $padding-left
+		position: relative
+		height: 100px
+		border-radius: 9px
+		background-color: #232428
+		overflow: hidden
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+
+		@media screen and (max-width: $media-lg)
+			height: 82px
+			padding-left: $padding-left-lg
+
+		@media screen and (max-width: $media-sm)
+			width: 255px
+
+		&::before, &::after
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			height: 100%
+			width: 95px
+			z-index: 1
+
+			@media screen and (max-width: $media-lg)
+				width: 78px
+
+		&::after
+			z-index: 0
+			background: linear-gradient(to right, #3D5F95, #1E2F4B)
+
+		&:hover::after
+			width: 100%
+
+		&:hover
+			cursor: pointer
+
+		&:hover::before
+			background-color: #3D5F95
+
+		&:not(:nth-last-child(-n + 4))
+			margin-bottom: 45px
+
+		&:not(:nth-last-child(-n + 2))
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 20px
+
+		&:not(:nth-last-child(-n + 1))
+			@media screen and (max-width: $media-sm)
+				margin-bottom: 20px
+
+		&:nth-child(odd)
+			@media screen and (max-width: $media-lg)
+				padding-right: 15px
+
+			@media screen and (max-width: $media-sm)
+				padding-right: 0
+
+		@for $i from 1 through 6
+			&:nth-child(#{$i})::before
+				background: url(../img/icon-main-service-#{$i}.svg) center no-repeat
+
+	&__item-content
+		display: flex
+		align-items: center
+		padding-right: 22px
+		height: 100%
+		width: 100%
+		position: relative
+		z-index: 2
+
+		@media screen and (max-width: $media-lg)
+			font-size: 14px
+			padding-right: 0
+
+.block-vector
+	padding-top: 70px
+	padding-bottom: 70px
+	position: relative
+
+	@media screen and (max-width: $media-lg)
+		padding-bottom: 50px
+
+	&__headline
+		margin-bottom: 60px
+
+		@media screen and (max-width: $media-sm)
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 25px
+			max-width: 226px
+
+	&__main-services
+		margin-top: -158px
+		margin-bottom: 70px
+		width: 100%
+		z-index: 99
+
+		@media screen and (max-width: $media-lg)
+			margin-bottom: 50px
+
+	&__services
+		margin-bottom: 60px
+
+		@media screen and (max-width: $media-lg)
+			max-width: 570px
+			margin-right: auto
+			margin-left: auto
+			margin-bottom: 40px
+
+	&__item
+		$padding-left: 37px
+		@include col()
+		@include size(3)
+		@include size-lg(6)
+		@include size-sm(12)
+		padding-left: $padding-left
+		position: relative
+		height: 75px
+		overflow: hidden
+
+		@media screen and (max-width: $media-sm)
+			width: 255px
+
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			height: 75px
+			width: 75px
+			border-radius: 50%
+			background-color: #1e2f4b
+			background-position: center
+			background-repeat: no-repeat
+
+		&:hover
+			cursor: pointer
+
+		&:hover::before
+			background-color: #3D5F95
+
+		&:not(:nth-last-child(-n + 4))
+			margin-bottom: 45px
+
+		&:not(:nth-last-child(-n + 2))
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 20px
+
+		&:not(:nth-last-child(-n + 1))
+			@media screen and (max-width: $media-sm)
+				margin-bottom: 20px
+
+		&:nth-child(odd)
+			@media screen and (max-width: $media-lg)
+				padding-right: 15px
+
+			@media screen and (max-width: $media-sm)
+				padding-right: 0
+
+		&:nth-child(even)
+			@media screen and (max-width: $media-lg)
+				padding-left: calc($padding-left + 15px)
+
+			@media screen and (max-width: $media-sm)
+				padding-left: $padding-left
+
+			&::before
+				@media screen and (max-width: $media-lg)
+					left: 15px
+
+				@media screen and (max-width: $media-sm)
+					left: 0
+
+		@for $i from 1 through 8
+			&:nth-child(#{$i})::before
+				background-image: url(../img/icon-service-#{$i}.svg)
+
+	&__item-content
+		display: flex
+		align-items: center
+		padding-left: 60px
+		padding-right: 22px
+		height: 100%
+		width: 100%
+		background-color: #232428
+		border-radius: 5px
+
+	&__buttons
+		text-align: center
+
+.block-why
+	padding-top: 42px
+	padding-bottom: 42px
+	background-color: #232428
+
+	@media screen and (max-width: $media-lg)
+		padding-top: 35px
+		padding-bottom: 40px
+
+	@media screen and (max-width: $media-sm)
+		background-color: transparent
+		padding-top: 0
+		padding-bottom: 50px
+
+	&__wrap
+		@media screen and (max-width: $media-lg)
+			padding-left: 45px
+			padding-right: 45px
+
+		@media screen and (max-width: $media-sm)
+			padding-left: 15px
+			padding-right: 15px
+
+	&__sidebar
+		@include col()
+		@include size(4)
+		@include size-lg(12)
+		@include size-sm(12)
+		@include size-xs(12)
+		padding-right: 65px
+
+		@media screen and (max-width: $media-lg)
+			padding-right: 0
+			margin-bottom: 30px
+
+	&__sidebar-headline
+		text-align: left
+		margin-bottom: 30px
+
+		@media screen and (max-width: $media-sm)
+			text-align: center
+
+	&__list
+		counter-reset: why-list
+		justify-content: center
+
+	&__item
+		@include col()
+		@include size-lg(6)
+		@include size-sm(12)
+		height: 100px
+		counter-increment: why-list
+
+		@media screen and (max-width: $media-sm)
+			width: 285px
+
+		&:nth-child(odd)
+			@media screen and (max-width: $media-lg)
+				padding-right: 30px
+
+			@media screen and (max-width: $media-sm)
+				padding-right: 0
+
+		&:nth-child(even)
+			@media screen and (max-width: $media-lg)
+				padding-left: 15px
+
+			@media screen and (max-width: $media-sm)
+				padding-left: 0
+
+		&:not(:last-child)
+			margin-bottom: 30px
+
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 0
+
+			@media screen and (max-width: $media-sm)
+				margin-bottom: 15px
+
+		&:not(:nth-last-child(-n + 2))
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 30px
+
+	&__item-content
+		position: relative
+		padding-left: 120px
+		padding-right: 30px
+		height: 100%
+		display: flex
+		align-items: center
+		border-radius: 6px
+		background: linear-gradient(to left, #464646 0%, #28292B 100%)
+
+		&::before
+			content: '0'counter(why-list)
+			display: block
+			position: absolute
+			left: 16px
+			top: calc(50% - 46px)
+			font-size: 68px
+			font-weight: 700
+			background: linear-gradient(90deg, #3D5F95 0%, rgba(61, 95, 149, 0.34) 100%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+
+	&__headline
+		color: #3d5f95
+		padding-bottom: 15px
+		margin-bottom: 35px
+		position: relative
+
+		@media screen and (max-width: $media-sm)
+			padding-bottom: 20px
+			margin-bottom: 20px
+
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			margin: 0 auto
+			height: 2px
+			width: 70%
+			background-color: #424242
+
+	&__content
+		@include col()
+		@include size(8)
+		@include size-lg(12)
+		@include size-sm(12)
+		@include size-xs(12)
+		background-color: #292A2B
+		border-radius: 6px
+		padding: 50px 65px
+		text-align: center
+
+		@media screen and (max-width: $media-sm)
+			padding: 30px 30px 35px
+
+	&__content-text
+		margin-bottom: 42px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 14px
+
+		p:not(:last-child)
+			margin-bottom: 20px
+
+.block-benefits
+	padding-top: 70px
+	padding-bottom: 70px
+
+	@media screen and (max-width: $media-sm)
+		padding-top: 0
+
+	&__headline
+		margin-bottom: 70px
+
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 48px
+
+	&__item
+		@include col()
+		@include size(3)
+		@include size-lg(6)
+		@include size-sm(12)
+		text-align: center
+		height: 123px
+		padding: 40px 15px 15px
+		background-color: #232428
+		display: flex
+		align-items: center
+		border-radius: 6px
+		position: relative
+
+		@media screen and (max-width: $media-sm)
+			width: 290px
+
+		&:hover
+			cursor: pointer
+
+		&:not(:nth-last-child(-n + 2))
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 48px
+
+		&:not(:last-child)
+			@media screen and (max-width: $media-sm)
+				margin-bottom: 38px
+
+
+		&::before, &::after
+			content: ''
+			position: absolute
+			display: block
+			
+			background-repeat: no-repeat
+			background-size: contain
+
+		&::before
+			width: 95px
+			height: 95px
+			top: -47px
+			left: calc(50% - 70px)
+			background-position: left
+
+		&::after
+			width: 52px
+			height: 52px
+			top: -22px
+			left: 0
+			right: 0
+			margin: 0 auto
+			background-position: center
+
+		&:hover::before
+			background-image: url(../img/icon-benefit-hover.svg)
+
+		&:nth-child(1)::after
+			width: 58px
+			height: 58px
+
+		@for $i from 1 through 4
+			&:nth-child(#{$i})::after
+				background-image: url(../img/icon-benefit-#{$i}.svg)
+
+			&:nth-child(#{$i}):hover::after
+				background-image: url(../img/icon-benefit-#{$i}-hover.svg)
+
+.page-content
+	@media screen and (max-width: $media-sm)
+		font-size: 14px
+
+	&__content
+		text-align: justify
+
+		& h3
+			text-align: left
+			margin-bottom: 21px
+
+			@media screen and (max-width: $media-sm)
+				font-size: 18px
+
+		& ul
+			list-style-position: outside
+			padding-left: 25px
+
+			& li
+				margin-bottom: 15px
+				padding-left: 5px
+
+		& img
+			margin: 0 0 30px 30px
+			float: right
+
+			@media screen and (max-width: $media-lg)
+				float: none
+				margin-bottom: 30px
+				margin-left: auto
+				margin-right: auto
+
+.block-not-allowed
+	padding-top: 70px
+	padding-bottom: 60px
+
+	@media screen and (max-width: $media-sm)
+		padding-top: 50px
+		padding-bottom: 50px
+
+	&__wrap
+		margin-left: auto
+		margin-right: auto
+
+		@media screen and (max-width: $media-lg)
+			max-width: 570px
+
+		@media screen and (max-width: $media-sm)
+			width: 340px
+
+	&__headline
+		margin-bottom: 40px
+
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 30px
+
+		& span
+			color: #f00
+
+	&__item
+		@include col()
+		@include size(2)
+		@include size-lg(4)
+		@include size-sm(6)
+		@include size-xs(6)
+		text-align: center
+		height: 185px
+		padding: 100px 15px 15px
+		background-color: #101317
+		display: flex
+		align-items: center
+		border-radius: 8px
+		position: relative
+		font-size: 14px
+		box-shadow: 0 0 16px #2f343c
+
+		@media screen and (max-width: $media-sm)
+			font-size: 13px
+
+		&:not(:nth-last-child(-n + 3))
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 48px
+
+		&:not(:nth-last-child(-n + 2))
+			@media screen and (max-width: $media-sm)
+				margin-bottom: 20px
+			
+			@media screen and (max-width: $media-xs)
+				margin-bottom: 10px
+
+		&::after
+			content: ''
+			position: absolute
+			display: block
+			
+			background-repeat: no-repeat
+			background-size: contain
+
+		&::after
+			width: 64px
+			height: 64px
+			top: 23px
+			left: 0
+			right: 0
+			margin: 0 auto
+			background-position: center
+
+		@for $i from 1 through 6
+			&:nth-child(#{$i})::after
+				background-image: url(../img/icon-not-allowed-#{$i}.svg)
+
+.block-any-questions
+	margin-top: 95px
+	margin-bottom: 32px
+
+	@media screen and (max-width: $media-lg)
+		margin-top: 75px
+
+	@media screen and (max-width: $media-sm)
+		margin-top: 40px
+
+	& .container
+		@media screen and (max-width: $media-sm)
+			max-width: 340px
+
+	&__headline
+		@include col()
+		@include shift-left(2)
+		@include shift-lg-left(0)
+		@include size(10)
+		@include size-lg(12)
+		padding-bottom: 20px
+		text-align: left
+
+	&__content
+		background-color: #232428
+
+	&__content-wrap
+		padding-top: 32px
+		padding-bottom: 32px
+		position: relative
+
+		&::before
+			content: ''
+			display: block
+			width: 315px
+			height: 362px
+			position: absolute
+			bottom: -23px
+			left: -180px
+			background-image: url(../img/bg-any-questions.png)
+			background-position: center
+			background-repeat: no-repeat
+
+			@media screen and (max-width: $media-xxl)
+				left: -118px
+
+			@media screen and (max-width: $media-lg)
+				right: -85px
+				left: auto
+
+			@media screen and (max-width: $media-sm)
+				width: 169px
+				height: 173px
+				background-size: contain
+				right: -54px
+				top: -42px
+
+		&::after
+			content: ''
+			display: block
+			width: 477px
+			height: 95px
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			margin-top: auto
+			margin-bottom: auto
+			background-image: url(../img/shpion.svg)
+			background-position: center
+			background-repeat: no-repeat
+			background-size: contain
+
+			@media screen and (max-width: $media-lg)
+				display: none
+
+	&__content-col
+		@include col()
+		@include shift-left(2)
+		@include shift-lg-left(0)
+		@include size(5)
+		@include size-lg(8)
+		@include size-sm(12)
+		@include size-xs(12)
+
+	&__offer
+		padding-right: 65px
+		margin-bottom: 32px
+		font-size: 18px
+
+		@media screen and (max-width: $media-sm)
+			padding-right: 100px
+			margin-bottom: 25px
+			font-size: 16px
+
+.block-address
+	padding-top: 70px
+	padding-bottom: 70px
+
+	&__side
+		@include col()
+		@include size(6)
+		@include size-sm(12)
+		@include size-xs(12)
+
+		@media screen and (max-width: $media-sm)
+			&:not(:last-child)
+				margin-bottom: 25px
+
+	&__content
+		height: 185px
+		padding-top: 15px
+		margin-bottom: -70px
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		z-index: 1
+
+		@media screen and (max-width: $media-lg)
+			height: 168px
+			margin-bottom: -100px
+
+		@media screen and (max-width: $media-sm)
+			padding-left: 30px
+
+		@media screen and (max-width: $media-xs)
+			padding-left: 0
+
+		&::before, &::after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			height: 100%
+			width: 2000px
+			z-index: 0
+
+			@media screen and (max-width: $media-lg)
+				background-size: 100% 300%
+				background-position: left 100%
+
+		&::before
+			background-image: url(../img/bg-map-headline.svg)
+			background-size: contain
+			background-position: right center
+			background-repeat: no-repeat
+			right: 0
+
+		&::after
+			right: 100%
+			background-color: #292a2b
+
+	&__side:last-child &__content
+		text-align: right
+		align-items: flex-end
+
+		@media screen and (max-width: $media-sm)
+			padding-left: 0
+			padding-right: 30px
+
+		@media screen and (max-width: $media-xs)
+			padding-right: 0
+
+		&::before
+			transform: rotate(180deg)
+			right: auto
+			left: 0
+
+		&::after
+			left: 100%
+			background-color: #292a2b
+
+	&__headline
+		position: relative
+		font-size: 36px
+		font-weight: 600
+		color: #3d5f95
+		margin-bottom: 20px
+
+		@media screen and (max-width: $media-lg)
+			font-size: 24px
+			margin-bottom: 15px
+
+	&__text
+		position: relative
+		width: 60%
+
+		@media screen and (max-width: $media-lg)
+			font-size: 14px
+
+		@media screen and (max-width: $media-xs)
+			width: 70%
+
+	&__map
+		height: 395px
+		background-color: #000
+		background-image: url(../img/map.png)
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		filter: invert(95%)
+
+.text-block
+	border-radius: 6px
+	background-color: #212226
+	padding: 25px
+	margin-bottom: 60px
+	text-align: justify
+
+	@media screen and (max-width: $media-sm)
+			font-size: 14px
+
+	& p
+		&:not(:last-child)
+			margin-bottom: 15px
+
+	& ul, & ol
+		list-style-position: outside
+		padding-left: 25px
+
+		& li
+			margin-bottom: 15px
+			padding-left: 5px
+
+.our-clients-short
+	margin-bottom: 45px
+
+	&__headline
+		@media screen and (max-width: $media-xs)
+			padding-left: 30px
+			padding-right: 30px
+
+	&__wrap
+
+	&__list
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		flex-wrap: nowrap
+		font-size: 18px
+
+		@media screen and (max-width: $media-lg)
+			font-size: 16px
+
+		@media screen and (max-width: $media-sm)
+			flex-wrap: wrap
+
+	&__list-item
+		max-width: 380px
+		width: 50%
+		height: 110px
+		background: linear-gradient(280.72deg, #464646 0%, #28292B 100%)
+		border-radius: 6px
+		position: relative
+		overflow: hidden
+
+		@media screen and (max-width: $media-lg)
+			height: 94px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 18px
+			width: 100%
+			height: 110px
+			min-width: 100%
+
+		&:not(:last-child)
+			margin-bottom: 15px
+
+		&:nth-child(odd)
+			margin-right: 10px
+
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			bottom: 0
+			background-size: contain
+			background-repeat: no-repeat
+			background-position: left 0px bottom -2px 
+
+		&:nth-child(1)::before
+			width: 90px
+			height: 90px
+			background-image: url(../img/icon-our-clients-1.svg)
+
+			@media screen and (max-width: $media-lg)
+				width: 70px
+				height: 70px
+			
+			@media screen and (max-width: $media-sm)
+				width: 90px
+				height: 90px
+
+		&:nth-child(2)::before
+			width: 98px
+			height: 94px
+			background-image: url(../img/icon-our-clients-2.svg)
+
+			@media screen and (max-width: $media-lg)
+				width: 73px
+				height: 70px
+
+			@media screen and (max-width: $media-sm)
+				width: 98px
+				height: 94px
+
+	&__link
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		position: relative
+		padding-left: 74px
+		padding-right: 30px
+		text-align: center
+
+		@media screen and (max-width: $media-sm)
+			padding-right: 30px
+			padding-left: 120px
+
+		&:hover::after
+			content: ''
+			display: block
+			position: absolute
+			right: 0
+			bottom: 0
+			height: 100%
+			width: 56px
+			background: url(../img/icon-arrow-white-right.svg) center no-repeat, linear-gradient(91.99deg, #3D5F95 -31.4%, #1E2F4B 129.3%)
+
+			@media screen and (max-width: $media-lg)
+				width: 30px
+				background-size: 35%, 100%
+
+.connect-with-messenger
+	position: relative
+	padding-top: 30px
+	padding-bottom: 30px
+	padding-left: 350px
+	padding-right: 95px
+	margin-top: 87px
+	margin-bottom: 87px
+	background-color: #373940
+	background-image: url(../img/bg-connect-with-messenger.png)
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+	border-radius: 14px
+
+	@media screen and (max-width: $media-lg)
+		padding-left: 30px
+		padding-right: 220px
+
+	@media screen and (max-width: $media-sm)
+		padding-right: 30px
+		margin-bottom: 50px
+		margin-top: 122px
+		text-align: center
+
+	&::before, &::after
+		content: ''
+		display: block
+		position: absolute
+		top: 0
+		bottom: 0
+		margin: auto
+		background-repeat: no-repeat
+		background-size: contain
+
+	&::before
+		width: 180px
+		height: 36px
+		left: -30px
+		background-image: url(../img/shpion.svg)
+		background-position: center
+		transform: rotate(270deg)
+
+		@media screen and (max-width: $media-lg)
+			display: none
+
+	&::after
+		width: 311px
+		height: 348px
+		left: 50px
+		background-image: url(../img/bg-connect-phone.png)
+		background-position: center 14px
+
+		@media screen and (max-width: $media-lg)
+			left: auto
+			right: -49px
+			height: 340px
+
+		@media screen and (max-width: $media-sm)
+			z-index: -1
+			left: 0
+			right: 0
+			top: auto
+			bottom: 100%
+			width: 224px
+			height: 82px
+			background-image: url(../img/bg-connect-phone-sm.png)
+
+	&__headline
+		margin-bottom: 25px
+		text-align: left
+
+		@media screen and (max-width: $media-lg)
+			margin-bottom: 15px
+
+		@media screen and (max-width: $media-sm)
+			text-align: center
+
+	&__text
+		margin-bottom: 25px
+
+		@media screen and (max-width: $media-lg)
+			margin-bottom: 15px
+			font-size: 14px
+
+	&__list
+		padding: 12px 16px
+		border-radius: 11px
+		display: inline-flex
+		flex-wrap: nowrap
+		align-items: center
+		background-color: rgba(#1B1C20, .4)
+
+	&__list-item
+
+	&__link
+		display: block
+		width: 25px
+		height: 25px
+		background-size: contain
+		background-position: center
+		background-repeat: no-repeat
+
+	&__list-item:not(:last-child)
+		margin-right: 25px
+	&__list-item:nth-child(1) &__link
+		width: 28px
+		height: 30px
+		background-image: url(../img/icon-color-viber.svg)
+
+	&__list-item:nth-child(2) &__link
+		width: 26px
+		height: 26px
+		background-image: url(../img/icon-color-whatsapp.svg)
+
+	&__list-item:nth-child(3) &__link
+		width: 24px
+		height: 24px
+		background-image: url(../img/icon-color-telegram.svg)
+
+.benefits-short
+	margin-bottom: 45px
+	position: relative
+
+	&__headline
+		margin-bottom: 50px
+
+		@media screen and (max-width: $media-sm)
+			margin-left: auto
+			margin-right: auto
+			margin-bottom: 38px
+
+	&__list
+		margin-bottom: 60px
+
+		@media screen and (max-width: $media-lg)
+			max-width: 570px
+			margin-right: auto
+			margin-left: auto
+			margin-bottom: 40px
+
+	&__item
+		@include col()
+		@include size(4)
+		@include size-lg(12)
+		@include size-sm(12)
+		@include size-xs(12)
+		position: relative
+		height: 150px
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+
+		@media screen and (max-width: $media-lg)
+			height: 98px
+
+		@media screen and (max-width: $media-sm)
+			height: 164px
+
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			width: 98px
+			height: 98px
+			left: 32px
+			top: -27px
+			background-position: center
+			background-size: contain
+			background-repeat: no-repeat
+
+		@for $i from 1 through 6
+			&:nth-child(#{$i})::after
+				background: url(../img/icon-benefits-short-#{$i}.svg) center no-repeat
+
+			&:not(:last-child)
+				@media screen and (max-width: $media-lg)
+					margin-bottom: 32px
+
+	&__item-content
+		$padding-top: 76px
+		$padding-top-lg: 0
+		padding-top: $padding-top
+		display: flex
+		justify-content: center
+		align-items: center
+		font-size: 18px
+		height: 100%
+		width: 100%
+		position: relative
+		border-radius: 6px
+		overflow: hidden
+		position: relative
+		background-color: #292A2C
+
+		@media screen and (max-width: $media-lg)
+			padding-top: $padding-top-lg
+			padding-left: 182px
+
+		@media screen and (max-width: $media-sm)
+			padding-top: $padding-top
+			padding-left: 0
+
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			top: 0
+			width: 182px
+			height: 87px
+			background-image: url(../img/bg-benefits-short-splash.svg)
+			background-position: left top
+			background-size: contain
+			background-repeat: no-repeat
+
+.qt
+	
+	&__wrap
+		padding-top: 50px
+		padding-bottom: 50px
+		padding-left: 95px
+		background-color: #101317
+		background-image: url(../img/bg-qt.png)
+		background-size: auto
+		background-position: top left
+		border-radius: 14px 0 0 14px
+		position: relative
+
+		@media screen and (max-width: $media-lg)
+			padding-top: 35px
+			padding-bottom: 35px
+			padding-left: 90px
+
+		@media screen and (max-width: $media-sm)
+			padding-left: 15px
+
+		&::before
+			content: ''
+			display: block
+			width: 69px
+			height: 60px
+			position: absolute
+			top: -32px
+			left: 22px
+			background-image: url(../img/icon-qt.svg)
+			background-size: cover
+			background-position: center
+
+			@media screen and (max-width: $media-lg)
+				width: 59px
+				height: 51px
+
+		&::after
+			content: ''
+			display: block
+			width: 2000px
+			height: 100%
+			position: absolute
+			left: 100%
+			top: 0
+			background-color: #101317
+			background-image: url(../img/bg-qt.png)
+			background-size: auto
+			background-position: top left
+
+	&__content
+		max-width: 720px
+
+		@media screen and (max-width: $media-lg)
+			text-align: justify
+			
+		&::after
+			content: ''
+			display: block
+			width: 307px
+			height: 282px
+			position: absolute
+			right: -65px
+			top: 0
+			bottom: 0
+			margin-top: auto
+			margin-bottom: auto
+			background-image: url(../img/logo-face.svg)
+			background-size: contain
+			background-position: center
+			z-index: 1
+
+			@media screen and (max-width: $media-lg)
+				display: none
+
+	&__headline
+		font-size: 18px
+		color: #3d5f95
+		margin-bottom: 37px
+
+		@media screen and (max-width: $media-lg)
+			margin-bottom: 20px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 16px
+
+	&__text
+		@media screen and (max-width: $media-sm)
+			font-size: 14px
+
+
+
+
+
+
+
+//.degub-grid
+	+debug(rgba(0, 0, 0, 0.1), 1px solid rgba(#ff0, .1))
+	top: 0
+
+.social-contacts
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+
+	@media screen and (max-width: $media-sm)
+		flex-direction: row-reverse
+		justify-content: space-between
+
+	&_fixed
+		position: fixed
+		margin-left: 60px
+		height: 100vh
+		z-index: 1
+		justify-content: center
+		align-items: center
+
+		@media screen and (max-width: $media-xxl)
+			margin-left: 30px
+
+		@media screen and (max-width: $media-lg)
+			margin-left: 0
+			margin-right: 20px
+			height: auto
+			flex-direction: row
+			z-index: 101
+			right: 0
+			height: 80px
+
+		@media screen and (max-width: $media-sm)
+			height: 66px
+			flex-direction: row
+
+		@media screen and (max-width: $media-xs)
+			margin-right: 15px
+
+		&::before, &::after
+			content: ''
+			position: relative
+			display: block
+			width: 1px
+			height: 140px
+			background-color: #314454
+
+			@media screen and (max-width: $media-xxl)
+				height: 130px
+
+			@media screen and (max-width: $media-lg)
+				display: none
+
+		&::before
+			top: -45px
+
+		&::after
+			bottom: -45px
+			height: 150px
+
+	&__item
+		display: flex
+		align-items: center
+
+		&:not(:last-child)
+			margin-bottom: 10px
+
+			@media screen and (max-width: $media-sm)
+				margin-bottom: 0
+
+	&_fixed &__item
+		&:not(:last-child)
+			margin-bottom: 20px
+
+			@media screen and (max-width: $media-lg)
+				margin-right: 15px
+				margin-bottom: 0
+
+			@media screen and (max-width: $media-sm)
+				margin-right: 7px
+
+	&__item-icon
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 38px
+		height: 38px
+		border-radius: 9px
+		background: linear-gradient(135deg, #28292B 0%, #464646 100%)
+
+		&:hover
+			background: linear-gradient(to right, rgba(#3D5F95, 1) 0%, rgba(#3D5F95, .34) 100%)
+
+		@media screen and (max-width: $media-sm)
+			width: 34px
+			height: 34px
+
+		&::after
+			content: ''
+			display: block
+			width: 23px
+			height: 23px
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+
+			@media screen and (max-width: $media-lg)
+				background-size: contain
+
+			@media screen and (max-width: $media-sm)
+				width: 20px
+				height: 20px
+
+	&_fixed &__item-icon
+		width: 47px
+		height: 47px
+		border-radius: 15px
+
+		&:hover
+			@media screen and (max-width: $media-lg)
+				background: none
+
+		@media screen and (max-width: $media-lg)
+			background: none
+			width: 23px
+			height: 23px
+
+		&::after
+			width: 28px
+			height: 28px
+
+			@media screen and (max-width: $media-lg)
+				width: 23px
+				height: 23px
+				background-size: contain
+
+	&__item-text
+		margin-left: 25px
+		font-weight: 600
+
+		@media screen and (max-width: $media-lg)
+			display: none
+
+		@media screen and (max-width: $media-sm)
+			margin-left: 15px
+
+		&_visible
+			@media screen and (max-width: $media-sm)
+				display: block
+
+	&__mail::after
+		background-image: url(../img/icon-mail.svg)
+
+	&__whatsapp::after
+		background-image: url(../img/icon-whatsapp.svg)
+
+	&__viber::after
+		background-image: url(../img/icon-viber.svg)
+
+	&__telegram::after
+		background-image: url(../img/icon-telegram.svg)
+
+.to-top
+	position: fixed
+	bottom: 60px
+	right: 30px
+
+	@media screen and (max-width: $media-sm)
+		right: 20px
+		bottom: 40px
+
+	@media screen and (max-width: $media-xs)
+		right: 15px
+		bottom: 30px
