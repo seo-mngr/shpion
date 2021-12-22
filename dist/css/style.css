@@ -1814,6 +1814,7 @@ a {
   border-radius: 9px;
   -webkit-box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
+  margin-bottom: 60px;
 }
 .qt-2__text {
   max-width: 380px;
@@ -2333,6 +2334,7 @@ a {
     margin-bottom: 20px;
   }
   .qt-2 {
+    margin-bottom: 50px;
     background-size: 160%;
     background-position: top 19% right 6%;
   }
@@ -2792,6 +2794,7 @@ a {
     font-size: 14px;
   }
   .qt-2 {
+    margin-bottom: 45px;
     background-size: 200%;
     background-position: top 25% right 10%;
   }
