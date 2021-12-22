@@ -653,12 +653,19 @@
 			left: calc(50% - 58px)
 			border-radius: 50%
 			background-color: #161a1f
-			background-repeat: no-repeat
-			background-position: center bottom 20px
 
-	@for $i from 1 through 6
+	//@for $i from 1 through 6
 		&__item:nth-child(#{$i}) &__item-wrap::before
 			background-image: url(../img/icon-main-service-#{$i}.svg)
+
+	&__item-img
+		display: block
+		position: absolute
+		top: 18px
+		left: 0
+		right: 0
+		margin-left: auto
+		margin-right: auto
 
 	&__item-content
 		display: flex
@@ -1873,6 +1880,65 @@
 		@media screen and (max-width: $media-sm)
 			font-size: 14px
 
+.qt-2
+	height: 240px
+	display: flex
+	align-items: center
+	justify-content: center
+	background: url(../img/bg-qt-2.jpg) center no-repeat
+	background-size: 1059px 705px
+	background-position: right top -107px
+	border-radius: 9px
+	box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+
+	@media screen and (max-width: $media-lg)
+		background-size: 160%
+		background-position: top 19% right 6%
+
+	@media screen and (max-width: $media-sm)
+		background-size: 200%
+		background-position: top 25% right 10%
+
+	&__text
+		max-width: 380px
+		position: relative
+		left: 16%
+		text-align: center
+		font-size: 18px
+		z-index: 0
+
+		@media screen and (max-width: $media-lg)
+			font-size: 16px
+			max-width: 300px
+			left: 10%
+
+		@media screen and (max-width: $media-sm)
+			left: auto
+
+		&::before
+			display: none
+
+		&::after
+			content: ''
+			display: block
+			width: 96px
+			height: 74px
+			background: url(../img/icon-qt-2.svg) center no-repeat
+			background-size: contain
+			position: absolute
+			top: -43px
+			right: -47px
+			z-index: -1
+
+			@media screen and (max-width: $media-lg)
+				width: 74px
+				height: 57px
+				top: -30px
+				right: 0
+
+			@media screen and (max-width: $media-sm)
+				top: -37px
+				right: 15px
 
 
 
