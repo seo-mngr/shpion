@@ -954,38 +954,15 @@ a {
 .block-vector__item:not(:nth-last-child(-n+4)) {
   margin-bottom: 45px;
 }
-.block-vector__item:nth-child(1)::before {
-  background-image: url(../img/icon-service-1.svg);
+.block-vector__item-img {
+  display: block;
+  position: absolute;
+  left: 17px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-
-.block-vector__item:nth-child(2)::before {
-  background-image: url(../img/icon-service-2.svg);
-}
-
-.block-vector__item:nth-child(3)::before {
-  background-image: url(../img/icon-service-3.svg);
-}
-
-.block-vector__item:nth-child(4)::before {
-  background-image: url(../img/icon-service-4.svg);
-}
-
-.block-vector__item:nth-child(5)::before {
-  background-image: url(../img/icon-service-5.svg);
-}
-
-.block-vector__item:nth-child(6)::before {
-  background-image: url(../img/icon-service-6.svg);
-}
-
-.block-vector__item:nth-child(7)::before {
-  background-image: url(../img/icon-service-7.svg);
-}
-
-.block-vector__item:nth-child(8)::before {
-  background-image: url(../img/icon-service-8.svg);
-}
-
 .block-vector__item-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2172,6 +2149,9 @@ a {
   .block-vector__item:nth-child(even)::before {
     left: 15px;
   }
+  .block-vector__item:nth-child(even) .block-vector__item-img {
+    left: 32px;
+  }
   .block-why {
     padding-top: 35px;
     padding-bottom: 40px;
@@ -2622,6 +2602,9 @@ a {
   }
   .block-vector__item:nth-child(even)::before {
     left: 0;
+  }
+  .block-vector__item:nth-child(even) .block-vector__item-img {
+    left: 17px;
   }
   .block-why {
     background-color: transparent;
