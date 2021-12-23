@@ -392,6 +392,10 @@
 	&__item
 		display: flex
 		flex-direction: row
+		border-bottom: 3px solid transparent
+
+		&:hover
+			border-bottom: 3px solid #3D5F95
 
 		&_has-subnav
 			&::after
@@ -419,10 +423,6 @@
 		display: block
 		font-size: 16px
 		padding-bottom: 13px
-		border-bottom: 3px solid transparent
-
-		&:hover
-			border-bottom: 3px solid #3D5F95
 
 	&__subnav
 		display: none
