@@ -1235,26 +1235,13 @@
 			@media screen and (max-width: $media-xs)
 				margin-bottom: 10px
 
-		&::after
-			content: ''
-			position: absolute
-			display: block
-			
-			background-repeat: no-repeat
-			background-size: contain
-
-		&::after
-			width: 64px
-			height: 64px
-			top: 23px
-			left: 0
-			right: 0
-			margin: 0 auto
-			background-position: center
-
-		@for $i from 1 through 6
-			&:nth-child(#{$i})::after
-				background-image: url(../img/icon-not-allowed-#{$i}.svg)
+	&__item-img
+		position: absolute
+		display: block
+		top: 23px
+		left: 0
+		right: 0
+		margin: 0 auto
 
 .block-any-questions
 	margin-top: 95px

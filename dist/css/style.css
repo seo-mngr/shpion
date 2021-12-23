@@ -1245,46 +1245,13 @@ a {
   -webkit-box-shadow: 0 0 16px #2f343c;
           box-shadow: 0 0 16px #2f343c;
 }
-.block-not-allowed__item::after {
-  content: "";
+.block-not-allowed__item-img {
   position: absolute;
   display: block;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.block-not-allowed__item::after {
-  width: 64px;
-  height: 64px;
   top: 23px;
   left: 0;
   right: 0;
   margin: 0 auto;
-  background-position: center;
-}
-
-.block-not-allowed__item:nth-child(1)::after {
-  background-image: url(../img/icon-not-allowed-1.svg);
-}
-
-.block-not-allowed__item:nth-child(2)::after {
-  background-image: url(../img/icon-not-allowed-2.svg);
-}
-
-.block-not-allowed__item:nth-child(3)::after {
-  background-image: url(../img/icon-not-allowed-3.svg);
-}
-
-.block-not-allowed__item:nth-child(4)::after {
-  background-image: url(../img/icon-not-allowed-4.svg);
-}
-
-.block-not-allowed__item:nth-child(5)::after {
-  background-image: url(../img/icon-not-allowed-5.svg);
-}
-
-.block-not-allowed__item:nth-child(6)::after {
-  background-image: url(../img/icon-not-allowed-6.svg);
 }
 
 .block-any-questions {
