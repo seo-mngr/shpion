@@ -6,6 +6,8 @@
 @import "parts/grid"
 @import "parts/globals"
 
+@import "materialize/materialize.scss"
+
 .wrapper
 	display: flex
 	flex-direction: column
@@ -1795,6 +1797,10 @@
 			background-repeat: no-repeat
 
 .qt
+	margin-top: 30px
+
+	@media screen and (max-width: $media-sm)
+		margin-top: 20px
 	
 	&__wrap
 		padding-top: 50px
@@ -1885,6 +1891,7 @@
 			font-size: 14px
 
 .qt-2
+	margin: 60px 0
 	height: 240px
 	display: flex
 	align-items: center
@@ -1894,7 +1901,6 @@
 	background-position: right top -107px
 	border-radius: 9px
 	box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
-	margin-bottom: 60px
 
 	@media screen and (max-width: $media-lg)
 		margin-bottom: 50px
@@ -1946,6 +1952,729 @@
 			@media screen and (max-width: $media-sm)
 				top: -37px
 				right: 15px
+
+.block-facts
+	margin: 60px 0
+
+	@media screen and (max-width: $media-sm)
+		margin: 45px 0
+
+	&__headline
+		margin-bottom: 34px
+
+	&__list
+		counter-reset: block-facts
+
+		@media screen and (max-width: $media-sm)
+			font-size: 14px
+
+	&__item
+		padding: 10px 0
+		position: relative
+		display: flex
+		align-items: center
+		background: #232428
+		border-radius: 6px
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25)
+		counter-increment: block-facts
+
+		@media screen and (max-width: $media-sm)
+			align-items: flex-start
+			border-radius: 0
+			box-shadow: none
+
+		&:not(:last-child)
+			margin-bottom: 20px
+
+		&::before
+			width: 90px
+			flex: none
+			margin-left: 7px
+			margin-right: 43px
+			content: '0'counter(block-facts)
+			display: block
+			line-height: 1em
+			position: relative
+			top: 5px
+			font-size: 68px
+			font-weight: 700
+			text-align: right
+			background: linear-gradient(90deg, #3D5F95 0%, rgba(61, 95, 149, 0.34) 100%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+
+			@media screen and (max-width: $media-sm)
+				width: 65px
+				font-size: 52px
+				text-align: left
+				margin-left: 0
+				margin-right: 12px
+				top: 7px
+
+		&::after
+			@media screen and (max-width: $media-sm)
+				content: ''
+				display: block
+				position: absolute
+				top: 0
+				left: -50%
+				width: 1000px
+				height: 100%
+				background: #232428
+				box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25)
+				z-index: -1
+
+	&__content
+		padding: 10px 20px 10px 0
+
+		@media screen and (max-width: $media-sm)
+			padding: 7px 20px 7px 0
+
+.block-license
+	margin: 60px 0
+
+	&__headline
+
+	&__wrap
+		background: #232428
+		border-radius: 6px
+		padding: 35px 65px
+
+		@media screen and (max-width: $media-lg)
+			padding: 30px
+
+		@media screen and (max-width: $media-sm)
+			padding: 25px 15px
+
+
+	&__content
+		margin-bottom: 40px
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		@media screen and (max-width: $media-lg)
+			flex-direction: column
+			margin-bottom: 30px
+
+	&__text
+		max-width: 410px
+
+		@media screen and (max-width: $media-lg)
+			margin-bottom: 30px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 14px
+			margin-bottom: 25px
+
+	&__link
+
+	&__slider
+		height: 438px
+
+		@media screen and (max-width: $media-lg)
+			height: 335px
+
+	&__slider-item
+		max-width: 316px
+		max-height: 438px
+		border-radius: 3px
+		overflow: hidden
+
+		@media screen and (max-width: $media-lg)
+			max-width: 242px
+			max-height: 335px
+			min-height: 335px !important
+
+		@media screen and (max-width: $media-sm)
+			max-width: 200px
+			max-height: 276px
+			min-height: 276px !important
+
+	&__slider-nav
+		max-width: 316px
+		height: 23px
+		margin: 0 auto 45px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 30px
+
+	&__slider-btn
+		width: 65px
+		height: 100%
+		background: url(../img/icon-licence-carousel-arrow.svg) center no-repeat
+		background-size: contain
+
+		@media screen and (max-width: $media-sm)
+			width: 60px
+
+		&:hover
+			opacity: .3
+			cursor: pointer
+
+		&_prev
+
+		&_next
+			transform: rotate(180deg)
+
+	&__slider-pages
+		color: #8b8b8b
+		font-size: 18px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 16px
+
+.block-steps
+	margin: 60px 0
+
+	&__headline
+		margin-bottom: 40px
+
+		@media screen and (max-width: $media-lg)
+			line-height: 54px
+
+		@media screen and (max-width: $media-sm)
+			line-height: 29px
+			margin-bottom: 0
+
+	&__wrap
+
+	&__list
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		justify-content: space-between
+		counter-reset: block-steps
+		position: relative
+
+		@media screen and (max-width: $media-sm)
+			flex-direction: column
+			justify-content: flex-start
+			align-items: center
+
+		&::after
+			content: ''
+			display: block
+			height: 2px
+			width: 70%
+			position: absolute
+			top: calc(50% - 1px)
+			left: 0
+			right: 0
+			margin: auto
+			background-color: #31383f
+			z-index: -1
+
+			@media screen and (max-width: $media-lg)
+				display: none
+
+	&__item
+		padding: 10px
+		counter-increment: block-steps
+		flex: none
+		width: 214px
+		height: 129px
+		position: relative
+		text-align: center
+		background: url(../img/bg-steps-item-stroke.svg) center no-repeat
+		background-size: 100% 
+
+		@media screen and (max-width: $media-lg)
+			order: unset !important
+
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 0 !important
+			margin-top: 163px
+
+		&:not(:last-child)
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 163px
+
+			@media screen and (max-width: $media-sm)
+				margin-bottom: 0
+
+		&:nth-child(1)
+			order: 1
+			margin-bottom: 187px
+
+		&:nth-child(2)
+			order: 4
+			left: 18%
+
+			@media screen and (max-width: $media-lg)
+				left: auto
+
+		&:nth-child(3)
+			order: 2
+			margin-bottom: 187px
+
+		&:nth-child(4)
+			order: 5
+			right: 18%
+
+			@media screen and (max-width: $media-lg)
+				right: auto
+
+		&:nth-child(5)
+			order: 3
+			margin-bottom: 187px
+
+	&__content
+		padding: 10px
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 100%
+		border-radius: 5px
+		background: linear-gradient(280.72deg, #464646 0%, #28292B 100%)
+
+	&__item-text
+
+	&__count-wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		left: 0
+		right: 0
+		margin: auto
+		width: 90px
+		height: 89px
+		border-radius: 50%
+		border: 2px solid #31383F
+		background-color: #1b1c20
+
+		&::before, &::after
+			position: absolute
+			content: ''
+			display: block
+			left: 0
+			right: 0
+			margin: auto
+			background-color: #31383f
+
+		&::before
+			width: 2px
+			height: 27px
+
+		&::after
+			width: 8px
+			height: 8px
+			border-radius: 50%
+
+	&__item:nth-child(1) &__count-wrap
+		bottom: -140px
+
+		@media screen and (max-width: $media-sm)
+			bottom: auto
+			top: -140px
+
+		&::before
+			bottom: 100%
+
+			@media screen and (max-width: $media-sm)
+				bottom: auto
+				top: 100%
+
+		&::after
+			bottom: calc(100% + 27px)
+
+			@media screen and (max-width: $media-sm)
+				bottom: auto
+				top: calc(100% + 27px)
+
+	&__item:nth-child(2) &__count-wrap
+		top: -140px
+
+		@media screen and (max-width: $media-lg)
+			top: auto
+			bottom: -140px
+
+		@media screen and (max-width: $media-sm)
+			bottom: auto
+			top: -140px
+
+		&::before
+			top: 100%
+
+			@media screen and (max-width: $media-lg)
+				top: auto
+				bottom: 100%
+
+			@media screen and (max-width: $media-sm)
+				bottom: auto
+				top: 100%
+
+		&::after
+			top: calc(100% + 27px)
+
+			@media screen and (max-width: $media-lg)
+				top: auto
+				bottom: calc(100% + 27px)
+
+			@media screen and (max-width: $media-sm)
+				bottom: auto
+				top: calc(100% + 27px)
+
+	&__item:nth-child(3) &__count-wrap
+		bottom: -140px
+
+		@media screen and (max-width: $media-sm)
+			bottom: auto
+			top: -140px
+
+		&::before
+			bottom: 100%
+
+			@media screen and (max-width: $media-sm)
+				bottom: auto
+				top: 100%
+
+		&::after
+			bottom: calc(100% + 27px)
+
+			@media screen and (max-width: $media-sm)
+				bottom: auto
+				top: calc(100% + 27px)
+
+	&__item:nth-child(4) &__count-wrap
+		top: -140px
+
+		@media screen and (max-width: $media-lg)
+			top: auto
+			bottom: -140px
+
+		@media screen and (max-width: $media-sm)
+			bottom: auto
+			top: -140px
+
+		&::before
+			top: 100%
+
+			@media screen and (max-width: $media-lg)
+				top: auto
+				bottom: 100%
+
+			@media screen and (max-width: $media-sm)
+				bottom: auto
+				top: 100%
+
+		&::after
+			top: calc(100% + 27px)
+
+			@media screen and (max-width: $media-lg)
+				top: auto
+				bottom: calc(100% + 27px)
+
+			@media screen and (max-width: $media-sm)
+				bottom: auto
+				top: calc(100% + 27px)
+
+	&__item:nth-child(5) &__count-wrap
+		bottom: -140px
+
+		@media screen and (max-width: $media-sm)
+			bottom: auto
+			top: -140px
+
+		&::before
+			bottom: 100%
+
+			@media screen and (max-width: $media-sm)
+				bottom: auto
+				top: 100%
+
+		&::after
+			bottom: calc(100% + 27px)
+
+			@media screen and (max-width: $media-sm)
+				bottom: auto
+				top: calc(100% + 27px)
+
+	&__count-text
+		&::before
+			display: block
+			position: relative
+			top: 4px
+			content: '0'counter(block-steps)
+			background: linear-gradient(90deg, #3D5F95 0%, rgba(61, 95, 149, 0.34) 100%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			font-size: 47px
+			font-weight: 700
+			text-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+
+.block-press
+	margin: 60px 0
+
+	&__headline
+
+	&__list
+
+	&__item
+		margin-bottom: 40px
+		@include col()
+		@include size(4)
+		@include size-lg(6)
+		@include size-sm(12)
+		@include size-xs(12)
+		background-color: #212226
+		border-radius: 6px
+
+		@media screen and (max-width: $media-lg)
+			margin-bottom: 20px
+
+	&__item-logo
+		padding: 0 25px
+		position: relative
+		height: 132px
+		display: flex
+		justify-content: center
+		align-items: center
+
+		@media screen and (max-width: $media-lg)
+			height: 110px
+			padding: 0 20px
+
+		@media screen and (max-width: $media-sm)
+			padding: 0 25px
+			height: 132px
+
+		&::after
+			display: block
+			content: ''
+			position: absolute
+			bottom: 0
+			height: 1px
+			width: 100%
+			background: url(../img/bg-press-delimeter.svg) center repeat-x
+
+
+	&__item-img
+
+	&__item-content
+		padding: 30px 25px
+
+		@media screen and (max-width: $media-lg)
+			padding: 20px
+			font-size: 14px
+
+		@media screen and (max-width: $media-sm)
+			padding: 30px 25px
+			font-size: 16px
+
+	&__item-date
+		margin-bottom: 17px
+		display: block
+		color: #3d5f95
+
+	&__item-text
+		margin-bottom: 18px
+		min-height: 66px
+		display: flex
+		align-items: center
+
+	&__item-link
+		color: #3d5f95
+
+	&__buttons
+		text-align: center
+
+		@media screen and (max-width: $media-lg)
+			margin-top: 20px
+
+.block-benefits-2
+	margin: 60px 0 85px
+
+	&__headline
+		margin-bottom: 50px
+
+		@media screen and (max-width: $media-xs)
+			padding-left: 30px
+			padding-right: 30px
+
+	&__wrap
+
+	&__list
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		flex-wrap: wrap
+
+		@media screen and (max-width: $media-lg)
+			
+
+		@media screen and (max-width: $media-sm)
+			font-size: 14px
+
+	&__list-item
+		max-width: 380px
+		width: 50%
+		height: 70px
+		background: linear-gradient(280.72deg, #464646 0%, #28292B 100%)
+		border-radius: 6px
+		position: relative
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+
+		@media screen and (max-width: $media-lg)
+			width: 100%
+			max-width: 100%
+
+		@media screen and (max-width: $media-sm)
+			font-size: 14px
+
+		&:not(:last-child)
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 45px
+
+		&:not(:nth-last-child(-n + 2))
+			margin-bottom: 56px
+
+	&__item-icon
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		left: 30px
+		top: 0
+		bottom: 0
+		margin: auto
+		width: 95px
+		height: 95px
+		border-radius: 14px
+		background: linear-gradient(280.72deg, #464646 0%, #28292B 100%)
+		box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25)
+
+	&__list-item:nth-child(1) &__item-icon &__item-img
+		position: relative
+		top: 10px
+
+	&__text
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		position: relative
+		padding-left: 160px
+		padding-right: 30px
+
+		@media screen and (max-width: $media-lg)
+			justify-content: center
+
+		@media screen and (max-width: $media-sm)
+			padding-right: 30px
+			padding-left: 155px
+			justify-content: flex-start
+
+.block-performance
+	margin: 60px 0
+
+	&__headline
+
+	&__list
+		display: flex
+		flex-direction: row
+		flex-wrap: nowrap
+		justify-content: space-between
+
+		@media screen and (max-width: $media-lg)
+			flex-wrap: wrap
+
+	&__item
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		align-items: center
+		padding: 25px 0
+		height: 180px
+		background: #232428
+		border-radius: 9px
+		width: 100%
+
+		@media screen and (max-width: $media-lg)
+			padding: 20px 0
+			height: 155px
+
+		&:not(:last-child)
+			margin-right: 20px
+
+			@media screen and (max-width: $media-lg)
+				margin-right: 0
+				margin-bottom: 16px
+
+		&:nth-child(1)
+			max-width: 185px
+
+			@media screen and (max-width: $media-lg)
+				max-width: 159px
+
+			@media screen and (max-width: $media-sm)
+				max-width: 100%
+
+		&:nth-child(2)
+			max-width: 315px
+
+			@media screen and (max-width: $media-lg)
+				max-width: 271px
+
+			@media screen and (max-width: $media-sm)
+				max-width: 100%
+
+		&:nth-child(3)
+			max-width: 285px
+
+			@media screen and (max-width: $media-lg)
+				max-width: 245px
+
+			@media screen and (max-width: $media-sm)
+				max-width: 100%
+
+	&__num
+		font-size: 96px
+		line-height: 1em
+		font-weight: 700
+		background: linear-gradient(90deg, #3D5F95 0%, rgba(61, 95, 149, 0.34) 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		text-shadow: 0px 4.32692px 11.25px rgba(0, 0, 0, 0.15)
+
+		@media screen and (max-width: $media-lg)
+			font-size: 84px
+
+	&__item:nth-child(3) &__num
+		position: relative
+		padding-left: 40px
+
+	&__num-more
+		position: absolute
+		left: -20px
+		top: 30px
+		flex: none
+		display: inline-block
+		line-height: 1em
+		font-size: 24px
+		text-transform: uppercase
+		transform: rotate(270deg)
+		background: linear-gradient(90deg, #3D5F95 0%, rgba(61, 95, 149, 0.34) 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		text-shadow: 0px 4.32692px 11.25px rgba(0, 0, 0, 0.15)
+
+		@media screen and (max-width: $media-lg)
+			font-size: 21px
+			left: -15px
+			top: 26px
+
+	&__text
+		font-size: 18px
+
+		@media screen and (max-width: $media-lg)
+			font-size: 16px
+
 
 
 

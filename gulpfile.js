@@ -30,7 +30,7 @@ let path = {
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
     scss: source_folder + "/scss/style.{sass,scss}",
     scss_parts: source_folder + "/scss/parts/",
-    js: source_folder + "/js/scripts.js",
+    js: source_folder + "/js/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.{ttf,woff,woff2,otf,svg}",
   },
