@@ -5,14 +5,20 @@
 $(document).ready(function() {
   
 	/* непрозрачный хедер при скролле страницы */
-  var header = document.querySelector(".header"),
-      start_point = 0;
-  
-  if (header) {
-    window.addEventListener("scroll", function() {
-      var cur_scroll_position = window.pageYOffset || document.documentElement.scrollTop;
-      start_point < cur_scroll_position ? header.classList.add("header_fill") : header.classList.remove("header_fill")
-    }, false)
+	{
+	  let header = document.querySelector(".header"),
+	      start_point = 0;
+	  
+	  function fillHeader() {
+			var cur_scroll_position = window.pageYOffset || document.documentElement.scrollTop;
+			start_point < cur_scroll_position ? header.classList.add("header_fill") : header.classList.remove("header_fill")
+	  }
+	  if (header) {
+	    window.addEventListener("scroll", fillHeader, false)
+	  }
+
+	  // Запускаем при обновлении страницы
+	  fillHeader();
   }
   /* END непрозрачный хедер при скролле страницы */
   
