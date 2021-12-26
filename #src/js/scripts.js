@@ -1,3 +1,7 @@
+@@include('materialize.min.js')
+@@include('wow.min.js')
+
+
 $(document).ready(function() {
   
 	/* непрозрачный хедер при скролле страницы */
