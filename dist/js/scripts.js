@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  
+	/* непрозрачный хедер при скролле страницы */
   var header = document.querySelector(".header"),
       start_point = 0;
   
@@ -8,48 +10,53 @@ $(document).ready(function() {
       start_point < cur_scroll_position ? header.classList.add("header_fill") : header.classList.remove("header_fill")
     }, false)
   }
-
+  /* END непрозрачный хедер при скролле страницы */
   
+  /* карусель с лицензиями на старинце «О нас» */
+  var $carousel = $('.carousel');
 
-  var carousel_param = {};
-  if ($(window).width() <= 992 && $(window).width() > 576) {
-  	carousel_param = {
-  		numVisible: 3,
-	  	dist: -55,
-	  	shift: -125,
-	  	onCycleTo: carouselOnCycleTo,
-  	};
-  } else if ($(window).width() <= 576) {
-  	carousel_param = {
-  		numVisible: 3,
-	  	dist: -55,
-	  	shift: -143,
-	  	onCycleTo: carouselOnCycleTo,
-  	};
-  } else {
-  	carousel_param = {
-  		numVisible: 3,
-	  	dist: -55,
-	  	shift: -50,
-	  	onCycleTo: carouselOnCycleTo,
-  	};
-  }
+  if ($carousel.length) {
+	  var carousel_param = {};
+	  if ($(window).width() <= 992 && $(window).width() > 576) {
+	  	carousel_param = {
+	  		numVisible: 3,
+		  	dist: -55,
+		  	shift: -125,
+		  	onCycleTo: carouselOnCycleTo,
+	  	};
+	  } else if ($(window).width() <= 576) {
+	  	carousel_param = {
+	  		numVisible: 3,
+		  	dist: -55,
+		  	shift: -143,
+		  	onCycleTo: carouselOnCycleTo,
+	  	};
+	  } else {
+	  	carousel_param = {
+	  		numVisible: 3,
+		  	dist: -55,
+		  	shift: -50,
+		  	onCycleTo: carouselOnCycleTo,
+	  	};
+	  }
 
-  var carousel = $('.carousel').carousel(carousel_param);
+	  $carousel.carousel(carousel_param);
 
-  function carouselOnCycleTo(elem) {
-  	let current_slide_num = $(elem).index() + 1;
-  			slides_total = this.count;
-  	$('.block-license__slider-pages').text('0'+current_slide_num+'/0'+slides_total);
-  }
+	  function carouselOnCycleTo(elem) {
+	  	let current_slide_num = $(elem).index() + 1;
+	  			slides_total = this.count;
+	  	$('.block-license__slider-pages').text('0'+current_slide_num+'/0'+slides_total);
+	  }
 
-  $('.block-license__slider-nav').on('click', function(event) {
-  	if ($(event.target).hasClass('block-license__slider-btn_prev')) {
-  		carousel.carousel('prev');
-  	} else {
-  		carousel.carousel('next');
-  	}
-  });
+	  $('.block-license__slider-nav').on('click', function(event) {
+	  	if ($(event.target).hasClass('block-license__slider-btn_prev')) {
+	  		$carousel.carousel('prev');
+	  	} else {
+	  		$carousel.carousel('next');
+	  	}
+	  });
+	}
+  /* END карусель с лицензиями на старинце «О нас» */
 
   /* кнопка прокрутки к верху страницы */
   $(window).scroll(function(){
@@ -65,5 +72,6 @@ $(document).ready(function() {
 		return false;
   });
   /* END кнопка прокрутки к верху страницы */
+
 
 });
