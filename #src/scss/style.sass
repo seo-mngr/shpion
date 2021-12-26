@@ -1501,7 +1501,7 @@
 				width: 100%
 				margin-bottom: 20px
 
-	h2
+	& h2
 		margin-top: 40px
 		margin-bottom: 18px
 
@@ -1516,6 +1516,10 @@
 		& li
 			margin-bottom: 15px
 			padding-left: 5px
+
+	& a
+		color: #3D5F95
+		text-decoration: underline
 
 .our-clients-short
 	margin-bottom: 45px
@@ -2910,8 +2914,111 @@
 		@media screen and (max-width: $media-sm)
 			display: none
 
+.services-list
+	margin-bottom: 60px
 
+	&__headline
+		margin-bottom: 70px
 
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 48px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+
+	&__item
+		padding-top: 94px
+		width: calc(20% - 8px)
+		margin-right: 10px
+
+		&:nth-child(5n)
+			margin-right: 0
+
+		@media screen and (max-width: $media-lg)
+			width: calc(33.333333% - 16px)
+			margin-right: 24px
+
+			&:nth-child(5n)
+				margin-right: 24px
+
+			&:nth-child(3n)
+				margin-right: 0
+
+		@media screen and (max-width: $media-sm)
+			width: calc(50% - 7px)
+			margin-right: 14px
+			padding-top: 68px
+
+			&:nth-child(5n)
+				margin-right: 14px
+
+			&:nth-child(3n)
+				margin-right: 14px
+
+			&:nth-child(2n)
+				margin-right: 0
+
+		&:last-child
+			margin-right: 0
+	
+	&__item-wrap
+		text-align: center
+		height: 102px
+		padding: 31px 27px 15px
+		background-color: #232428
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 6px
+		position: relative
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+
+		&:hover
+			cursor: pointer
+			color: #3D5F95
+
+		@media screen and (max-width: $media-sm)
+			height: 75px
+			padding: 20px 7px 15px
+
+	&__item-icon
+		width: 117px
+		height: 117px
+		position: absolute
+		left: 0
+		right: 0
+		margin: auto
+		top: -80px
+		display: flex
+		justify-content: center
+		align-items: center
+		background: url(../img/bg-services-list-item.svg) center no-repeat
+
+		@media screen and (max-width: $media-sm)
+			top: -50px
+			width: 75px
+			height: 75px
+			background-size: contain
+
+	&__item-wrap:hover &__item-icon
+		background: url(../img/bg-services-list-item-hover.svg) center no-repeat
+
+		@media screen and (max-width: $media-sm)
+			background-size: contain
+
+	&__item-img
+		position: relative
+		top: -3px
+		left: 1px
+
+		@media screen and (max-width: $media-sm)
+			width: 40%
+
+	&__item-text
+		@media screen and (max-width: $media-sm)
+			font-size: 14px
 
 
 
