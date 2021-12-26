@@ -50,4 +50,20 @@ $(document).ready(function() {
   		carousel.carousel('next');
   	}
   });
+
+  /* кнопка прокрутки к верху страницы */
+  $(window).scroll(function(){
+		if ($(this).scrollTop() > 100) {
+			$('.to-top').fadeIn();
+		} else {
+			$('.to-top').fadeOut();
+		}
+	});
+      
+  $('.to-top').click(function(){
+		$("html, body").animate({ scrollTop: 0 }, 600);
+		return false;
+  });
+  /* END кнопка прокрутки к верху страницы */
+
 });
