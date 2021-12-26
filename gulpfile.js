@@ -9,6 +9,8 @@ let { src, dest }         = require('gulp'),
   sortMediaQueries        = require('postcss-sort-media-queries'),
   rename                  = require('gulp-rename'),
   cssnano                 = require('cssnano'),
+  plumber                 = require('gulp-plumber'),
+  uglify                  = require('gulp-uglify'),
   //imagemin                = require('gulp-imagemin'),
   smartGrid               = require('smart-grid'),
   pathModule              = require('path');
@@ -30,7 +32,7 @@ let path = {
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
     scss: source_folder + "/scss/style.{sass,scss}",
     scss_parts: source_folder + "/scss/parts/",
-    js: source_folder + "/js/*.js",
+    js: source_folder + "/js/scripts.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.{ttf,woff,woff2,otf,svg}",
   },
@@ -115,6 +117,9 @@ function css() {
 
 function js() {
   return src(path.src.js)
+    .pipe(plumber())
+    .pipe(fileInclude())
+    .pipe(uglify())
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream())
 }
