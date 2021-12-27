@@ -1,5 +1,6 @@
-@@include('materialize.min.js')
-@@include('wow.min.js')
+@@include('modules/materialize/materialize.min.js')
+@@include('modules/wow/wow.min.js')
+@@include('modules/slick/slick.js')
 
 
 $(document).ready(function() {
