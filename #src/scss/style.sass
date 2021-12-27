@@ -6,6 +6,7 @@
 @import "parts/grid"
 @import "parts/globals"
 
+@import "modules/fancybox/jquery.fancybox.scss"
 @import "modules/materialize/materialize.scss"
 @import "modules/slick/slick.scss"
 
@@ -2184,6 +2185,289 @@
 		@media screen and (max-width: $media-sm)
 			font-size: 16px
 
+.block-license2
+	display: flow-root
+	margin-bottom: 70px
+
+	@media screen and (max-width: $media-lg)
+		margin-bottom: 60px
+
+	@media screen and (max-width: $media-sm)
+		margin-bottom: 50px
+
+	&_align_left
+
+	&__wrap
+		margin: 72px 0
+		background: #232428
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		border-radius: 9px
+		position: relative
+		display: flex
+		flex-direction: row
+
+		@media screen and (max-width: $media-lg)
+			margin: 36px 0
+
+		@media screen and (max-width: $media-sm)
+			margin: 0
+			flex-direction: column
+
+	&_align_left &__wrap
+		justify-content: flex-end
+
+	&__side
+		max-width: 570px
+
+		@media screen and (max-width: $media-lg)
+			max-width: 350px
+
+		@media screen and (max-width: $media-sm)
+			width: 100%
+			max-width: 100%
+
+	&__content
+		padding: 40px 0 40px 65px
+
+		@media screen and (max-width: $media-lg)
+			padding: 30px 0 30px 30px
+
+		@media screen and (max-width: $media-sm)
+			padding: 26px 15px
+
+	&_align_left &__content
+		padding-right: 40px
+
+		@media screen and (max-width: $media-lg)
+			padding-right: 20px
+
+		@media screen and (max-width: $media-sm)
+			padding-right: 15px
+
+	&__headline
+		text-align: left
+		margin-bottom: 20px
+		color: #3d5f95
+		line-height: 120%
+
+		@media screen and (max-width: $media-lg)
+			font-size: 24px
+
+	&__text
+		font-size: 18px
+
+		@media screen and (max-width: $media-lg)
+			font-size: 16px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 14px
+
+	&__slider-nav
+		padding: 28px 81px
+		background: #2A2B31
+		border-radius: 0px 14px 0px 0px
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		@media screen and (max-width: $media-lg)
+			padding: 28px 35px
+
+		@media screen and (max-width: $media-sm)
+			padding: 20px 15px
+			border-radius: 0px
+
+	&_align_left &__slider-nav
+		border-radius: 14px 0px 0px 0px
+
+		@media screen and (max-width: $media-sm)
+			border-radius: 0px
+
+	&__slider-btn
+		width: 65px
+		height: 15px
+		background: url(../img/icon-licence-carousel-arrow.svg) center no-repeat
+		background-size: contain
+
+		@media screen and (max-width: $media-sm)
+			width: 60px
+
+		&:hover
+			opacity: .3
+			cursor: pointer
+
+		&_prev
+
+		&_next
+			transform: rotate(180deg)
+
+	&__slider-pages
+		color: #8b8b8b
+		font-size: 18px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 16px
+
+	&__slider-wrap
+		@media screen and (max-width: $media-sm)
+			padding: 30px 15px 25px
+
+	&_align_left &__slider-wrap
+		@media screen and (max-width: $media-sm)
+			order: 1
+
+	&__slider
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 148px
+		margin: auto
+		height: 444px
+		width: 320px
+
+		@media screen and (max-width: $media-lg)
+			height: 344px
+			width: 250px
+			right: 70px
+		
+		@media screen and (max-width: $media-sm)
+			position: relative
+			top: auto
+			left: auto
+			right: 40px
+			bottom: auto
+			height: 236px
+			width: 172px
+
+		@media screen and (max-width: $media-xs)
+			right: auto
+			left: 0
+			margin-left: 0
+
+	&_align_left &__slider
+		right: auto
+		left: 148px
+
+		@media screen and (max-width: $media-lg)
+			left: 70px
+
+		@media screen and (max-width: $media-sm)
+			left: auto
+			right: 40px
+
+		@media screen and (max-width: $media-xs)
+			right: auto
+			left: 0
+			margin-left: 0
+
+	&__slider .slick-list
+		overflow: visible
+
+	&__slider .slick-slide
+		opacity: 1!important
+		z-index: 1!important
+		transform: scale(.9) translateX(110px)
+		transition: transform .5s!important
+		transition: transform .5s,-webkit-transform .5s!important
+
+		@media screen and (max-width: $media-lg)
+			transform: scale(.9) translateX(66px)
+
+		@media screen and (max-width: $media-sm)
+			transform: scale(.9) translateX(102px)
+
+	&_align_left &__slider .slick-slide
+		transform: scale(.9) translateX(-110px)
+
+		@media screen and (max-width: $media-lg)
+			transform: scale(.9) translateX(-66px)
+
+		@media screen and (max-width: $media-sm)
+			transform: scale(.9) translateX(102px)
+
+	&__slider .slick-slide.slick-current
+		position: relative
+		z-index: 2!important
+		transform: scale(1)!important
+
+	&__slider .slick-slide &__slider-item
+		cursor: -webkit-zoom-in
+		cursor: zoom-in
+		pointer-events: auto
+		position: relative
+		position: relative
+		width: 100%
+		position: relative
+		filter: blur(1px)
+		filter: brightness(50%)
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+
+	&__slider .slick-slide.slick-current &__slider-item
+		filter: blur(0)
+
+	&__slider .slick-slide &__slider-item
+		
+		& img  
+			width: 100%
+			height: 100%
+			object-fit: cover
+			border-radius: 0
+
+		&:before 
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background: rgba(3, 3, 3, 0.34)
+			z-index: 2
+			pointer-events: none
+			opacity: 0
+			transition: opacity .3s linear
+
+		&:hover:before
+			opacity: 1
+
+		&:after
+			content: ""
+			color: #fff
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			margin: auto
+			width: 50px
+			height: 52px
+			background-image: url(../img/icon-licence-carousel-magnifier.svg)
+			background-repeat: no-repeat
+			background-position: center
+			transform: scale(0)
+			transition: transform .3s linear
+			transition: transform .3s linear,-webkit-transform .3s linear
+			z-index: 3
+			pointer-events: none
+
+		&:hover:after
+			transform: scale(1)
+
+	&__slider-item
+		display: block
+		max-width: 320px
+		max-height: 444px
+		border-radius: 3px
+		overflow: hidden
+
+		@media screen and (max-width: $media-lg)
+			height: 344px
+			max-width: 250px
+
+		@media screen and (max-width: $media-sm)
+			height: 236px
+			max-width: 172px
+
+
 .block-steps
 	margin: 60px 0
 
@@ -3024,6 +3308,10 @@
 	&__item-text
 		@media screen and (max-width: $media-sm)
 			font-size: 14px
+
+
+
+
 
 
 

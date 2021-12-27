@@ -1,3 +1,4 @@
+@@include('modules/fancybox/jquery.fancybox.min.js')
 @@include('modules/materialize/materialize.min.js')
 @@include('modules/wow/wow.min.js')
 @@include('modules/slick/slick.js')
@@ -84,5 +85,32 @@ $(document).ready(function() {
   });
   /* END кнопка прокрутки к верху страницы */
 
+	/* слайдер на странице Лицензии */
+	$(function() {  
+		$('.block-license2__slider-pages-total').each(function(index, el) {
+			var _col = $(this).closest('.block-license2__wrap').find('.block-license2__slider-item');
+			$(this).text('0'+_col.length);
+		});
+		$('.block-license2__slider-btn').click(function(event) {
+			var _section = $(this).closest('.block-license2__wrap');
+			var _parent = _section.find('.block-license2__slider');
+			var _current = 0;
+			if ($(this).hasClass('block-license2__slider-btn_prev')) {
+				_parent.slick('slickPrev');
+				_current = _parent.slick('slickCurrentSlide');
+			}
+			if ($(this).hasClass('block-license2__slider-btn_next')) {
+				_parent.slick('slickNext');
+				_current = _parent.slick('slickCurrentSlide');
+			}
+			_section.find('.block-license2__slider-pages-current').text('0'+(_current+1));
+		});
+		$('.block-license2__slider').slick({
+			fade: true,
+			arrows: false,
+			lazyLoad: 'ondemand',
+		});
+	});
+	/* END слайдер на странице Лицензии */
 
 });
