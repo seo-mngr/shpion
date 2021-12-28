@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Shpion</title>
+</head>
+<body>
+  <div class="wrapper">
+  	@@include('view_parts/_header.html')
+  	<main class="main">
+  		<div class="breadcrumbs">
+  			<div class="container">
+  				<div class="breadcrumbs__wrap">
+  					<ul class="breadcrumbs__list">
+	  					<li class="breadcrumbs__list-item">
+	  						<a href="/" class="breadcrumbs__link">Главная</a>
+	  					</li>
+	  					<li class="breadcrumbs__list-item">Контакты</li>
+	  				</ul>
+  				</div>
+  			</div>
+  		</div>
+
+  		<!-- .side-wrapper -->
+  		<div class="side-wrapper">
+	  		<h1 class="headline">Контакты</h1>
+
+	  		<section class="block-contacts">
+	  			<div class="container">
+	  				<div class="row row_lg_wide">
+	  					<div class="block-contacts__side">
+	  						<ul class="contacts-list">
+	  							<li class="contacts-list__item">
+	  								<div class="contacts-list__item-icon-box">
+	  									<img src="img/icon-clock.svg" alt="" class="contacts-list__item-icon-img">
+	  								</div>
+	  								<div class="contacts-list__item-content">
+	  									<div class="contacts-list__item-heading">Время работы</div>
+	  									<div class="contacts-list__item-box">
+	  										<div class="contacts-list__item-interactive">Пн - Вс с 09:00 до 23:00</div>
+	  										<div class="contacts-list__item-text">Заказы через сайт принимаются круглосуточно</div>
+	  									</div>
+	  								</div>
+	  							</li>
+	  							<li class="contacts-list__item">
+	  								<div class="contacts-list__item-icon-box">
+	  									<img src="img/icon-phone.svg" alt="" class="contacts-list__item-icon-img">
+	  								</div>
+	  								<div class="contacts-list__item-content">
+	  									<div class="contacts-list__item-heading">Телефон</div>
+	  									<div class="contacts-list__item-box">
+	  										<a href="tel:+79266965858" class="contacts-list__item-interactive">+7 926 696 58 58</a>
+	  										<div class="contacts-list__item-text">Для связи в мессенджерах WhatsApp, Viber, Telegram</div>
+	  									</div>
+	  								</div>
+	  							</li>
+	  							<li class="contacts-list__item">
+	  								<div class="contacts-list__item-icon-box">
+	  									<img src="img/icon-mail.svg" alt="" class="contacts-list__item-icon-img">
+	  								</div>
+	  								<div class="contacts-list__item-content">
+	  									<div class="contacts-list__item-heading">E-mail</div>
+	  									<div class="contacts-list__item-box">
+	  										<a href="mailto:info@spion.su" class="contacts-list__item-interactive">info@spion.su</a>
+	  									</div>
+	  								</div>
+	  							</li>
+	  						</ul>
+	  					</div>
+	  					<div class="block-contacts__side">
+	  						<ul class="contacts-list">
+	  							<li class="contacts-list__item">
+	  								<div class="contacts-list__item-icon-box">
+	  									<img src="img/icon-telegram.svg" alt="" class="contacts-list__item-icon-img">
+	  								</div>
+	  								<div class="contacts-list__item-content">
+	  									<div class="contacts-list__item-heading">Telegram</div>
+	  									<div class="contacts-list__item-box">
+	  										<a href="https://t.me/shpion_su" class="contacts-list__item-interactive">t.me/shpion_su</a>
+	  									</div>
+	  								</div>
+	  							</li>
+	  							<li class="contacts-list__item">
+	  								<div class="contacts-list__item-icon-box">
+	  									<img src="img/icon-viber.svg" alt="" class="contacts-list__item-icon-img">
+	  								</div>
+	  								<div class="contacts-list__item-content">
+	  									<div class="contacts-list__item-heading">Viber</div>
+	  									<div class="contacts-list__item-box">
+	  										<a href="https://viber.me/79266965858" class="contacts-list__item-interactive">viber.me/79266965858</a>
+	  									</div>
+	  								</div>
+	  							</li>
+	  							<li class="contacts-list__item">
+	  								<div class="contacts-list__item-icon-box">
+	  									<img src="img/icon-whatsapp.svg" alt="" class="contacts-list__item-icon-img">
+	  								</div>
+	  								<div class="contacts-list__item-content">
+	  									<div class="contacts-list__item-heading">WhatsApp</div>
+	  									<div class="contacts-list__item-box">
+	  										<a href="https://wa.me/79266965858" class="contacts-list__item-interactive">wa.me/79266965858</a>
+	  									</div>
+	  								</div>
+	  							</li>
+	  						</ul>
+	  					</div>
+	  				</div>
+	  			</div>
+	  		</section>
+
+	  		<section class="block-address">
+	  			<div class="container">
+	  				<div class="row">
+	  					<div class="block-address__side">
+	  						<div class="block-address__content">
+	  							<div class="block-address__headline">Москва</div>
+	  							<div class="block-address__text">123112, Россия, город Москва, Пресненская набережная, дом 12, МФК Башня Федерация, офис 98</div>
+	  						</div>
+	  						<div id="map32" class="block-address__map"></div>
+	  					</div>
+	  					<div class="block-address__side">
+	  						<div class="block-address__content">
+	  							<div class="block-address__headline">Санкт-Петербург</div>
+	  							<div class="block-address__text">195112, Россия, город Санкт-Петербург, Малоохтинский проспект, дом 64, БЦ Санкт-Петербург Плаза, офис 83</div>
+	  						</div>
+	  						<div id="map33" class="block-address__map"></div>
+	  					</div>
+	  				</div>
+	  			</div>
+	  		</section>
+
+	  		<section class="block-claim">
+	  			<div class="container">
+	  				<div class="block-claim__wrap">
+	  					Если Вы остались не довольны работой нашего агента или качеством предоставляемых услуг — напишите руководству компании на <a href="mailto:client@spion.su">client@spion.su</a>. Мы обязательно рассмотрим сообщение и ответим Вам. Ваша информация очень важна для нас!
+	  				</div>
+	  			</div>
+	  		</section>
+	  		
+	  		<section class="qt">
+	  			<div class="container">
+	  				<div class="qt__wrap">
+	  					<div class="qt__content">
+	  						<div class="qt__headline">Если Вы не нашли необходимую Вам услугу это не означает что мы не сможем Вам помочь. Напишите агенту SHPION или оставьте заявку на обратную связь и мы обязательно поможем Вам.</div>
+	  					</div>
+	  				</div>
+	  			</div>
+	  		</section>
+
+	  		<section class="block-any-questions">
+	  			<div class="container">
+	  				<div class="row">
+	  					<h2 class="block-any-questions__headline">Остались вопросы?</h2>
+	  				</div>
+	  			</div>
+	  			<div class="block-any-questions__content">
+	  				<div class="container">
+	  					<div class="block-any-questions__content-wrap">
+	  						<div class="row">
+	  							<div class="block-any-questions__content-col">
+	  								<p class="block-any-questions__offer">Оставьте заявку и наш специалист свяжется с Вами и ответит на все вопросы</p>
+		  							<div class="block-any-questions__buttons">
+		  								<a href="#" class="btn btn_color_blue">Бесплатный вопрос детективу</a>
+		  							</div>
+	  							</div>
+	  						</div>
+	  					</div>
+	  				</div>
+	  			</div>
+	  		</section>
+	  	</div>
+	  	<!-- /.side-wrapper -->
+		</main>
+  	@@include('view_parts/_footer.html')
+  </div>
+  <div class="degub-grid">
+		<div>
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <script>
+    setTimeout(function () {
+      var elem = document.createElement('script');
+      elem.type = 'text/javascript';
+      elem.src = '//api-maps.yandex.ru/2.1/?lang=ru_RU&onload=getYaMap';
+      document.getElementsByTagName('body')[0].appendChild(elem);
+    }, 3000);
+
+
+    function getYaMap() {
+      var myMap = new ymaps.Map("map33", {
+        center: [ 59.932051483250966,30.402738007934573 ],
+        zoom: 16
+      });
+      var myPlacemark = new ymaps.Placemark([ 59.932051483250966,30.402738007934573 ], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: '/img/marker.png',
+        iconImageSize: [38, 60],
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+
+      myMap.controls.remove('searchControl');
+      myMap.controls.remove('geolocationControl');
+      myMap.controls.remove('trafficControl');
+      myMap.controls.remove('rulerControl');
+
+
+
+
+      var myMap = new ymaps.Map("map32", {
+        center: [ 55.74974151421052,37.53672408399191 ],
+        zoom: 16
+      });
+      var myPlacemark = new ymaps.Placemark([ 55.74974151421052,37.53672408399191 ], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: '/img/marker.png',
+        iconImageSize: [38, 60],
+      });
+
+      myMap.controls.remove('searchControl');
+      myMap.controls.remove('geolocationControl');
+      myMap.controls.remove('trafficControl');
+      myMap.controls.remove('rulerControl');
+
+      myMap.geoObjects.add(myPlacemark);
+
+    }
+  </script>
+</body>
+</html> 

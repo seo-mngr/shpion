@@ -2466,7 +2466,6 @@
 			height: 236px
 			max-width: 172px
 
-
 .block-steps
 	margin: 60px 0
 
@@ -3308,11 +3307,132 @@
 		@media screen and (max-width: $media-sm)
 			font-size: 14px
 
+.contacts-list
 
+	&__item
+		display: flex
+		flex-direction: row
+		flex-wrap: nowrap
+		justify-content: flex-start
 
+		@media screen and (max-width: $media-sm)
+			align-items: center
 
+		&:not(:last-child)
+			@media screen and (max-width: $media-sm)
+				margin-bottom: 30px
 
+	&__item:not(:last-child) &__item-icon-box
+		margin-bottom: 34px
 
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 0
+
+	&__item-icon-box
+		margin-right: 25px
+		display: flex
+		flex: none
+		align-items: center
+		justify-content: center
+		width: 47px
+		height: 47px
+		background: linear-gradient(280.72deg, #464646 0%, #28292B 100%)
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		border-radius: 9px
+
+		@media screen and (max-width: $media-sm)
+			position: relative
+			top: -4px
+
+	&__item-icon-img
+
+	&__item-content
+		padding-top: 12px
+		flex-basis: 100%
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+
+		@media screen and (max-width: $media-sm)
+			padding-top: 0
+			flex-direction: column
+
+	&__item-box
+		flex-basis: 55%
+
+	&__item-heading
+		font-size: 18px
+		font-weight: 600
+
+		@media screen and (max-width: $media-sm)
+			line-height: 22px
+			margin-bottom: 6px
+
+	&__item-interactive
+		font-size: 18px
+		font-weight: 600
+		color: #3D5F95
+
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 4px
+			line-height: 20px
+			font-size: 16px
+
+	&__item-text
+		font-size: 14px
+		color: #8b8b8b
+
+		@media screen and (max-width: $media-sm)
+			font-size: 13px
+			line-height: 16px
+
+.block-contacts
+
+	&__side
+		@include col()
+		@include size(6)
+		@include shift-lg-left(1)
+		@include size-lg(10)
+		@include shift-sm-left(0)
+		@include size-sm(12)
+		@include size-xs(12)
+		padding: 30px
+		background: #232428
+		border-radius: 6px
+
+		@media screen and (max-width: $media-sm)
+			padding: 25px 15px
+
+		&:not(:last-child)
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 30px
+
+.block-claim
+
+	a
+		color: #3d5f95
+		text-decoration: underline
+
+	&__wrap
+		padding: 35px 65px
+		background-color: #373940
+		background-image: url(../img/bg-connect-with-messenger.png)
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		border-radius: 9px
+		line-height: 27px
+		font-size: 18px
+		font-weight: 500
+		text-align: justify
+
+		@media screen and (max-width: $media-lg)
+			padding: 35px 30px
+
+		@media screen and (max-width: $media-sm)
+			padding: 25px
+			font-size: 16px
+			line-height: 24px
 
 
 
