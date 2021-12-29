@@ -3107,6 +3107,7 @@ body.compensate-for-scrollbar {
 
 .block-license2__side {
   max-width: 570px;
+  z-index: 1;
 }
 .block-license2__content {
   padding: 40px 0 40px 65px;
