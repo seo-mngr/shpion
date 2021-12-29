@@ -5945,6 +5945,7 @@ body.compensate-for-scrollbar {
   .blog-pagination__item_prev, .blog-pagination__item_next {
     width: 36px;
     height: 36px;
+    background-size: 9px 15px;
   }
   .blog-pagination__item_prev {
     margin-right: 20px;
