@@ -32,6 +32,11 @@
 	&_layout_blog &__sidebar
 		@include size(4)
 		@include size-lg(3)
+		@include size-sm(12)
+		@include size-xs(12)
+
+		@media screen and (max-width: $media-sm)
+			display: block
 
 	&__content
 		@include col()
@@ -206,10 +211,11 @@
 		color: #3d5f95
 
 		@media screen and (max-width: $media-sm)
-			padding: 5px 0 5px 15px
+			padding: 10px 0 10px 15px
 			min-height: 40px
 			background-color: #232428
 			border-radius: 3px
+			line-height: 17px
 
 		&:not(:last-child)
 			@media screen and (max-width: $media-sm)
@@ -1570,6 +1576,24 @@
 	& a
 		color: #3D5F95
 		text-decoration: underline
+
+	& img
+		display: block
+		margin: 25px auto
+		max-width: 100%
+		border-radius: 9px
+
+	&_content h2
+		margin-top: 30px
+		margin-bottom: 15px
+		font-size: 24px
+		text-align: left
+		line-height: 36px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 18px
+			font-weight: 500
+			line-height: 135%
 
 .our-clients-short
 	margin-bottom: 45px
@@ -3590,6 +3614,9 @@
 			height: 50px
 			font-size: 18px
 
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 15px
+
 	&__list
 
 	&__item
@@ -3600,6 +3627,9 @@
 
 		&:not(:last-child)
 			margin-bottom: 20px
+
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 15px
 
 		@media screen and (max-width: $media-lg)
 			padding: 20px 20px 15px
@@ -3613,6 +3643,9 @@
 			margin-bottom: 15px
 			font-size: 13px
 
+		@media screen and (max-width: $media-sm)
+			font-size: 14px
+
 	&__item-link
 
 	&__item-date
@@ -3622,6 +3655,9 @@
 
 		@media screen and (max-width: $media-lg)
 			font-size: 13px
+
+		@media screen and (max-width: $media-sm)
+			line-height: 16px
 
 .blog-pagination
 	padding-top: 70px
