@@ -1499,6 +1499,7 @@ body.compensate-for-scrollbar {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  position: relative;
 }
 
 .breadcrumbs__list-item {
@@ -1519,7 +1520,6 @@ body.compensate-for-scrollbar {
           align-items: center;
   color: #3d5f95;
 }
-
 .breadcrumbs__list-item:not(:last-child)::after {
   content: "";
   display: block;
@@ -5143,10 +5143,40 @@ body.compensate-for-scrollbar {
     height: 40px;
     margin-left: unset;
     margin-right: unset;
+    padding-left: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+    background-color: transparent;
+  }
+  .breadcrumbs__list-item {
+    padding: 5px 0 5px 15px;
+    min-height: 40px;
+    background-color: #232428;
+    border-radius: 3px;
+  }
+  .breadcrumbs__list-item:not(:last-child) {
+    margin-bottom: 10px;
   }
   .breadcrumbs__list-item:not(:last-child)::after {
     margin-left: 15px;
-    margin-right: 15px;
+    margin-right: 0;
+  }
+  .breadcrumbs__list-item:first-child::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #232428;
+    border-radius: 3px;
+    z-index: -1;
+  }
+  .breadcrumbs__list-item:last-child {
+    padding-right: 15px;
   }
   .main {
     padding-top: 80px;
