@@ -4229,10 +4229,10 @@ body.compensate-for-scrollbar {
   line-height: 17px;
   color: #3d5f95;
 }
-.blog-pagination {
+.pagination {
   padding-top: 70px;
 }
-.blog-pagination__list {
+.pagination__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4248,11 +4248,11 @@ body.compensate-for-scrollbar {
           align-items: center;
 }
 
-.blog-pagination__item {
+.pagination__item {
   width: 45px;
   height: 50px;
 }
-.blog-pagination__item_prev, .blog-pagination__item_next {
+.pagination__item_prev, .pagination__item_next {
   width: 50px;
   height: 50px;
   background: #232428;
@@ -4261,20 +4261,20 @@ body.compensate-for-scrollbar {
   border-radius: 9px;
   background: url(../img/icon-arrow-white-right.svg) center no-repeat, #232428;
 }
-.blog-pagination__item_prev {
+.pagination__item_prev {
   margin-right: 50px;
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.blog-pagination__item_next {
+.pagination__item_next {
   margin-left: 50px;
 }
-.blog-pagination__item_current {
+.pagination__item_current {
   position: relative;
 }
 
-.blog-pagination__item_current::before {
+.pagination__item_current::before {
   content: "";
   position: absolute;
   left: calc(50% - 25px);
@@ -4291,7 +4291,7 @@ body.compensate-for-scrollbar {
   border-radius: 50%;
   z-index: -1;
 }
-.blog-pagination__link {
+.pagination__link {
   display: block;
   width: 100%;
   height: 100%;
@@ -4309,7 +4309,7 @@ body.compensate-for-scrollbar {
   line-height: 1em;
   color: #8b8b8b;
 }
-.blog-pagination__item_current .blog-pagination__link {
+.pagination__item_current .pagination__link {
   color: #fafafa;
 }
 
@@ -6011,30 +6011,30 @@ body.compensate-for-scrollbar {
   .side-blog-popular__item-date {
     line-height: 16px;
   }
-  .blog-pagination {
+  .pagination {
     padding-top: 50px;
   }
-  .blog-pagination__item {
+  .pagination__item {
     width: 30px;
     height: 36px;
   }
-  .blog-pagination__item_prev, .blog-pagination__item_next {
+  .pagination__item_prev, .pagination__item_next {
     width: 36px;
     height: 36px;
     background-size: 9px 15px;
   }
-  .blog-pagination__item_prev {
+  .pagination__item_prev {
     margin-right: 20px;
   }
-  .blog-pagination__item_next {
+  .pagination__item_next {
     margin-left: 20px;
   }
-  .blog-pagination__item_current::before {
+  .pagination__item_current::before {
     width: 36px;
     height: 36px;
     left: calc(50% - 18px);
   }
-  .blog-pagination__link {
+  .pagination__link {
     font-size: 18px;
   }
   .social-contacts {
