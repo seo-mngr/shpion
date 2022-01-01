@@ -1504,8 +1504,8 @@ body.compensate-for-scrollbar {
       -ms-flex-pack: start;
           justify-content: flex-start;
   position: relative;
+  width: 100%;
 }
-
 .breadcrumbs__list-item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5180,6 +5180,11 @@ body.compensate-for-scrollbar {
             align-items: flex-start;
     height: auto;
     background-color: transparent;
+  }
+  .breadcrumbs__list {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .breadcrumbs__list-item {
     padding: 10px 0 10px 15px;
