@@ -2,6 +2,7 @@
 @@include('modules/materialize/materialize.min.js')
 @@include('modules/wow/wow.min.js')
 @@include('modules/slick/slick.js')
+@@include('modules/masonry/masonry.pkgd.min.js')
 
 
 $(document).ready(function() {
@@ -112,5 +113,61 @@ $(document).ready(function() {
 		});
 	});
 	/* END слайдер на странице Лицензии */
+
+	/* кнопка списка услуг на странице услуг */
+	if ($('.services-links').length) {
+		$('.services-links__btn-mob').on('click', function () {
+			$('.services-links__list').slideToggle('slow');
+			$(this).toggleClass('services-links__btn-mob_active');
+		});
+	}
+	/* END кнопка списка услуг на странице услуг */
+
+	/* фильтр услуг на странице услуг */
+	if ($('.services-links').length) {
+		$('.services-masonry__list').masonry({
+			itemSelector: '.services-masonry__item',
+			columnWidth: '.services-masonry__item',
+			gutter: '.services-masonry__item_gutter_sizer',
+		});
+
+		$('.services-links__list').on('click touch','.services-links__item-link',function(e){
+      e.preventDefault();
+      console.log($('.services-links__list').length);
+      $('.services-links__item-link').removeClass('services-links__item-link_active');
+      $(this).addClass('services-links__item-link_active');
+      $('.services-masonry__tab-container').fadeOut();
+      $('.services-masonry__tab-container[data-id="'+$(this).data("click")+'"]').fadeIn(function() {
+      	$('.services-masonry__list').masonry({
+	        itemSelector: '.services-masonry__item',
+	        columnWidth: '.services-masonry__item',
+	        gutter: '.services-masonry__item_gutter_sizer',
+	      });
+      });
+      
+      // скроллим к списку услуг
+			var id = $(this).attr('href'),
+			top = $(id).offset().top - 100;
+			$('body,html').animate({scrollTop: top}, 900);
+		});
+	}
+	/* END фильтр услуг на странице услуг */
+
+	/* FAQ */
+	if ($('.block-faq').length) {
+		$('.block-faq__question').click(function(event) {
+		  var _item = $(this).closest('.block-faq__item');
+		  if (_item.hasClass('block-faq__item_active')) {
+		    _item.removeClass('block-faq__item_active');
+		    _item.find('.block-faq__answer').slideUp('fast');
+		  } else {
+		    $('.block-faq__item').removeClass('block-faq__item_active');
+		    $('.block-faq__answer').slideUp('fast');
+		    _item.addClass('block-faq__item_active');
+		    _item.find('.block-faq__answer').slideDown('fast');
+		  }
+		});
+	}
+	/* END FAQ */
 
 });
