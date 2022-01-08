@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Shpion</title>
+</head>
+<body>
+  <div class="wrapper">
+  	@@include('view_parts/_header.html')
+  	<main class="main">
+  		<div class="breadcrumbs">
+  			<div class="container">
+  				<div class="breadcrumbs__wrap">
+  					<ul class="breadcrumbs__list">
+	  					<li class="breadcrumbs__list-item">
+	  						<a href="/" class="breadcrumbs__link">Главная</a>
+	  					</li>
+	  					<li class="breadcrumbs__list-item">О нас</li>
+	  				</ul>
+  				</div>
+  			</div>
+  		</div>
+  		<!-- .side-wrapper -->
+  		<div class="side-wrapper">
+  			<div class="container">
+  				<div class="row">
+  					<div class="side-wrapper__sidebar">
+		  				@@include('view_parts/_services-list.html')
+		  			</div>
+		  			<div class="side-wrapper__content">
+		  				<h1 class="headline">Скоринг и оценка рисков контрагентов</h1>
+		  				
+		  				<div class="form-free-request">
+		  					<div class="form-free-request__wrap">
+		  						<form action="" class="form-free-request__form">
+		  							<fieldset class="form-free-request__fieldset">
+			  							<input type="text" name="inn" placeholder="Введите ИНН" autocomplete="off" class="form-free-request__control form-free-request__input-text">
+			  							<label for="model" class="form-free-request__label">
+			  								<span class="form-free-request__label-text">Тип используемой скоринговой модели</span>
+			  								<select name="model" data-alt-title="<p>Выбрать из списка</p>" class="form-free-request__control form-free-request__select">
+			  									<option></option>
+			  									<option value="" class="form-free-request__select-option">Скоринг компаний-банкротов</option>
+			  									<option value="" class="form-free-request__select-option">Скоринг компаний по "черному списку" 115-ФЗ</option>
+			  									<option value="" class="form-free-request__select-option">Cкоринг компаний дисквалифицированных лиц</option>
+			  									<option value="" class="form-free-request__select-option">Скоринг компаний с проблемными кредитами</option>
+			  								</select>
+			  							</label>
+			  							<div class="form-free-request__captcha"></div>
+			  							<button type="submit" class="form-free-request__control form-free-request__btn btn btn_color_blue">Отправить запрос</button>
+			  						</fieldset>
+		  						</form>
+		  					</div>
+		  				</div>
+
+		  				<div class="text-block">
+		  					<p>ИНН присваивается компании или предпринимателю налоговой при регистрации. Он входит в число обязательных реквизитов, а также с его помощью возможен поиск предприятия и проверка организации по ИНН, который вы можете выполнить онлайн на официальном сайте сервиса. Зная идентификационный номер, можно пробить наличие у организации налоговой задолженности, узнать об участии фирмы в судебных делах, государственных заказах, проверить наличие дочерних структур. Также ИНН позволяет получить другую важную информацию, необходимую для оценки бизнес-партнеров и контрагентов.</p>
+							</div>
+
+							<section class="block-faq block-faq_type_pic">
+								<ul class="block-faq__list">
+									<li class="block-faq__item">
+										<div class="block-faq__item-wrap">
+											<div class="block-faq__question">
+												<p class="block-faq__question-text">Лицензии</p>
+												<div class="block-faq__question-arrow"></div>
+											</div>
+											<div class="block-faq__answer">Мы имеем официальные лицензии на ведение сыскной деятельности. Сотрудники SHPION обладают законными основаниями ведения оперативно-розыскных мероприятий, а это значит, что клиенты не просто смогут собрать с нашей помощью доказательную базу против оппонента, но и легитимно представить ее в суде или других государственных инстанциях.</div>
+										</div>
+									</li>
+									<li class="block-faq__item">
+										<div class="block-faq__item-wrap">
+											<div class="block-faq__question">
+												<p class="block-faq__question-text">Гарантии</p>
+												<div class="block-faq__question-arrow"></div>
+											</div>
+											<div class="block-faq__answer">Мы имеем официальные лицензии на ведение сыскной деятельности. Сотрудники SHPION обладают законными основаниями ведения оперативно-розыскных мероприятий, а это значит, что клиенты не просто смогут собрать с нашей помощью доказательную базу против оппонента, но и легитимно представить ее в суде или других государственных инстанциях.</div>
+										</div>
+									</li>
+									<li class="block-faq__item">
+										<div class="block-faq__item-wrap">
+											<div class="block-faq__question">
+												<p class="block-faq__question-text">О нас</p>
+												<div class="block-faq__question-arrow"></div>
+											</div>
+											<div class="block-faq__answer">Мы имеем официальные лицензии на ведение сыскной деятельности. Сотрудники SHPION обладают законными основаниями ведения оперативно-розыскных мероприятий, а это значит, что клиенты не просто смогут собрать с нашей помощью доказательную базу против оппонента, но и легитимно представить ее в суде или других государственных инстанциях.</div>
+										</div>
+									</li>
+								</ul>
+							</section>
+
+							<section class="connect-with-messenger">
+								<h3 class="connect-with-messenger__headline">Связаться через мессенджеры</h3>
+								<p class="connect-with-messenger__text">Вы можете задать вопрос или оставить заявку с помощью удобного Вам мессенджера.</p>
+								<ul class="connect-with-messenger__list">
+									<li class="connect-with-messenger__list-item"><a href="#" class="connect-with-messenger__link"></a></li>
+									<li class="connect-with-messenger__list-item"><a href="#" class="connect-with-messenger__link"></a></li>
+									<li class="connect-with-messenger__list-item"><a href="#" class="connect-with-messenger__link"></a></li>
+								</ul>
+							</section>
+
+							<article class="article-full text-block text-block_content-services">
+		  					<p>Ведение бизнеса в условиях современной России – то еще испытание! Предпринимательская деятельность во все времена была сопряжена с опасностями и рисками, однако на сегодняшний день их стало еще больше!</p>
+		  					<p>Одна из главных проблем бизнеса связана с процветанием мошенничества и невыполнением контрагентами договорных обязательств. Чтобы избежать проблем с законом и обезопасить фирму от финансовых потерь, целесообразно проверить контрагента по ИНН на надежность и добросовестность.</p>
+		  					<h2>О чем расскажет проверка контрагента, и кому она нужна?</h2>
+		  					<p>Любое юридическое лицо имеет тесные связи со многими фирмами. К сожалению, не все они являются благонадежными, а значит, заключение контрактов с ними грозит потерей репутации, финансовым фиаско и проблемами с законодательством РФ.</p>
+		  					<p>Чтобы избежать подобных неприятностей, необходимо проверить контрагента по ИНН онлайн перед подписанием договора. Такой подход поможет:</p>
+		  					<ul>
+		  						<li>проверить благонадежность потенциального партнера;</li>
+		  						<li>получить важные сведения о долгах фирмы;</li>
+		  						<li>узнать, не грозит ли фирме банкротство и т.д.</li>
+		  					</ul>
+		  					<p>Таким образом, проверка контрагента на надежность и стабильность финансового состояния понадобиться каждому предпринимателю, который стремится к процветанию. И если компания не может содержать в штате сотрудника, отвечающего за сбор данных о контрагентах и конкурентах, эту миссию готовы взять на себя сотрудники частного детективного агентства Шпион.</p>
+		  					<h2>Заказать проверку контрагента от специалистов SHPION</h2>
+		  					<p>Детективное агентство Шпион поможет проверить контрагента по ИНН в России и, таким образом, предоставит клиенту информацию о целесообразности сотрудничества с конкретной фирмой. Информация об ИП и юридических лицах добывается специалистами SHPION законными способами на условиях конфиденциальности.</p>
+		  					<p>Сбор и анализ информации о контрагенте происходит на основании использования официальных источников (например, сервиса «Контур» и др.). Сбор и анализ информации о контрагенте подразумевает также изучение СМИ, различных реестров, справочников и т.д. Обращение к детективам нашего агентства позволит узнать:</p>
+		  					<ul>
+		  						<li>есть ли в фирмы КПП (код, присвоенный ей налоговыми органами и свидетельствующий о принадлежности к конкретному территориальному управлению ФНС);</li>
+		  						<li>есть ли у потенциального контрагента задолженность перед другими компаниями;</li>
+		  						<li>не действует ли контрагент незаконными методами;</li>
+		  						<li>не находится ли фирма в процедуре банкротства и т.д.</li>
+		  					</ul>
+		  					<p>Можно попытаться самостоятельно проверить контрагента по ИНН бесплатно, однако сотрудничество с агентством позволит решить задачу быстрее и эффективнее. Наши специалисты знают, через какой сайт пробить фирму по долгам и другим интересующим параметрам, и подскажут, как извлечь из полученной информации максимальную пользу! Решение проверить контрагента через ИНН на сайте SHPION станет одним из самых правильных для бизнеса.</p>
+							</article>
+
+				  		<section class="block-benefits-2">
+				  			<h2 class="block-benefits-2__headline headline">Проверка паспорта у нас это:</h2>
+				  			<div class="block-benefits-2__wrap">
+									<ul class="block-benefits-2__list">
+										<li class="block-benefits-2__list-item">
+											<div class="block-benefits-2__item-icon">
+												<img src="img/icon-benefits2-1.svg" alt="" class="block-benefits-2__item-img">
+											</div>
+											<div class="block-benefits-2__text">Достоверность данных</div>
+										</li>
+										<li class="block-benefits-2__list-item">
+											<div class="block-benefits-2__item-icon">
+												<img src="img/icon-benefits2-2.svg" alt="" class="block-benefits-2__item-img">
+											</div>
+											<div class="block-benefits-2__text">Сжатые сроки</div>
+										</li>
+										<li class="block-benefits-2__list-item">
+											<div class="block-benefits-2__item-icon">
+												<img src="img/icon-benefits2-3.svg" alt="" class="block-benefits-2__item-img">
+											</div>
+											<div class="block-benefits-2__text">Полная анонимность</div>
+										</li>
+										<li class="block-benefits-2__list-item">
+											<div class="block-benefits-2__item-icon">
+												<img src="img/icon-benefits2-4.svg" alt="" class="block-benefits-2__item-img">
+											</div>
+											<div class="block-benefits-2__text">Гарантии</div>
+										</li>
+									</ul>
+								</div>
+				  		</section>
+
+				  		<section class="block-performance">
+				  			<h2 class="block-performance__headline headline">Наша работа в цифрах</h2>
+				  			<ul class="block-performance__list">
+				  				<li class="block-performance__item">
+				  					<div class="block-performance__num">7</div>
+				  					<div class="block-performance__text">лет на рынке</div>
+				  				</li>
+				  				<li class="block-performance__item">
+				  					<div class="block-performance__num">+3000</div>
+				  					<div class="block-performance__text">успешных дел</div>
+				  				</li>
+				  				<li class="block-performance__item">
+				  					<div class="block-performance__num">
+				  						<div class="block-performance__num-more">более</div>
+				  						500
+				  					</div>
+				  					<div class="block-performance__text">постоянных клиентов</div>
+				  				</li>
+				  			</ul>
+				  		</section>
+
+		  			</div>
+  				</div>
+  			</div>
+  		
+  			<section class="block-secrets">
+  				<div class="container">
+	  				<h2 class="block-secrets__headline headline">Еще кое-что из секретов детектива</h2>
+	  				<div class="block-secrets__list row">
+	  					<a href="#" class="block-secrets__item">
+	  						<h3 class="block-secrets__item-heading">Проверка паспорта на действительность</h3>
+	  						<p class="block-secrets__item-text">Проверим паспорт гражданина РФ с использованием официальных сервисов.</p>
+	  						<span class="block-secrets__item-btn btn btn_color_blue">Подробнее</span>
+	  					</a>
+	  					<a href="#" class="block-secrets__item">
+	  						<h3 class="block-secrets__item-heading">Проверка паспорта на действительность</h3>
+	  						<p class="block-secrets__item-text">Проверим паспорт гражданина РФ с использованием официальных сервисов.</p>
+	  						<span class="block-secrets__item-btn btn btn_color_blue">Подробнее</span>
+	  					</a>
+	  					<a href="#" class="block-secrets__item">
+	  						<h3 class="block-secrets__item-heading">Проверка паспорта на действительность</h3>
+	  						<p class="block-secrets__item-text">Проверим паспорт гражданина РФ с использованием официальных сервисов.</p>
+	  						<span class="block-secrets__item-btn btn btn_color_blue">Подробнее</span>
+	  					</a>
+	  				</div>
+	  			</div>
+  			</section>
+
+	  		<section class="qt">
+	  			<div class="container">
+	  				<div class="qt__wrap">
+	  					<div class="qt__content">
+	  						<div class="qt__headline">Если Вы не нашли необходимую Вам услугу это не означает что мы не сможем Вам помочь. Напишите агенту SHPION или оставьте заявку на обратную связь и мы обязательно поможем Вам.</div>
+	  						<p class="qt__text">Наши специалисты быстро и качественно соберут информацию по Москве и Московской области, Санкт-Петербургу и Ленинградской области, Новосибирску, Екатеринбургу, Казани, Нижнему Новгороду, Челябинску, Самаре, Омску, Ростову-на-Дону, Уфе, Красноярску, Воронежу, Перми, Волгограду, Саратову, Краснодару, Сочи, Владивостоку, Туле, Калуге, Твери, Владимиру, Брянску, Тамбову, Пскову, Смоленску и другим городам России.</p>
+	  					</div>
+	  				</div>
+	  			</div>
+	  		</section>
+
+	  		<section class="block-any-questions">
+	  			<div class="container">
+	  				<div class="row">
+	  					<h2 class="block-any-questions__headline">Остались вопросы?</h2>
+	  				</div>
+	  			</div>
+	  			<div class="block-any-questions__content">
+	  				<div class="container">
+	  					<div class="block-any-questions__content-wrap">
+	  						<div class="row">
+	  							<div class="block-any-questions__content-col">
+	  								<p class="block-any-questions__offer">Оставьте заявку и наш специалист свяжется с Вами и ответит на все вопросы</p>
+		  							<div class="block-any-questions__buttons">
+		  								<a href="#" class="btn btn_color_blue">Бесплатный вопрос детективу</a>
+		  							</div>
+	  							</div>
+	  						</div>
+	  					</div>
+	  				</div>
+	  			</div>
+	  		</section>
+	  	</div>
+	  	<!-- /.side-wrapper -->
+		</main>
+  	@@include('view_parts/_footer.html')
+  </div>
+  <div class="degub-grid">
+		<div>
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <script>
+   	// js here
+  </script>
+</body>
+</html> 

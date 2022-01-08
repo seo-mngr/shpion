@@ -119,7 +119,7 @@ function js() {
   return src(path.src.js)
     .pipe(plumber())
     .pipe(fileInclude())
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream())
 }

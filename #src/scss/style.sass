@@ -23,6 +23,8 @@
 
 	&_layout_blog
 
+	&_layout_blog-single
+
 	&__sidebar
 		@include col()
 		@include size(3)
@@ -31,12 +33,13 @@
 		@media screen and (max-width: $media-sm)
 			display: none
 
-	&_layout_blog &__sidebar
+	&_layout_blog &__sidebar, &_layout_blog-single &__sidebar
 		@include size(4)
 		@include size-lg(3)
 		@include size-sm(12)
 		@include size-xs(12)
 
+	&_layout_blog-single &__sidebar
 		@media screen and (max-width: $media-sm)
 			display: block
 
@@ -47,7 +50,7 @@
 		@include size-sm(12)
 		@include size-xs(12)
 
-	&_layout_blog &__content
+	&_layout_blog &__content, &_layout_blog-single &__content
 		@include size(8)
 		@include size-lg(9)
 		@include size-sm(12)
@@ -781,7 +784,6 @@
 			padding-left: $padding-left-lg
 
 		@media screen and (max-width: $media-sm)
-			width: 255px
 			height: 100px
 
 		&::before, &::after
@@ -1521,7 +1523,10 @@
 	text-align: justify
 
 	@media screen and (max-width: $media-sm)
-			font-size: 14px
+		font-size: 14px
+
+	&:last-child
+		margin-bottom: 0
 
 	&_attention
 		margin-top: 70px
@@ -2993,7 +2998,7 @@
 			justify-content: flex-start
 
 .block-performance
-	margin: 60px 0
+	margin: 60px 0 0
 
 	&__headline
 
@@ -3101,11 +3106,19 @@
 
 	&__list
 
+		&_nested
+			margin-right: -95px
+
+			@media screen and (max-width: $media-sm)
+				margin-right: 0
+
 	&__item
 		margin-bottom: 10px
 
 		@media screen and (max-width: $media-sm)
 			margin-bottom: 8px
+
+		&_active
 
 	&__item-heading
 		height: 75px
@@ -3132,9 +3145,13 @@
 		height: 100%
 		background: #1E2F4B
 		border-radius: 9px
+		transition: .3s ease-in-out
 
 		@media screen and (max-width: $media-sm)
 			display: none
+
+	&__item_active > &__item-heading &__item-heading-icon
+		background: linear-gradient(91.99deg, #3D5F95 -31.4%, #1E2F4B 129.3%)
 
 	&__item-heading-img
 
@@ -3146,10 +3163,14 @@
 		justify-content: flex-start
 		background: linear-gradient(280.72deg, #464646 0%, #28292B 100%)
 		font-size: 18px
+		transition: .3s ease-in-out
 
 		@media screen and (max-width: $media-sm)
 			font-size: 16px
 			padding-left: 15px
+
+	&__item_active > &__item-heading &__item-heading-text
+		color: #3D5F95
 
 	&__item-heading-arrow
 		position: relative
@@ -3174,12 +3195,20 @@
 			height: 12px
 			background: url(../img/icon-pricelist-item-arrow-white.svg) center no-repeat
 			background-size: contain
+			transition: .3s ease-in-out
 
 			@media screen and (max-width: $media-sm)
 				width: 17px
 				height: 10px
 
+	&__item_active > &__item-heading &__item-heading-arrow
+		&::before
+			transform: rotate(180deg)
+			background: url(../img/icon-pricelist-item-arrow-blue.svg) center no-repeat
+			background-size: contain
+
 	&__sublist-wrap
+		display: none
 		margin-top: 10px
 		padding-right: 95px
 
@@ -3187,12 +3216,14 @@
 			margin-top: 8px
 			padding-right: 0
 
+		&_nested
+
 	&__sublist
 		border-radius: 9px
 		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
 
 	&__sublist-item
-		height: 77px
+		//height: 77px
 		position: relative
 
 		@media screen and (max-width: $media-sm)
@@ -3219,13 +3250,13 @@
 			padding-right: 0
 			padding-left: 16px
 
-	&__sublist-item:first-child &__sublist-item-wrap
+	&__sublist-item:first-child > &__sublist-item-link &__sublist-item-wrap
 		border-radius: 9px 9px 0 0
 
 		@media screen and (max-width: $media-sm)
 			border-radius: 6px 6px 0 0
 
-	&__sublist-item:last-child &__sublist-item-wrap
+	&__sublist-item:last-child > &__sublist-item-link &__sublist-item-wrap
 		border-radius: 0 0 9px 9px
 
 		@media screen and (max-width: $media-sm)
@@ -3244,7 +3275,10 @@
 
 	&__sublist-item-link
 		display: block
-		height: 100%
+		height: 77px
+
+		@media screen and (max-width: $media-sm)
+			height: auto
 
 	&__sublist-item-text
 		flex-basis: 100%
@@ -3612,6 +3646,8 @@
 		border-radius: 3px 0 0 0
 
 .side-blog-popular
+	@media screen and (max-width: $media-sm)
+		margin-top: 55px
 
 	&__headline
 		margin-bottom: 20px
@@ -4022,7 +4058,13 @@
 			padding-right: 20px
 
 .block-faq
+	margin-top: 70px
 	margin-bottom: 90px
+
+	@media screen and (max-width: $media-sm)
+		margin-top: 50px
+
+	&_type_pic
 
 	&__headline
 		margin-bottom: 40px
@@ -4033,12 +4075,39 @@
 	&__item
 		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
 		border-radius: 9px
-		overflow: hidden
+		position: relative
 
 		&:not(:last-child)
 			margin-bottom: 20px
 
 		&_active
+
+	&_type_pic &__item
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			top: -10px
+			left: 13px
+			width: 52px
+			height: 52px
+			z-index: 1
+
+			@media screen and (max-width: $media-sm)
+				top: -8px
+				left: 10px
+				width: 43px
+				height: 43px
+
+	@for $i from 1 through 3
+		&_type_pic &__item
+			&:nth-child(#{$i})::before				
+				background: url(../img/icon-faq-pic-#{$i}.svg) center no-repeat
+				background-size: contain
+
+	&__item-wrap
+		overflow: hidden
+		border-radius: 9px
 
 	&__question
 		min-height: 72px
@@ -4078,6 +4147,32 @@
 			background-clip: text
 			-webkit-text-fill-color: transparent
 
+	&_type_pic &__question
+		background: #292a2c
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+		@media screen and (max-width: $media-sm)
+			min-height: 60px
+			padding-left: 90px
+
+		&::before
+			display: none
+
+		&::after
+			content: ''
+			position: absolute
+			top: -38px
+			left: -15px
+			width: 100px
+			height: 110px
+			background: url(../img/bg-icon-faq-splash.svg) center no-repeat
+			background-size: contain
+
+			@media screen and (max-width: $media-sm)
+				top: -33px
+				width: 90px
+				height: 90px
+
 	&__question-text
 		padding: 24px 0
 		display: flex
@@ -4093,6 +4188,9 @@
 
 	&__item_active &__question-text
 		color: #3d5f95
+
+	&_type_pic &__question-text
+		color: #fafafa
 
 	&__question-arrow
 		margin-left: 30px
@@ -4131,6 +4229,9 @@
 		&::before
 			transform: rotate(-180deg)
 
+	&_type_pic &__question-arrow
+		background: #3C3C3D
+
 	&__answer
 		display: none
 		background: #2A2B31
@@ -4143,6 +4244,10 @@
 		@media screen and (max-width: $media-sm)
 			padding: 25px 15px
 			font-size: 14px
+
+	&_type_pic &__answer
+		background: #2e3033
+		line-height: 149.5%
 
 .services-blocks
 	margin-bottom: 45px
@@ -4246,6 +4351,199 @@
 		@media screen and (max-width: $media-lg)
 			left: -10px
 
+.form-free-request
+	margin: 30px 0 60px
+	padding: 50px 65px
+	background: url(../img/bg-form-free-request.png) right -115px center no-repeat, linear-gradient(279.91deg, #0E1C31 -21.28%, #1C2935 106.73%)
+	box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+	border-radius: 9px
+
+	@media screen and (max-width: $media-lg)
+		padding: 50px 30px
+		background: linear-gradient(279.91deg, #0E1C31 -21.28%, #1C2935 106.73%)
+
+	&__wrap
+
+	&__form
+
+	&__fieldset
+		border: 0
+		padding: 0
+		margin: 0
+
+	&__control
+		margin: 20px 0 25px
+		padding: 0 30px
+		display: block
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		border-radius: 3px
+		height: 50px
+		border: 0
+		outline: none
+
+		&:first-child
+			margin-top: 0
+
+		&:last-child
+			margin-bottom: 0
+
+	&__label
+		margin: 25px 0 35px
+
+	&__label-text
+		font-size: 18px
+		line-height: 22px
+
+	&__input-text
+		width: 100%
+		max-width: 285px
+		background: #233548
+		color: #fafafa
+
+		&::placeholder
+			color: #3E4E5E
+
+	&__select
+
+	&__select-option
+		
+	&__captcha
+
+// оформление выпадающих списков на странице бесплатных запросов
+.mfs-container
+	position: relative
+	margin-top: 20px
+	width: 100%
+	height: 50px
+	max-width: 460px
+	color: #3E4E5E
+	font-size: 16px
+
+	& select
+		position: absolute
+		width: 100%
+		top: 0
+		z-index: 1
+		opacity: 0
+
+	&.notouch select
+		display: none
+
+	& .mfs-options
+		position: absolute
+		top: 100%
+		width: 100%
+		padding: 0
+		margin: 0
+		list-style-type: none
+		background: #1D2C3D
+		border-radius: 0 0 3px 3px
+		z-index: 10
+
+		& li:first-child
+			display: none
+
+		& li:last-child
+			border-radius: 0 0 3px 3px
+
+		& li a
+			display: block
+			padding: 15px 30px
+			text-decoration: none
+			color: #fff
+
+		& li.selected
+			background-color: none
+
+		& li.selected a
+			color: #6FB1FF
+
+		& li:hover
+			background: linear-gradient(96.22deg, #10213C -30.94%, #2C4164 105.3%)
+
+	& a.mfs-selected-option
+		display: block
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		padding: 0 45px 0 23px
+		line-height: 50px
+		text-decoration: none 
+		background: #233548
+		color: #fafafa
+		border: 0
+		border-radius: 3px
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		z-index: 11
+
+	& a.mfs-selected-option p
+		margin: 0
+		padding: 0
+		color: #3E4E5E
+
+	& a.mfs-selected-option span
+		position: absolute
+		top: 16px
+		right: 17px
+		width: 12px
+		height: 12px
+		border-bottom: 1px solid #fff
+		border-right: 1px solid #fff
+		transform: rotate(45deg)
+
+.block-secrets
+	margin-top: 70px
+	margin-bottom: 90px
+
+	&__headline
+
+	&__list
+
+	&__item
+		@include col()
+		@include size(4)
+		@include size-lg(6)
+		@include size-sm(12)
+		@include size-xs(12)
+		padding: 25px 35px 0
+		background: #232C3B
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		border-radius: 6px
+		overflow: hidden
+		margin-bottom: 30px
+
+		@media screen and (max-width: $media-lg)
+			padding: 25px 30px 0
+
+		@media screen and (max-width: $media-sm)
+			padding: 25px 15px 0
+
+		&:last-child
+			@media screen and (max-width: $media-sm)
+				margin-bottom: 0
+
+	&__item-heading
+		font-size: 18px
+		line-height: 140%
+		text-align: left
+		margin-bottom: 15px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 16px
+
+	&__item-text
+		margin-bottom: 25px
+		font-size: 14px
+		line-height: 140%
+		text-align: justify
+
+	&__item-btn
+		border-radius: 3px 3px 0 0
 
 
 
@@ -4350,22 +4648,6 @@
 			width: 34px
 			height: 34px
 
-		&::after
-			content: ''
-			display: block
-			width: 23px
-			height: 23px
-			background-size: contain
-			background-position: center
-			background-repeat: no-repeat
-
-			@media screen and (max-width: $media-lg)
-				background-size: contain
-
-			@media screen and (max-width: $media-sm)
-				width: 20px
-				height: 20px
-
 	&_fixed &__item-icon
 		width: 47px
 		height: 47px
@@ -4388,6 +4670,15 @@
 				width: 23px
 				height: 23px
 				background-size: contain
+
+	&__item-img
+		width: 23px
+		height: 23px
+		object-fit: contain
+
+		@media screen and (max-width: $media-sm)
+			width: 20px
+			height: 20px
 
 	&__item-text
 		margin-left: 25px
