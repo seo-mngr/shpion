@@ -5021,9 +5021,12 @@ body.compensate-for-scrollbar {
           box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
   overflow: hidden;
-  margin-bottom: 30px;
   position: relative;
 }
+.block-secrets__item:last-child {
+  margin-bottom: 0;
+}
+
 .block-secrets__item-heading {
   font-size: 18px;
   line-height: 140%;
@@ -5936,6 +5939,7 @@ body.compensate-for-scrollbar {
   }
   .block-secrets__item {
     padding: 25px 30px 45px;
+    margin-bottom: 30px;
   }
   .social-contacts_fixed {
     margin-left: 0;
@@ -7058,9 +7062,6 @@ body.compensate-for-scrollbar {
   }
   .block-secrets__item {
     padding: 25px 15px 45px;
-  }
-  .block-secrets__item:last-child {
-    margin-bottom: 0;
   }
   .block-secrets__item-heading {
     font-size: 16px;
