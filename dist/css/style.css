@@ -4811,16 +4811,11 @@ body.compensate-for-scrollbar {
 
 .form-free-request__control {
   margin: 20px 0 25px;
-  padding: 0 30px;
   display: block;
-  -webkit-box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
   height: 50px;
   border: 0;
   outline: none;
 }
-
 .form-free-request__control:first-child {
   margin-top: 0;
 }
@@ -4837,32 +4832,58 @@ body.compensate-for-scrollbar {
   font-size: 18px;
   line-height: 22px;
 }
-
 .form-free-request__input-text {
+  padding: 0 30px;
   width: 100%;
   max-width: 285px;
   background: #233548;
   color: #fafafa;
+  -webkit-box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
 }
-
 .form-free-request__input-text::-webkit-input-placeholder {
-  color: #3E4E5E;
+  color: #8B8B8B;
 }
-
 .form-free-request__input-text::-moz-placeholder {
-  color: #3E4E5E;
+  color: #8B8B8B;
 }
-
 .form-free-request__input-text:-ms-input-placeholder {
-  color: #3E4E5E;
+  color: #8B8B8B;
 }
-
 .form-free-request__input-text::-ms-input-placeholder {
-  color: #3E4E5E;
+  color: #8B8B8B;
+}
+.form-free-request__input-text::placeholder {
+  color: #8B8B8B;
 }
 
-.form-free-request__input-text::placeholder {
-  color: #3E4E5E;
+.form-free-request__select {
+  -webkit-box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  padding: 0 30px;
+}
+
+.form-free-request__result {
+  max-width: 410px;
+}
+
+.form-free-request__result p {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #3d5f95;
+}
+.form-free-request__result p span {
+  color: #fafafa;
+}
+
+.form-free-request__notify {
+  font-size: 16px;
+}
+.form-free-request__btn {
+  margin-top: 25px;
 }
 
 .mfs-container {
@@ -4874,7 +4895,6 @@ body.compensate-for-scrollbar {
   color: #3E4E5E;
   font-size: 16px;
 }
-
 .mfs-container select {
   position: absolute;
   width: 100%;
@@ -4913,7 +4933,6 @@ body.compensate-for-scrollbar {
   text-decoration: none;
   color: #fff;
 }
-
 .mfs-container .mfs-options li.selected {
   background-color: none;
 }
@@ -4934,7 +4953,7 @@ body.compensate-for-scrollbar {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 0 45px 0 23px;
+  padding: 0 45px 0 30px;
   line-height: 50px;
   text-decoration: none;
   background: #233548;
@@ -4950,16 +4969,26 @@ body.compensate-for-scrollbar {
   z-index: 11;
 }
 
+.mfs-container a.mfs-selected-option::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  background-color: #293b4f;
+  z-index: -1;
+}
 .mfs-container a.mfs-selected-option p {
   margin: 0;
   padding: 0;
-  color: #3E4E5E;
+  color: #8B8B8B;
 }
 
 .mfs-container a.mfs-selected-option span {
   position: absolute;
   top: 16px;
-  right: 17px;
+  right: 19px;
   width: 12px;
   height: 12px;
   border-bottom: 1px solid #fff;
@@ -5888,6 +5917,9 @@ body.compensate-for-scrollbar {
     padding: 50px 30px;
     background: -o-linear-gradient(170.09deg, #0E1C31 -21.28%, #1C2935 106.73%);
     background: linear-gradient(279.91deg, #0E1C31 -21.28%, #1C2935 106.73%);
+  }
+  .mfs-container .mfs-options li a {
+    font-size: 14px;
   }
   .block-secrets__item {
     width: calc(50% - 30px);
@@ -6978,6 +7010,38 @@ body.compensate-for-scrollbar {
     width: auto;
     height: auto;
     bottom: 0;
+  }
+  .form-free-request {
+    padding: 30px 15px;
+  }
+  .form-free-request__control {
+    height: 45px;
+  }
+  .form-free-request__label-text {
+    font-size: 16px;
+  }
+  .form-free-request__input-text {
+    padding: 0 15px;
+    font-size: 14px;
+  }
+  .form-free-request__result p {
+    font-size: 16px;
+  }
+  .form-free-request__notify {
+    font-size: 14px;
+    line-height: 140%;
+  }
+  .form-free-request__btn-wrap {
+    text-align: center;
+  }
+  .mfs-container {
+    font-size: 14px;
+  }
+  .mfs-container .mfs-options li a {
+    padding: 11px 15px;
+  }
+  .mfs-container a.mfs-selected-option {
+    padding-left: 15px;
   }
   .block-secrets__item {
     width: calc(100% - 30px);

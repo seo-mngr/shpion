@@ -4362,6 +4362,9 @@
 		padding: 50px 30px
 		background: linear-gradient(279.91deg, #0E1C31 -21.28%, #1C2935 106.73%)
 
+	@media screen and (max-width: $media-sm)
+		padding: 30px 15px
+
 	&__wrap
 
 	&__form
@@ -4373,13 +4376,13 @@
 
 	&__control
 		margin: 20px 0 25px
-		padding: 0 30px
 		display: block
-		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
-		border-radius: 3px
 		height: 50px
 		border: 0
 		outline: none
+
+		@media screen and (max-width: $media-sm)
+			height: 45px
 
 		&:first-child
 			margin-top: 0
@@ -4394,20 +4397,62 @@
 		font-size: 18px
 		line-height: 22px
 
+		@media screen and (max-width: $media-sm)
+			font-size: 16px
+
 	&__input-text
+		padding: 0 30px
 		width: 100%
 		max-width: 285px
 		background: #233548
 		color: #fafafa
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		border-radius: 3px
+
+		@media screen and (max-width: $media-sm)
+			padding: 0 15px
+			font-size: 14px
 
 		&::placeholder
-			color: #3E4E5E
+			color: #8B8B8B
 
 	&__select
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		border-radius: 3px
+		padding: 0 30px
 
 	&__select-option
 		
 	&__captcha
+
+	&__result
+		max-width: 410px
+
+		& p
+			margin-bottom: 10px
+			font-size: 18px
+			line-height: 22px
+			color: #3d5f95
+
+			@media screen and (max-width: $media-sm)
+				font-size: 16px
+
+			& span
+				color: #fafafa
+
+	&__notify
+		font-size: 16px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 14px
+			line-height: 140%
+
+	&__btn-wrap
+		@media screen and (max-width: $media-sm)
+			text-align: center
+
+	&__btn
+		margin-top: 25px
 
 // оформление выпадающих списков на странице бесплатных запросов
 .mfs-container
@@ -4418,6 +4463,9 @@
 	max-width: 460px
 	color: #3E4E5E
 	font-size: 16px
+
+	@media screen and (max-width: $media-sm)
+		font-size: 14px
 
 	& select
 		position: absolute
@@ -4452,6 +4500,12 @@
 			text-decoration: none
 			color: #fff
 
+			@media screen and (max-width: $media-lg)
+				font-size: 14px
+
+			@media screen and (max-width: $media-sm)
+				padding: 11px 15px
+
 		& li.selected
 			background-color: none
 
@@ -4468,7 +4522,7 @@
 		right: 0
 		bottom: 0
 		left: 0
-		padding: 0 45px 0 23px
+		padding: 0 45px 0 30px
 		line-height: 50px
 		text-decoration: none 
 		background: #233548
@@ -4481,15 +4535,28 @@
 		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
 		z-index: 11
 
+		&::after
+			content: ''
+			position: absolute
+			right: 0
+			top: 0
+			width: 50px
+			height: 100%
+			background-color: #293b4f
+			z-index: -1
+
+		@media screen and (max-width: $media-sm)
+			padding-left: 15px
+
 	& a.mfs-selected-option p
 		margin: 0
 		padding: 0
-		color: #3E4E5E
+		color: #8B8B8B
 
 	& a.mfs-selected-option span
 		position: absolute
 		top: 16px
-		right: 17px
+		right: 19px
 		width: 12px
 		height: 12px
 		border-bottom: 1px solid #fff

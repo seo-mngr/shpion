@@ -41,16 +41,32 @@
 			  								<span class="form-free-request__label-text">Тип используемой скоринговой модели</span>
 			  								<select name="model" data-alt-title="<p>Выбрать из списка</p>" class="form-free-request__control form-free-request__select">
 			  									<option></option>
-			  									<option value="" class="form-free-request__select-option">Скоринг компаний-банкротов</option>
-			  									<option value="" class="form-free-request__select-option">Скоринг компаний по "черному списку" 115-ФЗ</option>
-			  									<option value="" class="form-free-request__select-option">Cкоринг компаний дисквалифицированных лиц</option>
-			  									<option value="" class="form-free-request__select-option">Скоринг компаний с проблемными кредитами</option>
+			  									<option value="ee" class="form-free-request__select-option">Скоринг компаний-банкротов</option>
+			  									<option value="ww" class="form-free-request__select-option">Скоринг компаний по "черному списку" 115-ФЗ</option>
+			  									<option value="re" class="form-free-request__select-option">Cкоринг компаний дисквалифицированных лиц</option>
+			  									<option value="er" class="form-free-request__select-option">Скоринг компаний с проблемными кредитами</option>
 			  								</select>
 			  							</label>
 			  							<div class="form-free-request__captcha"></div>
-			  							<button type="submit" class="form-free-request__control form-free-request__btn btn btn_color_blue">Отправить запрос</button>
+			  							<div class="form-free-request__btn-wrap">
+			  								<button type="submit" class="form-free-request__btn btn btn_color_blue">Отправить запрос</button>
+			  							</div>
 			  						</fieldset>
 		  						</form>
+		  					</div>
+		  				</div>
+
+		  				<div class="form-free-request">
+		  					<div class="form-free-request__wrap">
+		  						<div class="form-free-request__result">
+		  							<p>ИНН компании: <span>1234567890</span></p>
+		  							<p>Тип скоринговой модели: <span>Скоринг компаний-банкротов</span></p>
+		  							<p>Год использованных данных: <span>2016</span></p>
+		  							<div class="form-free-request__notify">Ответ на Ваш запрос носит справочный характер. Для более углубленной проверки свяжитесь с агентом.</div>
+		  						</div>
+		  						<div class="form-free-request__btn-wrap">
+		  							<a href="#" class="form-free-request__btn btn btn_color_blue">Вернуться к форме</a>
+		  						</div>
 		  					</div>
 		  				</div>
 
