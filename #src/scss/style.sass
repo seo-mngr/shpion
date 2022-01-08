@@ -4577,18 +4577,19 @@
 		@include size-lg(6)
 		@include size-sm(12)
 		@include size-xs(12)
-		padding: 25px 35px 0
+		padding: 25px 35px 45px
 		background: #232C3B
 		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
 		border-radius: 6px
 		overflow: hidden
 		margin-bottom: 30px
+		position: relative
 
 		@media screen and (max-width: $media-lg)
-			padding: 25px 30px 0
+			padding: 25px 30px 45px
 
 		@media screen and (max-width: $media-sm)
-			padding: 25px 15px 0
+			padding: 25px 15px 45px
 
 		&:last-child
 			@media screen and (max-width: $media-sm)
@@ -4604,12 +4605,16 @@
 			font-size: 16px
 
 	&__item-text
+		height: 40px
+		overflow: hidden
 		margin-bottom: 25px
 		font-size: 14px
 		line-height: 140%
 		text-align: justify
 
 	&__item-btn
+		position: absolute
+		bottom: 0
 		border-radius: 3px 3px 0 0
 
 

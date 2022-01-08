@@ -162,6 +162,11 @@ button {
   margin-left: -15px;
   margin-right: -15px;
 }
+.row_justify_content_spb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -5010,13 +5015,14 @@ body.compensate-for-scrollbar {
   margin-left: 15px;
   margin-right: 15px;
   width: calc(33.3333333333% - 30px);
-  padding: 25px 35px 0;
+  padding: 25px 35px 45px;
   background: #232C3B;
   -webkit-box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
   overflow: hidden;
   margin-bottom: 30px;
+  position: relative;
 }
 .block-secrets__item-heading {
   font-size: 18px;
@@ -5025,6 +5031,8 @@ body.compensate-for-scrollbar {
   margin-bottom: 15px;
 }
 .block-secrets__item-text {
+  height: 40px;
+  overflow: hidden;
   margin-bottom: 25px;
   font-size: 14px;
   line-height: 140%;
@@ -5032,6 +5040,8 @@ body.compensate-for-scrollbar {
 }
 
 .block-secrets__item-btn {
+  position: absolute;
+  bottom: 0;
   border-radius: 3px 3px 0 0;
 }
 
@@ -5925,7 +5935,7 @@ body.compensate-for-scrollbar {
     width: calc(50% - 30px);
   }
   .block-secrets__item {
-    padding: 25px 30px 0;
+    padding: 25px 30px 45px;
   }
   .social-contacts_fixed {
     margin-left: 0;
@@ -7047,7 +7057,7 @@ body.compensate-for-scrollbar {
     width: calc(100% - 30px);
   }
   .block-secrets__item {
-    padding: 25px 15px 0;
+    padding: 25px 15px 45px;
   }
   .block-secrets__item:last-child {
     margin-bottom: 0;
