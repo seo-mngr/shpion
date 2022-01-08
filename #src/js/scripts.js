@@ -6,9 +6,34 @@
 //@@include('modules/formstyler/jquery.formstyler.min.js')
 @@include('modules/formstyler/jquery.mfs.min.js')
 @@include('modules/maskedinput/jquery.maskedinput.min.js')
+@@include('modules/yall/yall.min.js')
+@@include('modules/jgrowl/jquery.jgrowl.min.js')
 
 
 $(document).ready(function() {
+
+	/* LazyLoad для картинок */
+	{
+		let isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+	  let isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+	  if (isSafari || isMac) {
+	    $('img').each(function (i) {
+	      var $win = $(window);
+	      var $marker = $(this);
+	      //отслеживаем событие прокрутки страницы
+	      $win.scroll(function () {
+	        //Складываем значение прокрутки страницы и высоту окна, этим мы получаем положение страницы относительно нижней границы окна, потом проверяем, если это значение больше, чем отступ нужного элемента от верха страницы, то значит элемент уже появился внизу окна, соответственно виден
+	        if ($win.scrollTop() + $win.height() >= $marker.offset().top) {
+	          $marker.attr('src', $marker.attr('data-src'));
+	        } else {
+	        }
+	      });
+	    })
+	  } else {
+	    document.addEventListener("DOMContentLoaded", yall, true);
+	  }
+	}
+	/* END LazyLoad для картинок */
   
 	/* непрозрачный хедер при скролле страницы */
 	{

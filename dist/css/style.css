@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* Указываем box sizing */
+@import "modules/jgrowl/jquery.jgrowl.min.css";
 *,
 *::before,
 *::after {
