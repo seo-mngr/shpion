@@ -4997,6 +4997,9 @@ body.compensate-for-scrollbar {
   max-width: 140px;
   text-align: center;
 }
+.form-free-request__input-text_ogrn {
+  max-width: 475px;
+}
 .form-free-request__select {
   -webkit-box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
@@ -6223,6 +6226,8 @@ body.compensate-for-scrollbar {
   }
   .breadcrumbs__list-item:last-child {
     padding-right: 15px;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
   .main {
     padding-top: 80px;
@@ -7187,6 +7192,9 @@ body.compensate-for-scrollbar {
   .form-free-request__input-text_passport_num {
     max-width: 50%;
     width: 50%;
+  }
+  .form-free-request__input-text_ogrn {
+    max-width: 100%;
   }
   .form-free-request__result p {
     font-size: 16px;
