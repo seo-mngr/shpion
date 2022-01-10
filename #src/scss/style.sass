@@ -4934,6 +4934,273 @@
 
 	&__btn
 
+.searchline
+	margin-bottom: 60px
+
+	@media screen and (max-width: $media-sm)
+		margin-bottom: 35px
+
+	&__wrap
+		height: 51px
+		display: flex
+		position: relative
+
+	&__btn-icon
+		position: absolute
+		left: 0
+		top: 0
+		background: linear-gradient(91.99deg, #3D5F95 -31.4%, #1E2F4B 129.3%)
+		box-shadow: 0px 2.26667px 9.06667px rgba(0, 0, 0, 0.25)
+		border-radius: 3px
+
+		@media screen and (max-width: $media-sm)
+			display: none
+
+	&__form
+
+	&__input
+		padding-left: 80px
+		flex-basis: 100%
+		margin-right: 30px
+		border: 1px solid #243859
+		border-radius: 3px
+		background: #31383F
+		outline: none
+		color: #fafafa
+
+		@media screen and (max-width: $media-sm)
+			margin-right: -3px
+			padding-left: 15px
+			font-size: 14px
+
+	&__btn
+
+.searchresults
+
+	&__headline
+		margin-bottom: 40px
+		font-size: 24px
+		font-weight: 500
+
+		@media screen and (max-width: $media-sm)
+			font-size: 18px
+			margin-bottom: 25px
+
+	&__list
+
+	&__item
+		margin-bottom: 30px
+		background: #232428
+		overflow: hidden
+		border-radius: 9px
+
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 25px
+
+		&:last-child
+			margin-bottom: 0
+
+	&__item-heading
+		display: block
+		margin-bottom: 20px
+		font-size: 18px
+		font-weight: 500
+		text-align: left
+
+		&:hover
+			color: #3d5f95
+
+		@media screen and (max-width: $media-sm)
+			font-size: 16px
+			margin-bottom: 20px
+
+	&__item-text
+		line-height: 19px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 14px
+			line-height: 130%
+			text-align: justify
+
+	&__content
+		padding: 25px 35px 35px
+
+		@media screen and (max-width: $media-lg)
+			padding: 25px 30px
+
+		@media screen and (max-width: $media-sm)
+			padding: 20px 15px 25px
+
+	&__crumbs
+		margin-bottom: 35px
+		color: #3d5f95
+		font-size: 14px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 12px
+			margin-bottom: 25px
+
+	&__crumbs-list
+		display: flex
+
+		@media screen and (max-width: $media-sm)
+			flex-wrap: wrap
+
+	&__crumbs-item
+		display: flex
+		align-items: center
+		margin-right: 15px
+
+		@media screen and (max-width: $media-sm)
+			margin-right: 10px
+			margin-bottom: 5px
+
+		&:not(:first-child)
+			&::before
+				content: ''
+				display: block
+				width: 13px
+				height: 8px
+				position: relative
+				top: -1px
+				margin-right: 15px
+				background: url(../img/icon-subnav-item-arrow.svg) center no-repeat
+				background-size: contain
+
+				@media screen and (max-width: $media-sm)
+					margin-right: 10px
+
+		&:nth-child(2)
+			@media screen and (max-width: $media-sm)
+				margin-right: 0
+
+	&__crumbs-link
+		color: #3d5f95
+
+	&__conditions
+		display: flex
+		width: fit-content
+		background: #292A2C
+		border-radius: 0 9px 0 0
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+
+		@media screen and (max-width: $media-sm)
+			width: 100%
+			border-radius: 0
+			flex-wrap: wrap
+
+	&__price, &__term
+		min-height: 50px
+		padding: 0 35px 0 35px
+
+		@media screen and (max-width: $media-lg)
+			padding: 0 25px
+
+		@media screen and (max-width: $media-sm)
+			padding: 0 15px
+			min-height: 46px
+			font-size: 14px
+
+	&__price
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		background: #373737
+		border-radius: 0 9px 0 0
+
+		@media screen and (max-width: $media-sm)
+			flex-basis: 100%
+			border-radius: 0
+			box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+			z-index: 1
+
+	&__price-heading
+		margin-right: 5px
+		font-weight: 500
+		color: #3D5F95
+
+	&__price-content
+		font-weight: 500
+
+	&__term
+		display: flex
+		justify-content: flex-start
+		align-items: center
+
+		@media screen and (max-width: $media-lg)
+			padding: 0 20px
+
+	&__term-heading
+		margin-right: 5px
+		font-weight: 500
+		color: #3D5F95
+
+	&__term-content
+		font-weight: 500
+
+.no-searchresults
+	margin-bottom: 65px
+
+	@media screen and (max-width: $media-lg)
+		margin-bottom: 50px
+
+	&__wrap
+		padding: 50px 35px
+		background: url(../img/bg-searchresults-no-result.png) center no-repeat, linear-gradient(96.22deg, #10213C -30.94%, #2C4164 105.3%)
+		background-size: cover
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		border-radius: 9px
+		position: relative
+
+		@media screen and (max-width: $media-lg)
+			padding: 35px 30px
+
+		@media screen and (max-width: $media-sm)
+			padding: 25px 15px
+
+	&__content
+		max-width: 630px
+
+		@media screen and (max-width: $media-lg)
+			max-width: 360px
+
+		&::after
+			content: ''
+			display: block
+			width: 307px
+			height: 224px
+			position: absolute
+			right: 35px
+			top: 0
+			bottom: 0
+			margin-top: auto
+			margin-bottom: auto
+			background: url(../img/bg-searchresults-magnifier.png) center no-repeat
+			background-size: contain
+
+			@media screen and (max-width: $media-lg)
+				width: 257px
+				height: 188px
+				right: 15px
+
+			@media screen and (max-width: $media-sm)
+				display: none
+
+	&__headline
+		margin-bottom: 25px
+		font-size: 24px
+		font-weight: 500
+		line-height: 120.1%
+
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 20px
+			font-size: 18px
+
+	&__text
+		font-size: 18px
+
+		@media screen and (max-width: $media-sm)
+			font-size: 16px
 
 
 
