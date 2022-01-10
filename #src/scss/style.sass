@@ -4101,7 +4101,7 @@
 				width: 43px
 				height: 43px
 
-	@for $i from 1 through 3
+	@for $i from 1 through 4
 		&_type_pic &__item
 			&:nth-child(#{$i})::before				
 				background: url(../img/icon-faq-pic-#{$i}.svg) center no-repeat
@@ -4661,6 +4661,253 @@
 		position: absolute
 		bottom: 0
 		border-radius: 3px 3px 0 0
+
+.block-service
+	margin-bottom: 70px
+	display: flex
+	flex-direction: column
+	position: relative
+	background: #232428
+	box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+	border-radius: 9px
+	overflow: hidden
+
+	@media screen and (max-width: $media-lg)
+		margin-bottom: 55px
+
+	@media screen and (max-width: $media-sm)
+		margin-bottom: 45px
+
+	&__conditions
+		display: flex
+		width: fit-content
+		background: #292A2C
+		border-radius: 0 0 9px 0
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		z-index: 1
+
+		@media screen and (max-width: $media-lg)
+			order: 1
+			width: 100%
+			border-radius: 0
+
+		@media screen and (max-width: $media-sm)
+			flex-wrap: wrap
+
+	&__price, &__term, &__rating
+		min-height: 50px
+		padding: 0 50px 0 25px
+
+		@media screen and (max-width: $media-lg)
+			padding: 0 25px
+
+		@media screen and (max-width: $media-sm)
+			padding: 0 15px
+			min-height: 46px
+			font-size: 14px
+
+	&__price
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		background: #373737
+		border-radius: 0 0 9px 0
+
+		@media screen and (max-width: $media-sm)
+			flex-basis: 100%
+			border-radius: 0
+			box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+			z-index: 1
+
+	&__price-heading
+		margin-right: 20px
+		font-weight: 500
+		color: #3D5F95
+
+		@media screen and (max-width: $media-lg)
+			margin-right: 15px
+
+	&__price-content
+		margin-right: 20px
+		font-weight: 500
+
+		@media screen and (max-width: $media-lg)
+			margin-right: 10px
+
+	&__price-hint
+		font-size: 14px
+		color: #8b8b8b
+
+		@media screen and (max-width: $media-lg)
+			display: none
+
+	&__price-hicon
+		display: none
+
+		@media screen and (max-width: $media-lg)
+			flex: none
+			position: relative
+			top: -2px
+			padding-top: 1px
+			display: flex
+			justify-content: center
+			align-items: center
+			font-size: 12px
+			font-weight: 500
+			line-height: 1em
+			width: 17px
+			height: 17px
+			border-radius: 50%
+			background: linear-gradient(91.99deg, #3D5F95 -31.4%, #1E2F4B 129.3%)
+			cursor: help
+
+	&__term
+		display: flex
+		justify-content: flex-start
+		align-items: center
+
+		@media screen and (max-width: $media-lg)
+			padding: 0 0 0 20px
+
+	&__term-heading
+		margin-right: 20px
+		font-weight: 500
+		color: #3D5F95
+
+		@media screen and (max-width: $media-lg)
+			margin-right: 15px
+
+	&__term-content
+		font-weight: 500
+
+	&__content
+		padding: 50px 25px
+		font-size: 18px
+		line-height: 140%
+		text-align: justify
+
+		@media screen and (max-width: $media-lg)
+			order: 3
+			padding: 30px 25px
+			font-size: 16px
+
+		@media screen and (max-width: $media-sm)
+			padding: 25px 15px
+			font-size: 14px
+
+	&__rating
+		width: fit-content
+		background: #292A2B
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		border-radius: 0 9px 0 0
+
+		@media screen and (max-width: $media-lg)
+			order: 2
+			width: 100%
+			border-radius: 0
+
+	&__btn
+		position: absolute
+		bottom: 0
+		right: 25px
+		border-radius: 3px 3px 0 0
+
+		@media screen and (max-width: $media-lg)
+			position: static
+			order: 4
+			align-self: center
+
+.days-work-to
+	margin-top: 70px
+	margin-bottom: 70px
+	padding: 30px
+	background-color: #232C3B
+	background-image: url(../img/bg-days-work-to.png)
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+	border-radius: 9px
+	font-size: 18px
+	text-align: center
+
+	@media screen and (max-width: $media-lg)
+		margin-top: 55px
+		margin-bottom: 55px
+
+	@media screen and (max-width: $media-sm)
+		padding: 20px 15px
+		font-size: 14px
+
+	&__date
+		color: #3d5f95
+
+.mobile-providers
+	margin-top: 70px
+	margin-bottom: 70px
+
+	@media screen and (max-width: $media-lg)
+		margin-top: 50px
+		margin-bottom: 50px
+
+	@media screen and (max-width: $media-sm)
+		margin-top: 40px
+		margin-bottom: 40px
+
+	&__list
+		display: flex
+		justify-content: space-between
+
+		@media screen and (max-width: $media-lg)
+			justify-content: flex-start
+			flex-wrap: wrap
+
+		@media screen and (max-width: $media-sm)
+			justify-content: center
+
+	&__item
+		display: flex
+		justify-content: center
+		align-items: center
+		width: calc(20% - 17px)
+		height: 70px
+		background: #232C3B
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		border-radius: 6px
+
+		@media screen and (max-width: $media-lg)
+			width: calc(33.33333% - 8px)
+
+		@media screen and (max-width: $media-sm)
+			width: calc(50% - 10px)
+
+		&:not(:last-child)
+			margin-right: 16px
+
+			@media screen and (max-width: $media-lg)
+				margin-right: 12px
+
+			@media screen and (max-width: $media-sm)
+				margin-right: 20px
+
+		&:nth-child(3n)
+			@media screen and (max-width: $media-lg)
+				margin-right: 0
+
+		&:nth-child(2n)
+			@media screen and (max-width: $media-sm)
+				margin-right: 0
+
+		&:not(:nth-last-child(-n + 3))
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 30px
+
+		&:not(:nth-last-child(-n + 2))
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 20px
+
+
+	&__img
 
 
 
