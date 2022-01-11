@@ -4819,6 +4819,8 @@
 			font-size: 14px
 
 	&__rating
+		display: flex
+		align-items: center
 		width: fit-content
 		background: #292A2B
 		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
@@ -4828,6 +4830,51 @@
 			order: 2
 			width: 100%
 			border-radius: 0
+
+		@media screen and (max-width: $media-sm)
+			flex-wrap: wrap
+			justify-content: center
+			padding-top: 15px
+			padding-bottom: 15px
+
+		& .rating
+			margin-right: 30px
+			height: 25px
+			width: 92px
+
+			@media screen and (max-width: $media-sm)
+				order: 3
+				width: 100%
+				margin-right: 0
+				display: flex
+				justify-content: center
+
+			& .rating__best
+				transform: scale(0.7, 0.7)
+				position: relative
+				left: -19px
+				top: -5px
+
+				@media screen and (max-width: $media-sm)
+					left: 0
+
+		& .text_rate_num
+			margin-right: 30px
+
+			@media screen and (max-width: $media-sm)
+				order: 1
+				width: 50%
+				margin-right: 0
+				margin-bottom: 3px
+				text-align: center
+
+		& .text_rate_average
+			@media screen and (max-width: $media-sm)
+				order: 2
+				width: 50%
+				margin-right: 0
+				margin-bottom: 3px
+				text-align: center
 
 	&__btn
 		position: absolute
@@ -5228,6 +5275,9 @@
 .feedback-offer
 	margin-top: 70px
 
+	@media screen and (max-width: $media-sm)
+		margin-top: 50px
+
 	&__wrap
 		padding: 0 95px 40px 65px
 		position: relative
@@ -5291,6 +5341,93 @@
 
 	&__btn
 
+.smi
+	margin-top: 60px
+	margin-bottom: 60px
+
+	@media screen and (max-width: $media-sm)
+		margin-bottom: 50px
+
+	&__list
+
+	&__item
+		
+		&:not(:last-child)
+			margin-bottom: 30px
+
+			@media screen and (max-width: $media-sm)
+				margin-bottom: 25px
+
+	&__item-wrap
+		display: flex
+		padding: 20px 0 20px 65px
+		background: #232C3B
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		border-radius: 9px
+
+		&:hover
+			background: linear-gradient(96.22deg, #10213C -30.94%, #2C4164 105.3%)
+
+		@media screen and (max-width: $media-lg)
+			padding-left: 50px
+
+		@media screen and (max-width: $media-sm)
+			padding: 35px 15px 25px
+			flex-direction: column
+
+	&__item-content
+		max-width: 475px
+		width: 100%
+
+		@media screen and (max-width: $media-lg)
+			max-width: 330px
+
+		@media screen and (max-width: $media-sm)
+			order: 1
+
+	&__item-date
+		display: block
+		margin-bottom: 37px
+		color: #3d5f95
+
+		@media screen and (max-width: $media-lg)
+			margin-bottom: 25px
+
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 20px
+			font-size: 14px
+
+	&__item-text
+		margin-bottom: 37px
+		font-size: 18px
+
+		@media screen and (max-width: $media-lg)
+			margin-bottom: 25px
+
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 20px
+			font-size: 16px
+
+	&__item-link
+		color: #3d5f95
+
+	&__item-pic
+		flex: 1 0 auto
+		display: flex
+		justify-content: center
+		align-items: center
+
+		@media screen and (max-width: $media-lg)
+			flex-basis: 50%
+
+		@media screen and (max-width: $media-sm)
+			margin-bottom: 35px
+
+	&__item-img
+		max-width: 70%
+
+		@media screen and (max-width: $media-sm)
+			max-width: 90%
 
 
 
