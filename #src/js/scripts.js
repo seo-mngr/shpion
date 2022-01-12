@@ -12,6 +12,10 @@
 
 $(document).ready(function() {
 
+	/* fancybox модалки */
+  $('.fancybox').fancybox();
+  /* END fancybox модалки */
+
 	/* LazyLoad для картинок */
 	{
 		let isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
@@ -152,7 +156,7 @@ $(document).ready(function() {
 	/* END кнопка списка услуг на странице услуг */
 
 	/* фильтр услуг на странице услуг */
-	if ($('.services-links').length) {
+	if ($('.services-masonry__list').length) {
 		$('.services-masonry__list').masonry({
 			itemSelector: '.services-masonry__item',
 			columnWidth: '.services-masonry__item',
@@ -287,5 +291,180 @@ $(document).ready(function() {
 		});
 	}
 	/* END pricelist accordeon */
+
+	/* conversion events */
+	function gtag_report_conversion_vi(url) {
+    var callback = function () {
+        console.log('gtag_report_conversion_vi');
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-788332171/fZUICMbulekBEIv98_cC',
+        'event_callback': callback
+    });
+    return false;
+  }
+  $(document).on('click touch', 'a[href*="viber:"]', function(e){
+      gtag_report_conversion_vi();
+  });
+
+  function gtag_report_conversion_wa(url) {
+    var callback = function () {
+        console.log('gtag_report_conversion_wa');
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-788332171/rapRCMeO9egBEIv98_cC',
+        'event_callback': callback
+    });
+    return false;
+  }
+  $(document).on('click touch', 'a[href*="wa.me"]', function(e){
+      gtag_report_conversion_wa();
+  });
+  
+  function gtag_report_conversion_tg(url) {
+    var callback = function () {
+        console.log('gtag_report_conversion_tg');
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-788332171/JXQUCLzwlekBEIv98_cC',
+        'event_callback': callback
+    });
+    return false;
+  }
+  $(document).on('click touch', 'a[href*="t.me"]', function(e){
+      gtag_report_conversion_tg();
+  });
+  
+  function gtag_report_conversion_zayavka(url) {
+    var callback = function () {
+        console.log('gtag_report_conversion_zayavka');
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-788332171/M28zCM7qlekBEIv98_cC',
+        'transaction_id': '',
+        'event_callback': callback
+    });
+    return false;
+  }
+  $(document).on('click touch', '#main-when .holder .col.second .button', function(e){
+      gtag_report_conversion_zayavka();
+  });
+
+  function gtag_report_conversion_consult(url) {
+    var callback = function () {
+        console.log('gtag_report_conversion_consult');
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-788332171/hrLYCJTjlekBEIv98_cC',
+        'transaction_id': '',
+        'event_callback': callback
+    });
+    return false;
+  }
+  $(document).on('click touch', '.mainpage_vs .header-main-button a:first-child, .order-block-inner .button ', function(e){
+      gtag_report_conversion_consult();
+  });
+  /* END conversion events */
+
+  /* ВСПЛЫВАЮЩИЕ ОКНА */
+	// Вызов всплывающего окна
+	$('[data-popup]').click(function(event) {
+		var _popup_id = $(this).attr('data-popup');
+		callPopup(_popup_id);
+	});
+	// Закрытие попапа при клике вне области
+	$('.popup-main').mouseup(function (e){
+	  var div = $(".popup-content");
+	  if (!div.is(e.target) && div.has(e.target).length === 0) {
+	    closePopup($(this));
+	  }
+	});
+	// Закрытие при клике на кнопку
+	$('.popup-close,._js_close').click(function(event) {
+	  closePopup($(this));
+	});
+
+	function callPopup(_id){
+	  $('body').addClass('lock-body');
+	  $('.body-site-wrapper,.top-nav').addClass('blur');
+	  $(_id).fadeIn('fast');
+	}
+	function closePopup(_object) {
+	  _object.closest('.popup-main').fadeOut('fast');
+	  $('body').removeClass('lock-body');
+	  $('.body-site-wrapper,.top-nav').removeClass('blur');
+	}
+	$("#jGrowl").remove();
+	//AjaxForm.Message.success = function() {};
+	$(document).on('submit', '.ajax_form', function() {
+	    // Здесь любой код для проверки формы при отправке
+	    // Я просто печатаю её в консоли бразуреа
+	    //console.log(this);
+	    
+	    // Результатом работы будет выставление глобальной переменной
+	   // afValidated = false; // Или true, если валидация пройдена
+	    /*if (afValidated===true){
+	        
+	    }*/
+	});
+	$(document).on('af_complete', function(event, response) {
+    var form = response.form;
+    //var af_action=form.find("input[name='af_action']").val();
+    //form.find("input[name='af_action']").remove();
+     
+    // проверяем id формы
+    //form.parents('.modal').modal('hide');
+	  if (form.attr('id')=='form_vsdadata') {
+
+	  } else {
+      if (form.attr('id') == 'feedback') {
+          grecaptcha.reset();
+      }
+      //form.append('<input type="hidden" name="af_action" value="'+af_action+'">');
+      //alert(form.find(".error").length);
+      //$.fancybox.close();
+      setTimeout(ff1,300);
+      function ff1() {
+        //alert(form.find(".error").length);
+        if (form.find(".error").length>0) {
+
+        } else {
+	        $.fancybox.close();
+	        setTimeout(ff,400);
+	        /*
+	        console.log("reset");
+	        form[0].reset();
+	        */
+        }
+      }
+
+      function ff(){
+        //console.log(form.find(".error").length);
+        $("#popup-success").css({"display":"block"});
+
+        setTimeout(ff1,2000);
+        function ff1(){
+          $("#popup-success").fadeOut();
+          location.reload(true);
+        }
+      }
+	  }
+  });
+  /* END ВСПЛЫВАЮЩИЕ ОКНА */
 
 });
