@@ -2471,6 +2471,7 @@ body.compensate-for-scrollbar {
           box-shadow: 0 0 16px #2f343c;
 }
 .block-not-allowed__item-img {
+  width: 64px;
   position: absolute;
   display: block;
   top: 23px;
