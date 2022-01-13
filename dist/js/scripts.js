@@ -3064,6 +3064,24 @@ $(document).ready(function() {
   $('.fancybox').fancybox();
   /* END fancybox модалки */
 
+  if ($('.searchline.searchline_js_animated').length) {
+  	let $searchline = $('.searchline.searchline_js_animated');
+  	let $toggle_icon = $searchline.find('button.searchline__btn-icon, button.searchline__close');
+
+  	$toggle_icon.on('click', function(e) {
+  		var $current_searchline = $(this).closest('.searchline');
+  		
+  		$current_searchline.toggleClass('searchline_slide');
+  		if ($current_searchline.hasClass('searchline_absolute')) {
+  			setTimeout(function() {
+  				$current_searchline.removeClass('searchline_absolute');
+  			}, 100);
+  		} else {
+  			$current_searchline.addClass('searchline_absolute');
+  		}
+  	});
+  }
+
 	/* LazyLoad для картинок */
 	{
 		let isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);

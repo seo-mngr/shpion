@@ -165,6 +165,7 @@
 			display: none
 
 	&__additions
+		position: relative
 		display: flex
 		flex-direction: row
 
@@ -4487,6 +4488,12 @@
 	&__select-option
 		
 	&__captcha
+		& .g-recaptcha
+			@media screen and (max-width: $media-sm)
+				transform: scale(.8)
+				transform-origin: 0
+				width: 243px
+				margin-top: -10px
 
 	&__result
 		max-width: 410px
@@ -4513,6 +4520,7 @@
 
 	&__notify
 		font-size: 16px
+		color: #fafafa
 
 		@media screen and (max-width: $media-sm)
 			font-size: 14px
@@ -5005,16 +5013,52 @@
 
 	&__btn
 
-.searchline
+.search
 	margin-bottom: 60px
 
 	@media screen and (max-width: $media-sm)
 		margin-bottom: 35px
 
+.searchline
+	min-width: 51px
+	position: relative
+
+	&_header
+		margin-right: 5px
+		min-width: 51px
+
+	&_slide
+	
+	&_absolute
+
+	&_js_animated
+
 	&__wrap
 		height: 51px
 		display: flex
 		position: relative
+
+	&_slide &__wrap
+		position: absolute
+		right: 0
+		top: 0
+
+	&_absolute &__wrap
+		position: absolute
+		right: 0
+		top: 0
+
+	&__hidden
+		flex: none
+		width: 0
+		max-width: 735px
+		display: flex
+		position: relative
+		overflow: hidden
+		transition: width .1s linear
+
+	&_slide &__hidden
+		width: 735px
 
 	&__btn-icon
 		position: absolute
@@ -5023,9 +5067,14 @@
 		background: linear-gradient(91.99deg, #3D5F95 -31.4%, #1E2F4B 129.3%)
 		box-shadow: 0px 2.26667px 9.06667px rgba(0, 0, 0, 0.25)
 		border-radius: 3px
+		z-index: 1
 
 		@media screen and (max-width: $media-sm)
 			display: none
+
+	&_header &__btn-icon
+		@media screen and (max-width: $media-sm)
+			display: flex
 
 	&__form
 
@@ -5044,7 +5093,23 @@
 			padding-left: 15px
 			font-size: 14px
 
+	&_header &__input
+		margin-right: -30px
+
 	&__btn
+
+	&__close
+		position: absolute
+		width: 17px
+		height: 17px
+		top: 0
+		bottom: 0
+		right: 130px
+		margin-top: auto
+		margin-bottom: auto
+		background: url(../img/icon-close-search.svg) center / contain no-repeat
+		cursor: pointer
+
 
 .searchresults
 
@@ -5413,7 +5478,7 @@
 		color: #3d5f95
 
 	&__item-pic
-		flex: 1 0 auto
+		flex: 1 0 50%
 		display: flex
 		justify-content: center
 		align-items: center
@@ -5457,7 +5522,8 @@
 		& .g-recaptcha
 			@media screen and (max-width: $media-sm)
 				transform: scale(.8)
-				margin-left: -30px
+				transform-origin: 0
+				width: 243px
 				margin-top: -10px
 
 	&__fieldset
@@ -5540,6 +5606,71 @@
 
 		& svg
 			transform: scale(1.5, 1.5)
+
+.block-feedback
+	margin-top: 60px
+	margin-bottom: 60px
+
+	@media screen and (max-width: $media-sm)
+		margin-bottom: 50px
+
+	&__list
+		justify-content: center
+		align-items: flex-start
+
+	&__item
+		@include col()
+		@include size(3)
+		@include size-lg(4)
+		@include size-sm(12)
+		@include size-xs(12)
+		height: 170px
+		background: #232C3B
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		border-radius: 6px
+
+		&:not(:nth-last-child(-n + 4))
+			margin-bottom: 30px
+
+		&:not(:nth-last-child(-n + 3))
+			@media screen and (max-width: $media-lg)
+				margin-bottom: 30px
+
+		&:not(:last-child)
+			@media screen and (max-width: $media-sm)
+				margin-bottom: 25px
+
+		&:hover
+			background: linear-gradient(96.22deg, #10213C -30.94%, #2C4164 105.3%)
+
+	&__item-wrap
+		height: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: space-between
+
+	&__item-pic
+		flex-basis: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		max-width: 80%
+
+	&__item-img
+		width: 100%
+		
+
+	&__item-link
+		height: 48px
+		width: 100%
+		max-width: 175px
+		display: flex
+		justify-content: center
+		align-items: center
+		background: linear-gradient(90.42deg, #3D5F95 4.44%, rgba(61, 95, 149, 0.34) 109.4%)
+		border-radius: 6px 6px 0px 0px
+
 
 
 
