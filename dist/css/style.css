@@ -2657,6 +2657,7 @@ body.compensate-for-scrollbar {
 
 .block-any-questions {
   margin-top: 95px;
+  margin-bottom: 32px;
 }
 .block-any-questions__headline {
   -webkit-box-sizing: border-box;
@@ -7467,7 +7468,7 @@ body.compensate-for-scrollbar {
     border-radius: 3px;
     z-index: -1;
   }
-  .breadcrumbs__list-item:last-child {
+  .breadcrumbs__list-item:nth-child(3) {
     padding-right: 15px;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
