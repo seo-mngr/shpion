@@ -118,6 +118,9 @@
 			border-radius: 0 0 3px 3px
 			box-shadow: 0 5px 13px rgba(#000, .15), inset 0 5px 13px rgba(#000, .15)
 
+			@media screen and (max-width: $media-lg)
+				box-shadow: none
+
 	&__wrap
 		margin: 0 auto
 		height: 100%
@@ -131,13 +134,19 @@
 			justify-content: space-between
 
 		@media screen and (max-width: $media-lg)
-			justify-content: center
+			
 
 	&__logo
 		margin-right: 180px
 
 		@media screen and (max-width: $media-xxl)
 			margin-right: 0
+
+		@media screen and (max-width: $media-lg)
+			order: 2
+			flex: none
+			width: 33.3333%
+			z-index: 201
 
 	&__logo-img
 		height: 65px
@@ -150,6 +159,7 @@
 		@media screen and (max-width: $media-lg)
 			height: 50px
 			width: 119px
+			margin: 0 auto
 
 		@media screen and (max-width: $media-sm)
 			height: 36px
@@ -162,7 +172,9 @@
 			margin-right: 0
 
 		@media screen and (max-width: $media-lg)
-			display: none
+			odrer: 1
+			flex: none
+			width: 33.3333%
 
 	&__additions
 		position: relative
@@ -170,7 +182,11 @@
 		flex-direction: row
 
 		@media screen and (max-width: $media-lg)
-			display: none
+			overflow: hidden
+			height: 0
+			order: 3
+			flex: none
+			width: 33.3333%
 
 .breadcrumbs
 	padding-top: 15px
@@ -271,6 +287,9 @@
 .main
 	flex: 1 0 auto
 	padding-top: $header-height
+
+	@media screen and (max-width: $media-lg)
+		padding-top: $header-height-lg
 
 	@media screen and (max-width: $media-sm)
 		padding-top: $header-height-sm
@@ -449,14 +468,168 @@
 			color: #8b8b8b
 			text-decoration: underline
 
+.mobile-menu-btn
+	padding: 0 0 10px
+	background: transparent
+	border: none
+	outline: none
+	position: relative
+	left: 0
+	z-index: 201
+	cursor: pointer
+	transition: all .5s ease
+
+	&_active
+		display: sticky
+		left: 0
+		padding: 15px 15px 25px
+		background: #31383F
+		box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15)
+		border-radius: 0px 3px 3px 0px
+		left: -15px
+
+	&_type_back
+
+	&__wrap
+		padding: 0 0 9px
+		transition: all .5s ease
+
+	& span
+		position: relative
+		display: block
+		width: 23px
+		height: 2px
+		margin: 9px 0 0
+		background: #fafafa
+
+		&::before, &::after
+			content: ''
+			position: absolute
+			top: 9px
+			left: 0
+			width: 23px
+			height: 2px
+			background: #fafafa
+			transition: all .5s ease
+
+		&::after
+			top: -9px
+
+	&_active span
+		background: none
+
+		&::before
+			top: 0
+			transform: rotate(45deg)
+
+		&::after
+			top: 0
+			transform: rotate(-45deg)
+
+	&_type_back span
+		background: none
+
+		&::before, &::after
+			width: 14px
+			left: 3px
+
+		&::before
+			top: 5px
+			transform: rotate(45deg)
+
+		&::after
+			top: -4px
+			transform: rotate(-45deg)
+
 
 .nav
+	$social_panel_mob_height: 93px
+
+	&__mobile
+		display: none
+		height: 100%
+		margin-left: 20px
+
+		@media screen and (max-width: $media-lg)
+			display: block
+
+		@media screen and (max-width: $media-sm)
+			margin-left: 15px
+
+	&__mobile-wrap
+		display: flex
+		height: 100%
+		align-items: center
+
+	&__mobile-search
+		display: flex
+		justify-content: center
+		align-items: center
+		height: $header-height-lg
+		position: fixed
+		top: -100%
+		left: 0
+		right: 0
+		margin: 0 auto
+		padding: 0 20px
+		background: #23252A
+		z-index: 201
+		transition: all .5s ease
+
+		@media screen and (max-width: $media-sm)
+			height: $header-height-sm
+
+		&_active
+			top: 0
+
+	&__mobile-search .searchline
+		width: 100%
+
+	&__mobile-search-btn
+		padding: 0
+		background: transparent
+		border: none
+		outline: none
+		box-shadow: none
+		z-index: 201
+		transition: all .5s ease
+
+		&:not(&_fixed)
+			&:hover
+				background: none
+				box-shadow: none
+
+		&_fixed
+			position: fixed
+			right: 0
+			margin-right: 0
+			background: linear-gradient(91.99deg, #3D5F95 -31.4%, #1E2F4B 129.3%)
+			border-radius: 3px 0px 0px 3px
 
 	&__wrap
 		display: flex
 		flex-direction: row
 		justify-content: space-between
 		border-bottom: 1px solid #1E2F4B
+		transition: all .5s ease
+
+		@media screen and (max-width: $media-lg)
+			position: fixed
+			top: 0
+			left: 100%
+			width: 100%
+			height: 100%
+
+			flex-direction: column
+			justify-content: center
+
+			padding: $header-height-lg 40px $social_panel_mob_height
+			z-index: 200
+			background: #23252a
+
+		&_visible
+			@media screen and (max-width: $media-lg)
+				left: 0
 
 	&__item
 		display: flex
@@ -465,6 +638,9 @@
 
 		&:hover
 			border-bottom: 3px solid #3D5F95
+
+			@media screen and (max-width: $media-lg)
+				border-color: transparent
 
 		&_has-subnav
 			&::after
@@ -478,9 +654,20 @@
 				background: url(../img/icon-subnav-arrow.svg) center no-repeat
 				background-size: contain
 
+				@media screen and (max-width: $media-lg)
+					width: 15px
+					height: 9px
+					top: 8px
+					transform: rotate(-90deg)
+					background: url(../img/icon-pricelist-item-arrow-white.svg) center / contain no-repeat
+					cursor: pointer
+
 	&__item:hover
 		& .nav__subnav
 			display: block
+
+			@media screen and (max-width: $media-lg)
+				display: flex
 
 	&__item:not(:last-child)
 		margin-right: 65px
@@ -488,10 +675,21 @@
 		@media screen and (max-width: $media-xxl)
 			margin-right: 40px
 
+		@media screen and (max-width: $media-lg)
+			margin-bottom: 19px
+
 	&__link
 		display: block
 		font-size: 16px
 		padding-bottom: 13px
+
+		@media screen and (max-width: $media-lg)
+			font-size: 18px
+			padding-bottom: 0
+
+		&:hover
+			@media screen and (max-width: $media-lg)
+				color: #3d5f95
 
 	&__subnav
 		display: none
@@ -504,6 +702,28 @@
 		border-radius: 3px
 		padding: 26px 10px 26px 46px
 		margin-left: -46px
+		transition: all .5s ease
+
+		@media screen and (max-width: $media-lg)
+			display: flex
+			flex-direction: column
+			justify-content: center
+			padding: 0 40px
+			margin-top: $header-height-lg
+			margin-left: 0
+			width: 100%
+			height: calc(100vh - $header-height-lg - $social_panel_mob_height)
+			left: 100%
+			top: 0
+			columns: 0
+			z-index: 202
+			overflow-y: scroll
+			background-color: #23252A
+			box-shadow: none
+
+		&_active
+			@media screen and (max-width: $media-lg)
+				left: 0
 
 		&::before
 			content: ''
@@ -523,6 +743,10 @@
 				left: 11px
 				color: #3d5f95
 
+				@media screen and (max-width: $media-lg)
+					position: static
+					color: #fafafa
+
 			& .nav__subnav-link
 				&::before
 					content: ''
@@ -535,8 +759,18 @@
 					margin-right: 15px
 					background: url(../img/icon-subnav-item-arrow.svg) center no-repeat
 
+					@media screen and (max-width: $media-lg)
+						display: none
+
 	&__subnav-link
 		white-space: nowrap
+
+		@media screen and (max-width: $media-lg)
+			font-size: 18px
+
+		&:hover
+			@media screen and (max-width: $media-lg)
+				color: #3d5f95 !important
 
 .offer
 	position: relative
@@ -5038,6 +5272,9 @@
 		display: flex
 		position: relative
 
+		@media screen and (max-width: $media-sm)
+			height: 47px
+
 	&_slide &__wrap
 		position: absolute
 		right: 0
@@ -5059,6 +5296,9 @@
 
 	&_slide &__hidden
 		width: 735px
+
+		@media screen and (max-width: $media-lg)
+			width: 100%
 
 	&__btn-icon
 		position: absolute
@@ -5087,6 +5327,7 @@
 		background: #31383F
 		outline: none
 		color: #fafafa
+		box-sizing: border-box
 
 		@media screen and (max-width: $media-sm)
 			margin-right: -3px
@@ -5097,6 +5338,8 @@
 		margin-right: -30px
 
 	&__btn
+		@media screen and (max-width: $media-sm)
+			height: 47px
 
 	&__close
 		position: absolute
@@ -5109,6 +5352,12 @@
 		margin-bottom: auto
 		background: url(../img/icon-close-search.svg) center / contain no-repeat
 		cursor: pointer
+
+		@media screen and (max-width: $media-lg)
+			right: 160px
+
+		@media screen and (max-width: $media-sm)
+			right: 120px
 
 
 .searchresults
@@ -5738,6 +5987,9 @@
 			bottom: -45px
 			height: 150px
 
+	&__nav-dominated-you
+		display: none
+
 	&__item
 		display: flex
 		align-items: center
@@ -5837,6 +6089,7 @@
 	position: fixed
 	bottom: 60px
 	right: 30px
+	z-index: 1
 
 	@media screen and (max-width: $media-sm)
 		right: 20px

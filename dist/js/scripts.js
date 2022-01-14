@@ -3064,6 +3064,7 @@ $(document).ready(function() {
   $('.fancybox').fancybox();
   /* END fancybox модалки */
 
+  /* анимация поисковой строки в шапке */
   if ($('.searchline.searchline_js_animated').length) {
   	let $searchline = $('.searchline.searchline_js_animated');
   	let $toggle_icon = $searchline.find('button.searchline__btn-icon, button.searchline__close');
@@ -3081,6 +3082,62 @@ $(document).ready(function() {
   		}
   	});
   }
+  /* END анимация поисковой строки в шапке */
+
+  /* функционал главного мобильного меню */
+  if ( $(window).width() <= 992 ) {
+	  $('.nav__mobile').on('click', function(e) {
+	  	//console.log( $(e.target).closest('.mobile-menu-btn') );
+
+	  	if ( $(e.target).closest('.mobile-menu-btn').hasClass('mobile-menu-btn') ) {
+	  		var $mobile_menu_btn = $(e.target).closest('.mobile-menu-btn');
+
+	  		if ( $mobile_menu_btn.hasClass('mobile-menu-btn_active') ) {
+	  			if ( $mobile_menu_btn.hasClass('mobile-menu-btn_type_back') ) {
+	  				$mobile_menu_btn.removeClass('mobile-menu-btn_type_back');
+	  				$('.nav__wrap .nav__subnav').removeClass('nav__subnav_active');
+	  			} else {
+		  			$mobile_menu_btn.removeClass('mobile-menu-btn_active');
+		  			$('body').removeClass('body_stop_scrolling');
+		  			$('.nav__wrap').removeClass('nav__wrap_visible');
+		  			$('.social-contacts').removeClass('social-contacts__nav-dominated-you');
+		  			$('.nav__mobile-search-btn').removeClass('nav__mobile-search-btn_fixed');
+		  		}
+	  		} else {
+	  			$mobile_menu_btn.addClass('mobile-menu-btn_active');
+	  			$('body').addClass('body_stop_scrolling');
+	  			$('.nav__wrap').addClass('nav__wrap_visible');
+	  			$('.social-contacts').addClass('social-contacts__nav-dominated-you');
+	  			$('.nav__mobile-search-btn').addClass('nav__mobile-search-btn_fixed');
+	  		}
+
+	  	} else if ( $(e.target).hasClass('nav__mobile-search-btn') ) {
+	  		$('.nav__mobile-search').addClass('nav__mobile-search_active');
+	  		$('.social-contacts').addClass('social-contacts__nav-dominated-you');
+	  	} else if ( $(e.target).hasClass('searchline__close') ) {
+	  		$('.nav__mobile-search').removeClass('nav__mobile-search_active');
+	  		if ( !$('.mobile-menu-btn').hasClass('mobile-menu-btn_active') ) {
+	  			$('.social-contacts').removeClass('social-contacts__nav-dominated-you');
+	  		}
+	  	}
+	  });
+	  $('.nav__item_has-subnav').on('click', function(e) {
+	  	//console.log( $(e.target) );
+	  	if ( $(e.target).hasClass('nav__item_has-subnav') ) {
+	  		var $subnav = $(e.target).find('.nav__subnav');
+
+	  		if ( $subnav.hasClass('nav__subnav_active') ) {
+	  			$subnav.removeClass('nav__subnav_active');
+	  			$('.mobile-menu-btn').removeClass('mobile-menu-btn_type_back');
+	  			
+	  		} else {
+	  			$subnav.addClass('nav__subnav_active');
+	  			$('.mobile-menu-btn').addClass('mobile-menu-btn_type_back');
+	  		}
+	  	}
+	  });
+	}
+  /* END функционал главного мобильного меню */
 
 	/* LazyLoad для картинок */
 	{
