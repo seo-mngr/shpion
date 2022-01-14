@@ -3765,10 +3765,10 @@ body.compensate-for-scrollbar {
 }
 
 .block-steps__item:nth-child(1) .block-steps__count-wrap {
-  bottom: -140px;
+  bottom: -136px;
 }
 .block-steps__item:nth-child(1) .block-steps__count-wrap::before {
-  bottom: 100%;
+  bottom: calc(100% + 2px);
 }
 .block-steps__item:nth-child(1) .block-steps__count-wrap::after {
   bottom: calc(100% + 27px);
@@ -3777,16 +3777,16 @@ body.compensate-for-scrollbar {
   top: -140px;
 }
 .block-steps__item:nth-child(2) .block-steps__count-wrap::before {
-  top: 100%;
+  top: calc(100% + 2px);
 }
 .block-steps__item:nth-child(2) .block-steps__count-wrap::after {
   top: calc(100% + 27px);
 }
 .block-steps__item:nth-child(3) .block-steps__count-wrap {
-  bottom: -140px;
+  bottom: -136px;
 }
 .block-steps__item:nth-child(3) .block-steps__count-wrap::before {
-  bottom: 100%;
+  bottom: calc(100% + 2px);
 }
 .block-steps__item:nth-child(3) .block-steps__count-wrap::after {
   bottom: calc(100% + 27px);
@@ -3795,16 +3795,16 @@ body.compensate-for-scrollbar {
   top: -140px;
 }
 .block-steps__item:nth-child(4) .block-steps__count-wrap::before {
-  top: 100%;
+  top: calc(100% + 2px);
 }
 .block-steps__item:nth-child(4) .block-steps__count-wrap::after {
   top: calc(100% + 27px);
 }
 .block-steps__item:nth-child(5) .block-steps__count-wrap {
-  bottom: -140px;
+  bottom: -136px;
 }
 .block-steps__item:nth-child(5) .block-steps__count-wrap::before {
-  bottom: 100%;
+  bottom: calc(100% + 2px);
 }
 .block-steps__item:nth-child(5) .block-steps__count-wrap::after {
   bottom: calc(100% + 27px);
@@ -3812,7 +3812,6 @@ body.compensate-for-scrollbar {
 .block-steps__count-text::before {
   display: block;
   position: relative;
-  top: 4px;
   content: "0" counter(block-steps);
   background: -webkit-gradient(linear, left top, right top, from(#3D5F95), to(rgba(61, 95, 149, 0.34)));
   background: -o-linear-gradient(left, #3D5F95 0%, rgba(61, 95, 149, 0.34) 100%);
@@ -3821,6 +3820,7 @@ body.compensate-for-scrollbar {
   -webkit-text-fill-color: transparent;
   font-size: 47px;
   font-weight: 700;
+  line-height: 100%;
   text-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
 }
 
