@@ -3916,8 +3916,7 @@ body.compensate-for-scrollbar {
   max-width: 380px;
   width: 50%;
   height: 70px;
-  background: -o-linear-gradient(169.28deg, #464646 0%, #28292B 100%);
-  background: linear-gradient(280.72deg, #464646 0%, #28292B 100%);
+  background: #232428;
   border-radius: 6px;
   position: relative;
   -webkit-box-shadow: 0px 5px 13px rgba(0, 0, 0, 0.15);
@@ -6883,7 +6882,7 @@ body.compensate-for-scrollbar {
   }
   .block-steps__item:nth-child(2) .block-steps__count-wrap::before {
     top: auto;
-    bottom: 100%;
+    bottom: calc(100% + 2px);
   }
   .block-steps__item:nth-child(2) .block-steps__count-wrap::after {
     top: auto;
@@ -6895,7 +6894,7 @@ body.compensate-for-scrollbar {
   }
   .block-steps__item:nth-child(4) .block-steps__count-wrap::before {
     top: auto;
-    bottom: 100%;
+    bottom: calc(100% + 2px);
   }
   .block-steps__item:nth-child(4) .block-steps__count-wrap::after {
     top: auto;
@@ -8033,7 +8032,7 @@ body.compensate-for-scrollbar {
   }
   .block-steps__item:nth-child(1) .block-steps__count-wrap::before {
     bottom: auto;
-    top: 100%;
+    top: calc(100% + 2px);
   }
   .block-steps__item:nth-child(1) .block-steps__count-wrap::after {
     bottom: auto;
@@ -8045,7 +8044,7 @@ body.compensate-for-scrollbar {
   }
   .block-steps__item:nth-child(2) .block-steps__count-wrap::before {
     bottom: auto;
-    top: 100%;
+    top: calc(100% + 2px);
   }
   .block-steps__item:nth-child(2) .block-steps__count-wrap::after {
     bottom: auto;
@@ -8057,7 +8056,7 @@ body.compensate-for-scrollbar {
   }
   .block-steps__item:nth-child(3) .block-steps__count-wrap::before {
     bottom: auto;
-    top: 100%;
+    top: calc(100% + 2px);
   }
   .block-steps__item:nth-child(3) .block-steps__count-wrap::after {
     bottom: auto;
@@ -8069,7 +8068,7 @@ body.compensate-for-scrollbar {
   }
   .block-steps__item:nth-child(4) .block-steps__count-wrap::before {
     bottom: auto;
-    top: 100%;
+    top: calc(100% + 2px);
   }
   .block-steps__item:nth-child(4) .block-steps__count-wrap::after {
     bottom: auto;
@@ -8081,7 +8080,7 @@ body.compensate-for-scrollbar {
   }
   .block-steps__item:nth-child(5) .block-steps__count-wrap::before {
     bottom: auto;
-    top: 100%;
+    top: calc(100% + 2px);
   }
   .block-steps__item:nth-child(5) .block-steps__count-wrap::after {
     bottom: auto;
