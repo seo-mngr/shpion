@@ -3236,6 +3236,10 @@ body.compensate-for-scrollbar {
   background-position: center;
   z-index: 1;
 }
+.qt__content_wo_face::after {
+  display: none;
+}
+
 .qt__headline {
   font-size: 18px;
   color: #3d5f95;
