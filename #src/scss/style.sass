@@ -23,6 +23,15 @@
 	display: flow-root
 
 	&_layout_blog
+		& .container
+			@media screen and (max-width: $media-lg)
+				max-width: 760px
+
+			@media screen and (max-width: $media-sm)
+				max-width: 404px
+
+			@media screen and (max-width: $media-xs)
+				max-width: 320px
 
 	&_layout_blog-single
 
@@ -195,6 +204,16 @@
 	@media screen and (max-width: $media-sm)
 		font-size: 14px
 
+	& .container
+		@media screen and (max-width: $media-lg)
+			max-width: 760px
+
+		@media screen and (max-width: $media-sm)
+			max-width: 404px
+
+		@media screen and (max-width: $media-xs)
+			max-width: 320px
+
 	&__wrap
 		display: flex
 		flex-direction: row
@@ -206,8 +225,6 @@
 		padding-left: 35px
 
 		@media screen and (max-width: $media-lg)
-			margin-left: -20px
-			margin-right: -20px
 			padding-left: 25px
 
 		@media screen and (max-width: $media-sm)
@@ -2806,8 +2823,8 @@
 
 	&__slider-item
 		display: block
-		max-width: 320px
-		max-height: 444px
+		width: 320px
+		height: 444px
 		border-radius: 3px
 		overflow: hidden
 
