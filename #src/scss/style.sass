@@ -2533,6 +2533,14 @@
 			max-height: 276px
 			min-height: 276px !important
 
+		&.active
+			@media screen and (max-width: $media-sm)
+				left: -30px !important
+
+	&__slider-img
+		width: 100%
+		height: 100%
+
 	&__slider-nav
 		max-width: 316px
 		height: 23px
@@ -2794,7 +2802,7 @@
 		& img  
 			width: 100%
 			height: 100%
-			object-fit: cover
+			object-fit: contain
 			border-radius: 0
 
 		&:before 
