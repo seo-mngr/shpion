@@ -8771,6 +8771,9 @@ body.compensate-for-scrollbar {
   .block-feedback__item {
     width: calc(100% - 30px);
   }
+  .block-feedback__item {
+    max-width: 260px;
+  }
   .block-feedback__item:not(:last-child) {
     margin-bottom: 25px;
   }
