@@ -2820,10 +2820,6 @@ body.compensate-for-scrollbar {
   margin-bottom: 60px;
   text-align: justify;
 }
-.text-block:last-child {
-  margin-bottom: 0;
-}
-
 .text-block h2 {
   margin-top: 40px;
   margin-bottom: 18px;
@@ -2876,14 +2872,14 @@ body.compensate-for-scrollbar {
   z-index: -1;
 }
 .text-block_attention .headline {
-  margin-top: 15px;
+  margin-top: 0;
   margin-bottom: 23px;
   margin-left: auto;
   margin-right: auto;
   color: #3D5F95;
   padding-bottom: 20px;
   border-bottom: 1px solid #424242;
-  max-width: 60%;
+  max-width: 50%;
 }
 .text-block_attention ul {
   list-style: none;
