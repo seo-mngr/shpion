@@ -1690,7 +1690,7 @@
 			z-index: 0
 
 			@media screen and (max-width: $media-lg)
-				background-size: 100% 300%
+				background-size: 100%
 				background-position: left 100%
 
 		&::before
@@ -1699,6 +1699,9 @@
 			background-position: right center
 			background-repeat: no-repeat
 			right: 0
+
+			@media screen and (max-width: $media-lg)
+				background-image: url(../img/bg-map-headline-mob.svg)
 
 		&::after
 			right: 100%

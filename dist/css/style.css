@@ -2768,7 +2768,6 @@ body.compensate-for-scrollbar {
   background-repeat: no-repeat;
   right: 0;
 }
-
 .block-address__content::after {
   right: 100%;
   background-color: #292a2b;
@@ -6671,8 +6670,11 @@ body.compensate-for-scrollbar {
     margin-bottom: -100px;
   }
   .block-address__content::before, .block-address__content::after {
-    background-size: 100% 300%;
+    background-size: 100%;
     background-position: left 100%;
+  }
+  .block-address__content::before {
+    background-image: url(../img/bg-map-headline-mob.svg);
   }
   .block-address__headline {
     font-size: 24px;
