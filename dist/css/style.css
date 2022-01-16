@@ -7484,7 +7484,7 @@ body.compensate-for-scrollbar {
     border-radius: 3px;
     z-index: -1;
   }
-  .breadcrumbs__list-item:nth-child(2)::before {
+  .breadcrumbs__list-item::before {
     content: "";
     display: block;
     position: absolute;
@@ -7495,7 +7495,7 @@ body.compensate-for-scrollbar {
     border-radius: 3px;
     z-index: -1;
   }
-  .breadcrumbs__list-item:nth-child(3) {
+  .breadcrumbs__list-item:nth-child(n+3) {
     padding-right: 15px;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
