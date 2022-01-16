@@ -2044,6 +2044,13 @@ body.compensate-for-scrollbar {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+.nav__subnav_col_1 {
+  -webkit-columns: unset;
+     -moz-columns: unset;
+          columns: unset;
+  padding-right: 46px;
+}
+
 .nav__subnav::before {
   content: "";
   display: block;
@@ -2052,10 +2059,6 @@ body.compensate-for-scrollbar {
   bottom: 100%;
   width: 100%;
   height: 40px;
-}
-
-.nav__subnav-item {
-  margin-bottom: 17px;
 }
 
 .nav__subnav-item:hover .nav__subnav-link {
@@ -2074,6 +2077,10 @@ body.compensate-for-scrollbar {
   margin-right: 15px;
   background: url(../img/icon-subnav-item-arrow.svg) center no-repeat;
 }
+.nav__subnav-item:not(:last-child) {
+  margin-bottom: 17px;
+}
+
 .nav__subnav-link {
   white-space: nowrap;
   -webkit-transition: all 0.5s ease;
