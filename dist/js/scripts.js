@@ -3590,4 +3590,24 @@ $(document).ready(function() {
   });
   /* END ВСПЛЫВАЮЩИЕ ОКНА */
 
+  /* убираем ссылки на текущую страницу */
+  var getUri=window.location.pathname.slice(1);
+
+  // главное меню, первый уровень
+  $("a[href*='"+getUri+"'].nav__link").parent("li").addClass("nav__item_active");
+  $("a[href*='"+getUri+"'].nav__link").removeAttr("href");
+
+  // главное меню, второй уровень
+  $("a[href*='"+getUri+"'].nav__subnav-link").parent("li").addClass("nav__subnav-item_active");
+  $("a[href*='"+getUri+"'].nav__subnav-link").removeAttr("href");
+
+  // меню в подвале
+	$("a[href*='"+getUri+"'].footer__nav-link").parent("li").addClass("footer__nav-item_active");
+	$("a[href*='"+getUri+"'].footer__nav-link").removeAttr("href");
+
+	// сайдбар в категории услуг
+  $("a[href*='"+getUri+"'].side-nav__link").parent("li").addClass("side-nav__list-item_active");
+  $("a[href*='"+getUri+"'].side-nav__link").removeAttr("href");
+  /* END убираем ссылки на текущую страницу */
+
 });

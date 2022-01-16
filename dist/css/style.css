@@ -1535,6 +1535,11 @@ body.compensate-for-scrollbar {
   border-left: 3px solid #3D5F95;
 }
 
+.side-nav__list-item_active .side-nav__link {
+  background-color: #30373d;
+  border-left: 3px solid #3D5F95;
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -2010,6 +2015,9 @@ body.compensate-for-scrollbar {
   background: url(../img/icon-subnav-arrow.svg) center no-repeat;
   background-size: contain;
 }
+.nav__item_active {
+  border-bottom: 3px solid #3D5F95;
+}
 .nav__item:hover .nav__subnav {
   display: block;
 }
@@ -2081,6 +2089,22 @@ body.compensate-for-scrollbar {
   margin-bottom: 17px;
 }
 
+.nav__subnav-item_active .nav__subnav-link {
+  position: relative;
+  left: 11px;
+  color: #3d5f95;
+}
+.nav__subnav-item_active .nav__subnav-link::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 10px;
+  position: absolute;
+  top: 2px;
+  left: -34px;
+  margin-right: 15px;
+  background: url(../img/icon-subnav-item-arrow.svg) center no-repeat;
+}
 .nav__subnav-link {
   white-space: nowrap;
   -webkit-transition: all 0.5s ease;
@@ -6462,6 +6486,9 @@ body.compensate-for-scrollbar {
     background: url(../img/icon-pricelist-item-arrow-white.svg) center/contain no-repeat;
     cursor: pointer;
   }
+  .nav__item_active {
+    border-color: transparent;
+  }
   .nav__item:hover .nav__subnav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6475,6 +6502,9 @@ body.compensate-for-scrollbar {
     padding-bottom: 0;
   }
   .nav__link:hover {
+    color: #3d5f95;
+  }
+  .nav__item_active .nav__link {
     color: #3d5f95;
   }
   .nav__subnav {
@@ -6512,6 +6542,13 @@ body.compensate-for-scrollbar {
     color: #fafafa;
   }
   .nav__subnav-item:hover .nav__subnav-link::before {
+    display: none;
+  }
+  .nav__subnav-item_active .nav__subnav-link {
+    position: static;
+    color: #3d5f95 !important;
+  }
+  .nav__subnav-item_active .nav__subnav-link::before {
     display: none;
   }
   .nav__subnav-link {
