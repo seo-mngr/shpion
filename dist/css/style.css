@@ -4923,7 +4923,7 @@ body.compensate-for-scrollbar {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  top: calc(0% + 10px);
+  top: calc(0% + 1px);
   bottom: 0;
   margin: auto 0;
   left: 18px;
