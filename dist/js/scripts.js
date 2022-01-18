@@ -3100,24 +3100,24 @@ $(document).ready(function() {
 		  			$mobile_menu_btn.removeClass('mobile-menu-btn_active');
 		  			$('body').removeClass('body_stop_scrolling');
 		  			$('.nav__wrap').removeClass('nav__wrap_visible');
-		  			$('.social-contacts').removeClass('social-contacts__nav-dominated-you');
+		  			$('.social-contacts.social-contacts_fixed').removeClass('social-contacts__nav-dominated-you');
 		  			$('.nav__mobile-search-btn').removeClass('nav__mobile-search-btn_fixed');
 		  		}
 	  		} else {
 	  			$mobile_menu_btn.addClass('mobile-menu-btn_active');
 	  			$('body').addClass('body_stop_scrolling');
 	  			$('.nav__wrap').addClass('nav__wrap_visible');
-	  			$('.social-contacts').addClass('social-contacts__nav-dominated-you');
+	  			$('.social-contacts.social-contacts_fixed').addClass('social-contacts__nav-dominated-you');
 	  			$('.nav__mobile-search-btn').addClass('nav__mobile-search-btn_fixed');
 	  		}
 
 	  	} else if ( $(e.target).hasClass('nav__mobile-search-btn') ) {
 	  		$('.nav__mobile-search').addClass('nav__mobile-search_active');
-	  		$('.social-contacts').addClass('social-contacts__nav-dominated-you');
+	  		$('.social-contacts.social-contacts_fixed').addClass('social-contacts__nav-dominated-you');
 	  	} else if ( $(e.target).hasClass('searchline__close') ) {
 	  		$('.nav__mobile-search').removeClass('nav__mobile-search_active');
 	  		if ( !$('.mobile-menu-btn').hasClass('mobile-menu-btn_active') ) {
-	  			$('.social-contacts').removeClass('social-contacts__nav-dominated-you');
+	  			$('.social-contacts.social-contacts_fixed').removeClass('social-contacts__nav-dominated-you');
 	  		}
 	  	}
 	  });

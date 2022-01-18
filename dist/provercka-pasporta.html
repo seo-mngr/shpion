@@ -22,11 +22,11 @@
 						</button>
 						<button type="button" class="nav__mobile-search-btn btn btn_type_search"></button>
 						<div class="nav__mobile-search">
-							<div class="searchline">
+							<div class="searchline searchline_mobile">
 				        <form action="" class="searchline__form">
 				          <div class="searchline__wrap">
 			              <input type="text" placeholder="Введите Ваш запрос" class="searchline__input">
-			              <button type="submit" class="searchline__btn btn btn_color_blue">Найти</button>
+			              <button type="submit" class="searchline__btn btn btn_color_blue btn_type_search"></button>
 			              <button type="button" class="searchline__close"></button>
 				          </div>
 				        </form>
@@ -34,39 +34,65 @@
 						</div>
 					</div>
 				</div>
-				<ul class="nav__wrap">
-					<li class="nav__item"><a href="chastnyj-detektiv.html" class="nav__link">Частный детектив</a></li>
-					<li class="nav__item nav__item_has-subnav">
-						<a href="uslugi.html" class="nav__link">Услуги</a>
-						<ul class="nav__subnav">
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Физическим лицам</a></li>
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Юридическим лицам</a></li>
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Проверка номера телефона</a></li>
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Проверка автомобиля</a></li>
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Проверка недвижимости</a></li>
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Проверка в банках</a></li>
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Бесплатные запросы</a></li>
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Семейные вопросы</a></li>
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Безопасность</a></li>
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Наружное наблюдение</a></li>
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Слежка за человеком</a></li>
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Юридические услуги</a></li>
-							<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Финансовая разведка</a></li>
-						</ul>
-					</li>
-					<li class="nav__item"><a href="czenyi.html" class="nav__link">Цены</a></li>
-					<li class="nav__item nav__item_has-subnav">
-						<a href="o-nas.html" class="nav__link">О нас</a>
-					  <ul class="nav__subnav nav__subnav_col_1">
-							<li class="nav__subnav-item"><a href="liczenzii.html" class="nav__subnav-link">Лицензии</a></li>
-							<li class="nav__subnav-item"><a href="guarantees.html" class="nav__subnav-link">Гарантии</a></li>
-							<li class="nav__subnav-item"><a href="otzyvy.html" class="nav__subnav-link">Отзывы</a></li>
-							<li class="nav__subnav-item nav__subnav-item_active"><a href="smi.html" class="nav__subnav-link">СМИ о нас</a></li>
-						</ul>
-					</li>
-					<li class="nav__item"><a href="blog.html" class="nav__link">Блог</a></li>
-					<li class="nav__item"><a href="kontakty.html" class="nav__link">Контакты</a></li>
-				</ul>
+				<div class="nav__wrap">
+					<ul class="nav__list">
+						<li class="nav__item"><a href="chastnyj-detektiv.html" class="nav__link">Частный детектив</a></li>
+						<li class="nav__item nav__item_has-subnav">
+							<a href="uslugi.html" class="nav__link">Услуги</a>
+							<ul class="nav__subnav">
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Физическим лицам</a></li>
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Юридическим лицам</a></li>
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Проверка номера телефона</a></li>
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Проверка автомобиля</a></li>
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Проверка недвижимости</a></li>
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Проверка в банках</a></li>
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Бесплатные запросы</a></li>
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Семейные вопросы</a></li>
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Безопасность</a></li>
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Наружное наблюдение</a></li>
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Слежка за человеком</a></li>
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Юридические услуги</a></li>
+								<li class="nav__subnav-item"><a href="" class="nav__subnav-link">Финансовая разведка</a></li>
+							</ul>
+						</li>
+						<li class="nav__item"><a href="czenyi.html" class="nav__link">Цены</a></li>
+						<li class="nav__item nav__item_has-subnav">
+							<a href="o-nas.html" class="nav__link">О нас</a>
+						  <ul class="nav__subnav nav__subnav_col_1">
+								<li class="nav__subnav-item"><a href="liczenzii.html" class="nav__subnav-link">Лицензии</a></li>
+								<li class="nav__subnav-item"><a href="guarantees.html" class="nav__subnav-link">Гарантии</a></li>
+								<li class="nav__subnav-item"><a href="otzyvy.html" class="nav__subnav-link">Отзывы</a></li>
+								<li class="nav__subnav-item nav__subnav-item_active"><a href="smi.html" class="nav__subnav-link">СМИ о нас</a></li>
+							</ul>
+						</li>
+						<li class="nav__item"><a href="blog.html" class="nav__link">Блог</a></li>
+						<li class="nav__item"><a href="kontakty.html" class="nav__link">Контакты</a></li>
+					</ul>
+					<div class="nav__social">
+						<div class="social-contacts">
+							<a href="mailto:info@spion.su" class="social-contacts__item">
+								<i class="social-contacts__item-icon">
+									<img src="img/icon-mail.svg" alt="" class="social-contacts__item-img">
+								</i>
+							</a>
+							<a href="#" class="social-contacts__item">
+								<i class="social-contacts__item-icon">
+									<img src="img/icon-whatsapp.svg" alt="" class="social-contacts__item-img">
+								</i>
+							</a>
+							<a href="#" class="social-contacts__item">
+								<i class="social-contacts__item-icon">
+									<img src="img/icon-viber.svg" alt="" class="social-contacts__item-img">
+								</i>
+							</a>
+							<a href="#" class="social-contacts__item">
+								<i class="social-contacts__item-icon">
+									<img src="img/icon-telegram.svg" alt="" class="social-contacts__item-img">
+								</i>
+							</a>
+						</div>
+					</div>
+				</div>
 			</nav>
 		</div>
 		<div class="header__additions">

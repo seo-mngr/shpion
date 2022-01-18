@@ -609,7 +609,7 @@
 		left: 0
 		right: 0
 		margin: 0 auto
-		padding: 0 20px
+		padding: 0 15px
 		background: #23252A
 		z-index: 201
 		transition: all .5s ease
@@ -645,10 +645,6 @@
 			border-radius: 3px 0px 0px 3px
 
 	&__wrap
-		display: flex
-		flex-direction: row
-		justify-content: space-between
-		border-bottom: 1px solid #1E2F4B
 		transition: all .5s ease
 
 		@media screen and (max-width: $media-lg)
@@ -657,17 +653,58 @@
 			left: 100%
 			width: 100%
 			height: 100%
-
-			flex-direction: column
-			justify-content: center
-
-			padding: $header-height-lg 40px $social_panel_mob_height
+			padding: 150px 40px $social_panel_mob_height
 			z-index: 200
 			background: #23252a
 
 		&_visible
 			@media screen and (max-width: $media-lg)
 				left: 0
+
+	&__social
+		display: none
+
+		@media screen and (max-width: $media-lg)
+			padding: 0 40px
+			position: absolute
+			bottom: 0
+			left: 0
+			width: 100%
+			height: 93px
+			display: flex
+			justify-content: center
+			align-items: center
+
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				margin: 0 auto
+				height: 1px
+				width: calc(100% - 80px)
+				background: #424242
+
+			& .social-contacts
+				flex-direction: row
+
+			& .social-contacts__item
+				&:not(:last-child)
+					margin-bottom: 0
+					margin-right: 15px
+
+	&__list
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		border-bottom: 1px solid #1E2F4B
+
+		@media screen and (max-width: $media-lg)
+			display: block
+			width: 100%
+			height: 100%
+			overflow-y: scroll
 
 	&__item
 		display: flex
@@ -711,9 +748,6 @@
 		& .nav__subnav
 			display: block
 
-			@media screen and (max-width: $media-lg)
-				display: flex
-
 	&__item:not(:last-child)
 		margin-right: 65px
 
@@ -755,17 +789,15 @@
 		transition: all .5s ease
 
 		@media screen and (max-width: $media-lg)
-			display: flex
-			flex-direction: column
-			justify-content: center
+			display: block
+			columns: unset
 			padding: 0 40px
 			margin-top: $header-height-lg
 			margin-left: 0
 			width: 100%
-			height: calc(100vh - $header-height-lg - $social_panel_mob_height)
+			height: calc(100% - $header-height-lg - $social_panel_mob_height)
 			left: 100%
 			top: 0
-			columns: 0
 			z-index: 202
 			overflow-y: scroll
 			background-color: #23252A
@@ -779,6 +811,10 @@
 			columns: unset
 			padding-right: 46px
 
+			@media screen and (max-width: $media-lg)
+				margin-top: 150px
+				height: calc(100% - 243px)
+
 		&::before
 			content: ''
 			display: block
@@ -789,6 +825,10 @@
 			height: 40px
 
 	&__subnav-item
+		margin-bottom: 17px
+
+		@media screen and (max-width: $media-lg)
+			display: block
 
 		&:hover
 			& .nav__subnav-link
@@ -815,9 +855,6 @@
 					@media screen and (max-width: $media-lg)
 						display: none
 
-		&:not(:last-child)
-			margin-bottom: 17px
-
 		&_active
 
 		&_active .nav__subnav-link
@@ -842,6 +879,10 @@
 
 				@media screen and (max-width: $media-lg)
 					display: none
+
+	&__subnav_col_1 &__subnav-item
+		&:last-child
+			margin-bottom: 0
 
 	&__subnav-link
 		white-space: nowrap
@@ -1952,6 +1993,9 @@
 			font-weight: 500
 			line-height: 135%
 
+	&_content-services
+		margin-bottom: 0
+
 	&_content-services h2
 		@media screen and (max-width: $media-sm)
 			font-size: 18px
@@ -2011,9 +2055,9 @@
 			position: absolute
 			left: 0
 			bottom: 0
-			background-size: contain
+			background-size: 95px 95px
 			background-repeat: no-repeat
-			background-position: left 0px bottom -2px 
+			background-position: left -10px bottom -14px 
 
 		&:nth-child(1)::before
 			width: 90px
@@ -2023,10 +2067,14 @@
 			@media screen and (max-width: $media-lg)
 				width: 70px
 				height: 70px
+				background-size: 70px 70px
+				background-position: left -7px bottom -10px
 			
 			@media screen and (max-width: $media-sm)
 				width: 90px
 				height: 90px
+				background-size: 95px 95px
+				background-position: left -10px bottom -14px 
 
 		&:nth-child(2)::before
 			width: 98px
@@ -2036,10 +2084,14 @@
 			@media screen and (max-width: $media-lg)
 				width: 73px
 				height: 70px
+				background-size: 70px 70px
+				background-position: left -7px bottom -10px
 
 			@media screen and (max-width: $media-sm)
 				width: 98px
 				height: 94px
+				background-size: 95px 95px
+				background-position: left -10px bottom -14px 
 
 	&__link
 		width: 100%
@@ -2280,8 +2332,8 @@
 			width: 182px
 			height: 87px
 			background-image: url(../img/bg-benefits-short-splash.svg)
-			background-position: left top
-			background-size: contain
+			background-position: bottom right
+			background-size: 214px 205px
 			background-repeat: no-repeat
 
 .qt
@@ -2298,6 +2350,7 @@
 		background-image: url(../img/bg-qt.png)
 		background-size: auto
 		background-position: top left
+		background-repeat: no-repeat
 		border-radius: 14px 0 0 14px
 		position: relative
 
@@ -2320,6 +2373,7 @@
 			background-image: url(../img/icon-qt.svg)
 			background-size: cover
 			background-position: center
+			background-repeat: no-repeat
 
 			@media screen and (max-width: $media-lg)
 				width: 59px
@@ -4335,6 +4389,11 @@
 		justify-content: space-between
 		align-items: flex-start
 
+	&__item-wrap
+		display: block
+		width: 100%
+		height: 100%
+
 	&__item
 		width: calc(50% - 12px)
 		background: #232428
@@ -4688,25 +4747,51 @@
 
 	&__img
 		position: absolute
-		left: 0
-		bottom: 0
 
 		@media screen and (max-width: $media-lg)
-			width: 64px
-			height: 65px
-			bottom: 5px
-			left: -10px
+			
 
 		@media screen and (max-width: $media-sm)
 			width: auto
 			height: auto
 			bottom: 0
 
-	&__item:nth-child(2) &__img
-		left: 8px
+	&__item:nth-child(1) &__img
+		width: 175px
+		height: 98px
+		left: -62px
+		bottom: -14px
 
 		@media screen and (max-width: $media-lg)
-			left: -10px
+			width: 115px
+			height: 64px
+			left: -51px
+			bottom: 0
+
+		@media screen and (max-width: $media-sm)
+			width: 161px
+			height: 90px
+			left: -54px
+			bottom: -5px
+
+
+	&__item:nth-child(2) &__img
+		width: 115px
+		height: 90px
+		left: 0
+		bottom: -12px
+
+		@media screen and (max-width: $media-lg)
+			width: 74px
+			height: 57px
+			left: -15px
+			bottom: 4px
+
+		@media screen and (max-width: $media-sm)
+			width: 115px
+			height: 90px
+			left: -17px
+			bottom: 0
 
 .form-free-request
 	margin: 30px 0 60px
@@ -5364,6 +5449,8 @@
 
 	&_js_animated
 
+	&_mobile
+
 	&__wrap
 		height: 51px
 		display: flex
@@ -5385,14 +5472,17 @@
 	&__hidden
 		flex: none
 		width: 0
-		max-width: 735px
+		max-width: 1110px
 		display: flex
 		position: relative
 		overflow: hidden
 		transition: width .1s linear
 
 	&_slide &__hidden
-		width: 735px
+		width: 1110px
+
+		@media screen and (max-width: $media-xxl)
+			width: 735px
 
 		@media screen and (max-width: $media-lg)
 			width: 100%
@@ -5417,6 +5507,8 @@
 
 	&__input
 		padding-left: 80px
+		padding-top: 0
+		padding-bottom: 0
 		flex-basis: 100%
 		margin-right: 30px
 		border: 1px solid #243859
@@ -5428,15 +5520,28 @@
 
 		@media screen and (max-width: $media-sm)
 			margin-right: -3px
+			margin-top: 0
+			margin-bottom: 0
+			margin-left: 0
 			padding-left: 15px
 			font-size: 14px
+			height: 47px
 
 	&_header &__input
 		margin-right: -30px
 
+	&_mobile &__input
+		margin-right: -5px
+		padding-left: 15px
+
 	&__btn
+		flex: none
+		padding-top: 0
+		padding-bottom: 0
+
 		@media screen and (max-width: $media-sm)
 			height: 47px
+			border: 0
 
 	&__close
 		position: absolute
@@ -5455,6 +5560,9 @@
 
 		@media screen and (max-width: $media-sm)
 			right: 120px
+
+	&_mobile &__close
+		right: 80px
 
 
 .searchresults
@@ -5525,7 +5633,7 @@
 	&__crumbs-list
 		display: flex
 
-		@media screen and (max-width: $media-sm)
+		@media screen and (max-width: $media-lg)
 			flex-wrap: wrap
 
 	&__crumbs-item
@@ -5621,10 +5729,6 @@
 		font-weight: 500
 
 .no-searchresults
-	margin-bottom: 65px
-
-	@media screen and (max-width: $media-lg)
-		margin-bottom: 50px
 
 	&__wrap
 		padding: 50px 35px
@@ -5866,6 +5970,7 @@
 	&__form
 
 	&__form-captcha
+		margin-bottom: 20px
 
 		& .g-recaptcha
 			@media screen and (max-width: $media-sm)
