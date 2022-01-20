@@ -6125,7 +6125,12 @@ body.compensate-for-scrollbar {
   color: #fafafa;
   position: relative;
   z-index: 1;
+  border-radius: 3px;
 }
+.popup__input-text.error {
+  background-color: #ffceca;
+}
+
 .popup__textarea {
   display: block;
   padding: 12px 30px;

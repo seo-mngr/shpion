@@ -16,6 +16,8 @@ $(document).ready(function() {
   $('.fancybox').fancybox();
   /* END fancybox модалки */
 
+  $('#phone,.popup__input-text[name="phone"]').mask("9(999) 999-9999");
+
   /* анимация поисковой строки в шапке */
   if ($('.searchline.searchline_js_animated').length) {
   	let $searchline = $('.searchline.searchline_js_animated');
