@@ -6073,6 +6073,12 @@ body.compensate-for-scrollbar {
 }
 .popup__form-captcha {
   margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .popup__fieldset {
   margin: 0;
