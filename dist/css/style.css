@@ -9055,18 +9055,9 @@ body.compensate-for-scrollbar {
 }
 
 @media screen and (max-width: 375px){
-  .container {
-    max-width: 320px;
-  }
   .row {
     margin-left: -5px;
     margin-right: -5px;
-  }
-  .btn_type_to-top {
-    padding: 0;
-  }
-  .side-wrapper_layout_blog .container {
-    max-width: 320px;
   }
   .side-wrapper__sidebar {
     margin-left: 5px;
@@ -9084,15 +9075,6 @@ body.compensate-for-scrollbar {
   }
   .side-wrapper_layout_blog .side-wrapper__content, .side-wrapper_layout_blog-single .side-wrapper__content {
     width: calc(100% - 10px);
-  }
-  .breadcrumbs .container {
-    max-width: 320px;
-  }
-  .main {
-    padding-top: 66px;
-  }
-  .offer {
-    margin-top: -66px;
   }
   .common-services__item {
     margin-left: 5px;
@@ -9134,9 +9116,6 @@ body.compensate-for-scrollbar {
   .block-not-allowed__item {
     width: calc(50% - 10px);
   }
-  .block-not-allowed__item:not(:nth-last-child(-n+2)) {
-    margin-bottom: 10px;
-  }
   .block-any-questions__headline {
     margin-left: 5px;
     margin-right: 5px;
@@ -9155,6 +9134,65 @@ body.compensate-for-scrollbar {
   .block-address__side {
     width: calc(100% - 10px);
   }
+  .benefits-short__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .benefits-short__item {
+    width: calc(100% - 10px);
+  }
+  .block-press__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .block-press__item {
+    width: calc(100% - 10px);
+  }
+  .block-contacts__side {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .block-contacts__side {
+    width: calc(100% - 10px);
+  }
+  .block-secrets__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .block-secrets__item {
+    width: calc(100% - 10px);
+  }
+  .block-feedback__item {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .block-feedback__item {
+    width: calc(100% - 10px);
+  }
+}
+
+@media screen and (max-width: 374px){
+  .container {
+    max-width: 320px;
+  }
+  .btn_type_to-top {
+    padding: 0;
+  }
+  .side-wrapper_layout_blog .container {
+    max-width: 320px;
+  }
+  .breadcrumbs .container {
+    max-width: 320px;
+  }
+  .main {
+    padding-top: 66px;
+  }
+  .offer {
+    margin-top: -66px;
+  }
+  .block-not-allowed__item:not(:nth-last-child(-n+2)) {
+    margin-bottom: 10px;
+  }
   .block-address__content {
     padding-left: 0;
   }
@@ -9168,13 +9206,6 @@ body.compensate-for-scrollbar {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .benefits-short__item {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .benefits-short__item {
-    width: calc(100% - 10px);
-  }
   .block-license2__slider {
     right: auto;
     left: 0;
@@ -9185,23 +9216,9 @@ body.compensate-for-scrollbar {
     left: 0;
     margin-left: 0;
   }
-  .block-press__item {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .block-press__item {
-    width: calc(100% - 10px);
-  }
   .block-benefits-2__headline {
     padding-left: 30px;
     padding-right: 30px;
-  }
-  .block-contacts__side {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .block-contacts__side {
-    width: calc(100% - 10px);
   }
   .services-links__list {
     padding-left: 52px;
@@ -9210,22 +9227,8 @@ body.compensate-for-scrollbar {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .block-secrets__item {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .block-secrets__item {
-    width: calc(100% - 10px);
-  }
   .popup__wrap {
     padding: 35px 10px 25px;
-  }
-  .block-feedback__item {
-    margin-left: 5px;
-    margin-right: 5px;
-  }
-  .block-feedback__item {
-    width: calc(100% - 10px);
   }
   .social-contacts_fixed {
     margin-right: 15px;
